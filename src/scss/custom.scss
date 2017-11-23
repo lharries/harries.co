@@ -1,0 +1,43 @@
+@import './variables';
+@import './mixins';
+
+.navbar-nav {
+  color: $primary-color;
+}
+
+.uni-logo {
+  height: 100px;
+}
+
+.abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headshot {
+  width: 200px;
+}
+
+.project-image {
+  height: 400px;
+}
+
+.stack-badge {
+  background-color: $primary-color;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.circuit-background {
+  background: url("../imgs/circuit-board.svg"), linear-gradient(to left, black, blue)
+}

@@ -16,6 +16,9 @@ var build = function (dest) {
       gulp.src(['src/scss/froala_blocks.scss'])
           .pipe(sass())
           .pipe(gulp.dest(dest + '/css'))
+      gulp.src(['src/scss/custom.scss'])
+          .pipe(sass())
+          .pipe(gulp.dest(dest + '/css'))
   });
 
   gulp.task('html-' + dest, function () {
