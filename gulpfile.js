@@ -8,44 +8,49 @@ var vinylPaths = require('vinyl-paths');
 var utils = require('./utils');
 
 var build = function (dest) {
-  gulp.task('clean-' + dest, function () {
-    del.sync('dist/**/*');
-  })
+    gulp.task('clean-' + dest, function () {
+        del.sync('dist/**/*');
+    })
 
-  gulp.task('sass-' + dest, function () {
-      gulp.src(['src/scss/froala_blocks.scss'])
-          .pipe(sass())
-          .pipe(gulp.dest(dest + '/css'))
-      gulp.src(['src/scss/custom.scss'])
-          .pipe(sass())
-          .pipe(gulp.dest(dest + '/css'))
-  });
+    gulp.task('sass-' + dest, function () {
+        gulp.src(['src/scss/froala_blocks.scss'])
+            .pipe(sass())
+            .pipe(gulp.dest(dest + '/css'))
+        gulp.src(['src/scss/custom.scss'])
+            .pipe(sass())
+            .pipe(gulp.dest(dest + '/css'))
+    });
 
-  gulp.task('html-' + dest, function () {
-    gulp.src(['src/html/**/*.html'])
-        .pipe(gulp.dest(dest))
-  })
+    gulp.task('html-' + dest, function () {
+        gulp.src(['src/html/**/*.html'])
+            .pipe(gulp.dest(dest))
+    })
 
-  gulp.task('imgs-' + dest, function () {
-    gulp.src(['src/imgs/**/*'])
-        .pipe(gulp.dest(dest + '/imgs'))
-  })
+    gulp.task('imgs-' + dest, function () {
+        gulp.src(['src/imgs/**/*'])
+            .pipe(gulp.dest(dest + '/imgs'))
+    })
+
+    gulp.task('proteam-' + dest, function () {
+        gulp.src(['src/proteam/**/*'])
+            .pipe(gulp.dest(dest + '/proteam'))
+    })
 }
 
 build('demo');
 build('dist');
 
-gulp.task('watch', [], function() {
-  watch('dist').pipe(connect.reload());
-  watch('src/html', function () {
-    gulp.start(['html-demo']);
-  })
-  watch('src/imgs', function () {
-    gulp.start(['imgs-demo']);
-  })
-  watch('src/scss', function () {
-    gulp.start(['sass-demo']);
-  });
+gulp.task('watch', [], function () {
+    watch('dist').pipe(connect.reload());
+    watch('src/html', function () {
+        gulp.start(['html-demo']);
+    })
+    watch('src/imgs', function () {
+        gulp.start(['imgs-demo']);
+    })
+    watch('src/scss', function () {
+        gulp.start(['sass-demo']);
+    });
 })
 
 gulp.task('connect', function () {
@@ -56,25 +61,25 @@ gulp.task('connect', function () {
     });
 });
 
-gulp.task('screenshots', function(cb) {
-  del.sync('./screenshots');
+gulp.task('screenshots', function (cb) {
+    del.sync('./screenshots');
 
-  utils.makeScreenshots([
-    ['call_to_action', 'header, section, footer'],
-    ['contacts', 'header, section, footer'],
-    ['contents', 'header, section, footer'],
-    ['features', 'header, section, footer'],
-    ['footers', 'header, section, footer'],
-    ['forms', 'header, section, footer'],
-    ['headers', 'header, section, footer'],
-    ['pricings', 'header, section, footer'],
-    ['teams', 'header, section, footer'],
-    ['testimonials', 'header, section, footer'],
-  ]).then(function() {
-    cb();
-  });
+    utils.makeScreenshots([
+        ['call_to_action', 'header, section, footer'],
+        ['contacts', 'header, section, footer'],
+        ['contents', 'header, section, footer'],
+        ['features', 'header, section, footer'],
+        ['footers', 'header, section, footer'],
+        ['forms', 'header, section, footer'],
+        ['headers', 'header, section, footer'],
+        ['pricings', 'header, section, footer'],
+        ['teams', 'header, section, footer'],
+        ['testimonials', 'header, section, footer'],
+    ]).then(function () {
+        cb();
+    });
 });
 
-gulp.task('dist', ['clean-dist', 'html-dist', 'imgs-dist', 'sass-dist']);
+gulp.task('dist', ['clean-dist', 'html-dist', 'imgs-dist', 'sass-dist', 'proteam-dist']);
 
 gulp.task('default', ['clean-demo', 'html-demo', 'imgs-demo', 'sass-demo', 'connect', 'watch']);

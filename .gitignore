@@ -18,7 +18,7 @@ screenshots/*
 *.sublime-workspace
 nbproject
 Thumbs.db
-
+dist/
 
 # Files
 package-lock.json
