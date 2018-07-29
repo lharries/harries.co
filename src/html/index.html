@@ -509,7 +509,8 @@
 
     $(document).ready(function () {
         $('#not-my-email').click(function (el) {
-            if ($(this).text() === "Say hello") {
+            console.log('clicked')
+            if ($(this).text().startsWith("say hello 👋")) {
                 $(this).css('cursor', 'text');
                 $(this).text(thisisnotanemail);
             }
