@@ -76,3 +76,9 @@
   color: #007bff;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
