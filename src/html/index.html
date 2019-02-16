@@ -49,41 +49,34 @@
 </head>
 
 <body>
-<!-- <header class="navbar-fixed">
+<header class="navbar-fixed">
     <div class="container">
         <nav class="navbar navbar-expand-md">
-            <a class="navbar-brand" href="https://www.harries.co">
-                Luke Harries
+            <a class="navbar-brand" href="/">
+                Harries.co
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3"
                 aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="fa fa-bars" style="color: #777;"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav3">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="https://www.froala.com">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bio">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.froala.com">Work</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.froala.com">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.froala.com">Experience</a>
+                        <a class="nav-link" href="#hackathons">Hackathons</a>
                     </li>
                 </ul>
-
-                <a class="btn btn-empty ml-md-3" href="https://www.froala.com">Contact</a>
             </div>
         </nav>
     </div>
-</header> -->
+</header>
 <section class="fdb-block circuit-background fullscreen">
     <div class="container">
         <img alt="image" class="headshot" src="./imgs/headshot.jpg">
@@ -94,8 +87,7 @@
                 <p>Hi! I'm an entrepreneur and software engineer,<br class="hide-on-mobile">
                     working at the intersection of machine learning and medicine.</p>
                 <p>
-                    Scroll to find out more or <span id="not-my-email"
-                                                     class="fake-email">say hello 👋</span>
+                    <a href="#bio">Scroll</a> to find out more 👀</span>
                 </p>
                 <p class="text-h2">
                     <a href="https://github.com/lharries" name="github"><i class="fa fa-github" aria-hidden="true"></i></a>&nbsp;
@@ -114,10 +106,10 @@
     </div>
 </section>
 
-<section class="fdb-block">
+<section class="fdb-block" id="bio">
     <div class="container">
         <div class="row justify-content-center">
-            <div id="bio" class="col col-md-8">
+            <div class="col col-md-8">
                 <h1>About Me</h1>
                 <p class="text-h3">
                     <strong>I'm on a mission to solve real problems at scale, particularly in healthcare.</strong>
@@ -148,7 +140,7 @@
     </div>
 </section>
 
-<section class="fdb-block projects">
+<section class="fdb-block projects" id="projects">
     <div class="container ">
         <div class="row justify-content-center ">
             <div class="col col-md-8 text-center">
@@ -232,7 +224,7 @@
     </div>
 </section>
 
-<section class="fdb-block team-1" id="team">
+<section class="fdb-block team-1" id="hackathons">
     <div class="container">
         <div class="row text-center justify-content-center">
             <div class="col-8">
@@ -659,6 +651,12 @@
             scrollTop: $("#bio").offset().top
         }, 1000);
     });
+
+    $(".nav-link").click(function () {
+        if ($(".navbar-toggler").css('display') === 'block') {
+            $(".navbar-toggler")[0].click();
+        }
+    })
 </script>
 
 </body>
