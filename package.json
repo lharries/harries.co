@@ -1,5 +1,5 @@
 {
-  "name": "froala-design-blocks",
+  "name": "harries.co",
   "version": "1.0.1",
   "description": "An amazing collection of over 170 ready to use design blocks based on Bootstrap.",
   "keywords": [
@@ -14,15 +14,13 @@
     "trending design"
   ],
   "homepage": "https://www.froala.com/design-blocks",
-  "license": "https://github.com/froala/design-blocks/blob/master/LICENSE",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git://github.com/froala/design-blocks.git"
   },
   "maintainers": [
-    {
-      "name": "Froala Labs"
-    }
+    "Froala Labs"
   ],
   "scripts": {
     "gulp": "gulp",
@@ -30,7 +28,6 @@
   },
   "devDependencies": {
     "del": "^3.0.0",
-    "fs-extra": "^4.0.2",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.5.0",
     "gulp-copy": "^1.0.0",
@@ -39,8 +36,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
-    "node-sass": "^4.5.3",
-    "puppeteer": "^0.12.0"
+    "node-sass": "^4.5.3"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
@@ -61,5 +57,9 @@
         "imgs/*.svg"
       ]
     }
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/froala/design-blocks/issues"
+  },
+  "author": "Luke Harries"
 }
