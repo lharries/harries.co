@@ -5,6 +5,7 @@
 #### Install dependencies and run project
 
 ```bash
+nvm use 11
 npm install
 npm run gulp
 ```
