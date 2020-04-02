@@ -311,8 +311,7 @@ const Index = () => {
               <h2>Projects</h2>
               <p className="text-h3 ">
                 <strong>
-                  Here are two of projects that I am particularly proud to have
-                  been involved with.
+                  Here are two projects that I am proud to have led.
                 </strong>
               </p>
             </div>
