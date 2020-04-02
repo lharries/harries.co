@@ -62,11 +62,8 @@ const Bio = () => {
           marginTop: "auto"
         }}
       >
-        By{" "}
-        <a href="/">
-          <strong>
-            {author.name}
-          </strong>
+        By <a href="/">
+          {author.name}
         </a>.
         {/*{author.summary}*/}
         {` `}

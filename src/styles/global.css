@@ -388,3 +388,7 @@ a {
 @media (max-width: 500px) {
   .hide-on-mobile {
     display: none; } }
+
+footer a {
+  color: #0000FF;
+}
