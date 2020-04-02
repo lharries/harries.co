@@ -293,15 +293,15 @@ Counter Up
 //
 // Licensed under the terms of the MIT license.
 
-http: //
-// You may use it in your theme if you credit me.
+//
+http: // You may use it in your theme if you credit me.
 // It is also free to use on any individual website.
 //
 //
 // The only restriction is to not publish any
 // extension for browsers or native application
-Exception: // without getting a written permission first.
-//
+// without getting a written permission first.
+Exception: //
 
 (function() {
   // Scroll Variables (tweakable)
