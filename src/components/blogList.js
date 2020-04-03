@@ -15,6 +15,7 @@ const BlogList = () => {
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
+              description
             }
           }
         }
@@ -46,7 +47,7 @@ const BlogList = () => {
               <p
                 className="text-h3"
                 dangerouslySetInnerHTML={{
-                  __html: node.excerpt
+                  __html: node.frontmatter.description || node.excerpt
                 }}
               />
             </section>
