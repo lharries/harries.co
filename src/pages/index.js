@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import SEO from "../components/seo";
@@ -6,6 +6,8 @@ import BlogList from "../components/blogList";
 import Image from "gatsby-image";
 
 const Index = () => {
+  const [navbar, setNavbar] = useState(false);
+
   const data = useStaticQuery(graphql`
     query HomeQuery {
       headshot: file(absolutePath: { regex: "/headshot.jpg/" }) {
@@ -74,11 +76,12 @@ const Index = () => {
               aria-controls="navbarNav3"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={() => setNavbar(!navbar)}
             >
               <span className="fa fa-bars" style={{ color: "#777" }}/>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarNav3">
+            <div className="collapse navbar-collapse" id="navbarNav3" style={{display: navbar ? 'block' : 'none'}} onClick={() => setNavbar(false)}>
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a className="nav-link" href="#bio">
