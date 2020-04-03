@@ -71,7 +71,7 @@ const Bio = () => {
           Say hello on{" "}
           <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>.
         </p>
-        <form name="contact" method="POST" data-netlify="true" className="form-inline">
+        <form name="contact" method="POST" data-netlify="true" className="form-inline" action="/success">
           <label>Get my newsletter:</label>
           <input className="form-control" type="email" name="email" placeholder="Email" style={{margin: "5px"}}/>
         </form>
