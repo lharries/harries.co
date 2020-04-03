@@ -81,7 +81,7 @@ const Index = () => {
               <span className="fa fa-bars" style={{ color: "#777" }}/>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarNav3" style={{display: navbar ? 'block' : 'none'}} onClick={() => setNavbar(false)}>
+            <div aria-hidden='true' className="collapse navbar-collapse" id="navbarNav3" style={{display: navbar ? 'block' : 'none'}} onClick={() => setNavbar(false)}>
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a className="nav-link" href="#bio">
