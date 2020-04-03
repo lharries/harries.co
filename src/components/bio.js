@@ -56,20 +56,26 @@ const Bio = () => {
           borderRadius: `50%`
         }}
       />
-      <p
-        style={{
-          marginBottom: "auto",
-          marginTop: "auto"
-        }}
-      >
-        By <a href="/">
+      <div>
+        <p
+          style={{
+            marginBottom: "auto",
+            marginTop: "auto"
+          }}
+        >
+          By <a href="/">
           {author.name}
         </a>.
-        {/*{author.summary}*/}
-        {` `}
-        Say hello on{" "}
-        <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>.
-      </p>
+          {/*{author.summary}*/}
+          {` `}
+          Say hello on{" "}
+          <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>.
+        </p>
+        <form name="contact" method="POST" data-netlify="true" className="form-inline">
+          <label>Get my newsletter:</label>
+          <input className="form-control" type="email" name="email" placeholder="Email" style={{margin: "5px"}}/>
+        </form>
+      </div>
     </div>
   );
 };
