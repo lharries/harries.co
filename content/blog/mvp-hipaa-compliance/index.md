@@ -4,7 +4,7 @@ date: "2020-04-03T11:22:36"
 
 ---
 
-_Disclaimer: I'm not an expert on HIPAA regulation or a lawyer so don't take this as legal advice. There are likely to be errors in this guide so it's worth doing your own research too. If you find any errors please let me know at `luke [dot] harries [at] me [dot] com` or submit a [pull request](https://github.com/lharries/harries.co/tree/master/content/blog). It's worth discussing your plans with an lawyer. If you can't afford a lawyer then, until you can, ask a founder who has built a similar startup. It's crucial to uncover the unknown unknowns early on._
+_Disclaimer: I'm not an expert on HIPAA regulation or a lawyer so don't take this as legal advice. There are likely to be errors in this guide so it's worth doing your own research. If you find any errors please let me know at `luke [dot] harries [at] me [dot] com` or submit a [pull request](https://github.com/lharries/harries.co/tree/master/content/blog). It's worth discussing your plans with a lawyer. If you can't afford a lawyer then, until you can, ask a founder who has built a similar startup. It's crucial to uncover the unknown unknowns early on._
 
 This is a guide for early-stage HealthTech startups who want to launch an MVP quickly and cheaply while following HIPAA regulation. It's the guide that I wish I had when setting up infrastructure for COVID-19 drive-through testing.
 
@@ -21,7 +21,7 @@ HIPAA applies to two types of companies:
 - **Covered entities**: your company takes part in health insurance transactions. For example, health insurers and health providers.
 - **Business associates**: your company deals with PHI data for or from health insurance transactions. Your company will likely come in contact with PHI data by interacting with covered entities or other business associates. 
 
-Unless you are the company making the health insurance claim (or you are a health insurance), your startup will be a **business associate** under HIPAA.
+Unless you are the company making the health insurance claim (or you are a health insurance provider), your startup will be a **business associate** under HIPAA.
 
 **Importantly, you don't need to be directly interacting with a covered entity to be regulated under HIPAA as a business associate**. For example, let's say a hospital is using scheduling software running on AWS cloud hosting. The hospital handles insurance transactions and so they are the covered entity. The scheduling software will be handling patient intake information including their name and email (which are later used in a health insurance transaction) making them a business associate. AWS runs the servers and databases which the scheduling software uses and so AWS is also classified as a business associate.
 
@@ -41,7 +41,7 @@ The fastest way to be HIPAA compliant as a startup is to heavily use HIPAA compl
 
 #### Internal operations
 
-GSuite will be the core of your startup. When set up correctly, GSuite provides HIPAA compliant file storage (Google Drive), a collaborative database (Google Sheets), and external communication (GMail). Google handles the security, audit logs, identity management etc. To set up HIPAA compliant G-Suite, you'll need to sign up for G-Suite enterprise and sign their BAA. See [here](https://support.google.com/a/answer/3407074?hl=en) for more information.
+GSuite will be the core of your startup. When set up correctly, GSuite provides HIPAA compliant file storage (Google Drive), a collaborative database (Google Sheets), and external communication (Gmail). Google handles the security, audit logs, identity management, etc. To set up HIPAA compliant G-Suite, you'll need to sign up for G-Suite enterprise and sign their BAA. See [here](https://support.google.com/a/answer/3407074?hl=en) for more information.
 
 __Note: video calling with Google Hangouts is not HIPAA compliant.__
 
@@ -49,11 +49,11 @@ If you plan on sending PHI over email (even Gmail), I'd recommend [Paubox](https
 
 To securely share PHI internally or with other companies (after you've signed a BAA with them) you should create a shared drive within Google Drive and add them as collaborators.
 
-If you need to run custom code, you can reduce most security risks by running the code locally. Each evening (or however often you need to perform the task), download the relevant data from the Google Drive on to your work computer, run the script, and then upload the results to the Google Drive. Make sure your computer is encrypted and delete the PHI files afterwards.
+If you need to run custom code, you can reduce most security risks by running the code locally. Each evening (or however often you need to perform the task), download the relevant data from the Google Drive on to your work computer, run the script, and then upload the results to the Google Drive. Make sure your computer is encrypted and delete the PHI files afterward.
 
 #### Building web apps
 
-You can then embedd the Saas apps which handle PHI into your website.
+Instead of redirecting your customers to other Saas sites to handle the PHI, embed the Saas apps directly into your website.
 
 For example, if you want a scheduling system integrated into your site: setup [Acuity Scheduling](https://acuityscheduling.com/) and embed the booking form as an iFrame into your react web app. You can style CSS to make the booking form look native and deploy it as a static site from a Github repo using [Netlify](https://www.netlify.com/blog/2016/10/27/a-step-by-step-guide-deploying-a-static-site-or-single-page-app/) 
 
@@ -65,7 +65,7 @@ If you are looking to launch an iOS and Android app you could embed the Saas app
 
 ### Building your own systems
 
-Handling PHI with your own built systems adds significant complexity to be HIPAA compliant: audit logs, 3rd party audits, vulnerability scanning, etc. This can be partially abstracted using [Heroku Shield](https://www.heroku.com/shield) or [Aptible Deploy](https://www.aptible.com/deploy/). But, if you can, try and launch you MVP without PHI touching your servers as described above (insert link).
+Handling PHI with your own built systems adds significant complexity to be HIPAA compliant: audit logs, 3rd party audits, vulnerability scanning, etc. This can be partially abstracted using [Heroku Shield](https://www.heroku.com/shield) or [Aptible Deploy](https://www.aptible.com/deploy/). But, if you can, try and your MVP without PHI touching your servers as described above (insert link).
 
 ## The Business Associate Agreement (BAA)
 
@@ -73,7 +73,7 @@ Each company you interact with where you share PHI will require you to sign a BA
 
 ## Policies and procedures
 
-To be HIPAA compliant you have to follow policies and procedures in accordance with HIPAA. There's loads of them. Luckily, as a startup with a small team and (hopefully) no/very little code, you can get this all setup in half a day. I'd highly recommend [Aptible Comply](https://www.aptible.com/comply/). Comply generates the policies for your startup to follow. It helps you adhere to these policies by generating tickets based on time or events for example assigning HIPAA training to new employees. They have a free startup plan for up to 3 people if you send them an email. 
+To be HIPAA compliant you have to follow policies and procedures in accordance with HIPAA. There are loads of them. Luckily, as a startup with a small team and (hopefully) no/very little code, you can get this all set up in half a day. I'd highly recommend [Aptible Comply](https://www.aptible.com/comply/). Comply generates the policies for your startup to follow. It helps you adhere to these policies by generating tickets based on time or events, for example, assigning HIPAA training to new employees. They have a free startup plan for up to 3 people if you send them an email. 
 
 ## Summary
 
