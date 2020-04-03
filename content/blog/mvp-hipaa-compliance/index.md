@@ -61,8 +61,6 @@ For example, if you want a scheduling system integrated into your site: setup [A
 
 Two Saas apps that might be useful are [Acuity Scheduling](https://acuityscheduling.com/) for online scheduling and [JotForm](https://www.jotform.com/) for form building. Make sure to configure them properly: be on the HIPAA plan; sign the BAA; remove all PHI sent in emails from their servers.
 
-Payment providers such as Stripe and Square are PCI compliant (another stringent regulation) and can be used under HIPAA without signing a BAA.
-
 If you are looking to launch an iOS and Android app you could embed the Saas apps using a framework such as [react native](https://josephkhan.me/iframe-with-react-native/).
 
 ### Building your own systems
