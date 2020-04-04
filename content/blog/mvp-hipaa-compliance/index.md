@@ -7,7 +7,7 @@ description: "This is a guide for early-stage HealthTech startups who want to la
 
 _Disclaimer: I'm not an expert on HIPAA regulation or a lawyer so don't take this as legal advice. There are likely to be errors in this guide so it's worth doing your own research. If you find any errors please let me know at `luke [dot] harries [at] me [dot] com` or submit a [pull request](https://github.com/lharries/harries.co/blob/master/content/blog/mvp-hipaa-compliance/index.md). It's worth discussing your plans with a lawyer. If you can't afford a lawyer then, until you can, ask a founder who has built a similar startup. It's crucial to uncover the unknown unknowns early on._
 
-This is a guide for early-stage HealthTech startups who want to launch an MVP quickly and cheaply while following HIPAA regulation. The information is compiled from speaking to health lawyers, HealthTech founders, HIPAA experts, and reading far too much regulation. It's the guide that I wish I had when setting up infrastructure for COVID-19 drive-through testing.
+This guide is for HealthTech startups who want to launch an MVP under HIPAA regulation. I've compiled it from speaking to health lawyers, HealthTech founders, HIPAA experts, and reading too much regulation. It's the guide that I wish I had when setting up infrastructure for COVID-19 drive-through testing.
 
 ## Table of Contents
 ```toc
@@ -27,19 +27,19 @@ Unless you are the company making the health insurance claim (or you are a healt
 
 **Importantly, you don't need to be directly interacting with a covered entity to be regulated under HIPAA as a business associate**. For example, let's say a hospital is using scheduling software running on AWS cloud hosting. The hospital handles insurance transactions and so they are the covered entity. The scheduling software will be handling patient intake information including their name and email (which are later used in a health insurance transaction) making them a business associate. AWS runs the servers and databases which the scheduling software uses and so AWS is also classified as a business associate.
 
-A sign that you need to be HIPAA compliant is if you are asked to sign a BAA and thus take the role of a business associate. See Section X for more information on BAAs.
+A sign that you need to be HIPAA compliant is if a business partners asks you to sign a BAA and thus take the role of a business associate. See Section X for more information on BAAs.
 
-For more information on HIPAA I'd recommend reading [Aptible's HIPAA Compliance: Guide for Startups](https://www.aptible.com/hipaa/) or [TrueVault's HIPAA compliance developer guide](https://github.com/truevault/hipaa-compliance-developers-guide)
+For more information on HIPAA I'd recommend [Aptible's HIPAA Compliance: Guide for Startups](https://www.aptible.com/hipaa/) or [TrueVault's HIPAA compliance developer guide](https://github.com/truevault/hipaa-compliance-developers-guide)
 
 ## Building your MVP
 
 So, you have checked that you need to be HIPAA compliant but how do you make this happen quickly and cheaply while building an MVP?
 
-The secret to building a HIPAA compliant MVP is the same as building an MVP in any other industry: **write as little code as possible**. But the pressure to write no/low amounts of code is far greater in HealthTech. Dealing with patient data means that each line of code you write, or system you develop, introduces further security and compliance risks.
+The secret to building a HIPAA compliant MVP is the same as building an MVP in any other industry: **write the minimum amount of code**. But the pressure to write no/low amounts of code is far greater in HealthTech. Dealing with patient data means that each line of code you write, or system you develop, introduces further security and compliance risks.
 
 ### Using HIPAA compliant Saas apps
 
-The fastest way to be HIPAA compliant as a startup is to heavily use HIPAA compliant Saas apps. For each Saas app you use, you will need to select the HIPAA compliant plan (normally the most expensive); sign their BAA; and properly configure it so no PHI information is public or sent over unsecured mediums e.g. from their email servers. If you can't sign a BAA with the Saas app then you can't use it for PHI.
+The fastest way to be HIPAA compliant is to leverage HIPAA compliant Saas apps. For each Saas app you use, you will need to select the HIPAA compliant plan (normally the most expensive); sign their BAA; and properly configure it so no PHI information is public or sent over unsecured mediums e.g. from their email servers. If you can't sign a BAA with the Saas app then you can't use it for PHI.
 
 #### Internal operations
 
@@ -47,7 +47,7 @@ GSuite will be the core of your startup. When set up correctly, GSuite provides 
 
 __Note: video calling with Google Hangouts is not HIPAA compliant.__
 
-If you plan on sending PHI over email (even Gmail), I'd recommend [Paubox](https://www.paubox.com/). Paubox will securely encrypt all outgoing messages and attachments to ensure HIPAA compliance. Finally, you'll need to add a [HIPAA email disclaimer](https://www.exclaimer.com/email-signature-handbook/10128-hipaa-email-disclaimer-examples).
+If you plan on sending PHI over email (even Gmail), I'd recommend [Paubox](https://www.paubox.com/). Paubox will encrypt all outgoing messages and attachments. Finally, you'll need to add a [HIPAA email disclaimer](https://www.exclaimer.com/email-signature-handbook/10128-hipaa-email-disclaimer-examples).
 
 To securely share PHI internally or with other companies (after you've signed a BAA with them) you should create a shared drive within Google Drive and add them as collaborators.
 
@@ -73,7 +73,7 @@ Each company you interact with where you share PHI will require you to sign a BA
 
 ## Policies and procedures
 
-To be HIPAA compliant you have to follow policies and procedures in accordance with HIPAA. There are loads of them. Luckily, as a startup with a small team and (hopefully) no/very little code, you can get this all set up in half a day. I'd highly recommend [Aptible Comply](https://www.aptible.com/comply/). Comply generates the policies for your startup to follow. It helps you adhere to these policies by generating tickets based on time or events, for example, assigning HIPAA training to new employees. They have a free startup plan for up to 3 people if you send them an email. 
+To be HIPAA compliant you have to follow policies and procedures under HIPAA. There are loads of them. Luckily, as a startup with a small team and (hopefully) no/very little code, you can get this all set up in half a day. I'd highly recommend [Aptible Comply](https://www.aptible.com/comply/). Comply generates the policies for your startup to follow. It helps you adhere to these policies by generating tickets based on time or events, for example, assigning HIPAA training to new employees. They have a free startup plan for up to 3 people if you send them an email. 
 
 ## Summary
 
