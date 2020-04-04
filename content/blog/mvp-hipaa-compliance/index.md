@@ -12,7 +12,7 @@ This guide is for HealthTech startups who want to launch an MVP under HIPAA regu
 
 ## Summary
 
-It's possible to run a HIPAA compliant startup and launch an MVP in a few days at virtually no cost. The TL;DR version is: run your business through GSuite enterprise; leverage Saas apps to handle PHI and embed them into a static site; and use Aptible Comply to generate your policies and procedures.
+It's possible to run a HIPAA compliant startup and launch an MVP in a few days at virtually no cost. The TL;DR version is: run your business through GSuite (sign the BAA first); leverage Saas apps to handle PHI and embed them into a static site; and use Aptible Comply to generate your policies and procedures.
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ The fastest way to be HIPAA compliant is to leverage HIPAA compliant Saas apps. 
 
 GSuite will be the core of your startup. When set up correctly, GSuite provides HIPAA compliant file storage (Google Drive), a collaborative database (Google Sheets), and external communication (Gmail). Google handles the security, audit logs, identity management, etc.
 
-To set up HIPAA compliant G-Suite, you'll need to sign up for G-Suite and [sign their BAA](https://support.google.com/a/answer/3407074?hl=en). Enable [Vault](https://support.google.com/a/answer/2462365?hl=en) to retain data for auditing. Require multi-factor authentication.
+To set up HIPAA compliant GSuite, you'll need to sign up for GSuite and [sign their BAA](https://support.google.com/a/answer/3407074?hl=en). Enable [Vault](https://support.google.com/a/answer/2462365?hl=en) to retain data for auditing. Require multi-factor authentication.
 
 __Note: video calling with Google Hangouts is not HIPAA compliant.__
 
