@@ -29,7 +29,7 @@ HIPAA applies to two types of companies:
 - **Covered entities**: your company takes part in health insurance transactions. For example, health insurers and health providers.
 - **Business associates**: your company deals with PHI data for or from health insurance transactions. Your company will likely come in contact with PHI data by interacting with covered entities or other business associates.
 
-Unless you are the company making the health insurance claim (or you are a health insurance provider), your startup will be a **business associate** under HIPAA.
+As a rule of thumb, unless you are employing medical professionals or making health insurance transactions your startup will be a **business associate** under HIPAA.
 
 **Importantly, you don't need to be directly interacting with a covered entity to be regulated under HIPAA as a business associate**. For example, let's say a hospital is using scheduling software running on AWS cloud hosting. The hospital handles insurance transactions and so they are the covered entity. The scheduling software will be handling patient intake information including their name and email (which are later used in a health insurance transaction) making them a business associate. AWS runs the servers and databases which the scheduling software uses and so AWS is also classified as a business associate.
 
@@ -49,7 +49,9 @@ The fastest way to be HIPAA compliant is to leverage HIPAA compliant Saas apps. 
 
 #### Internal operations
 
-GSuite will be the core of your startup. When set up correctly, GSuite provides HIPAA compliant file storage (Google Drive), a collaborative database (Google Sheets), and external communication (Gmail). Google handles the security, audit logs, identity management, etc. To set up HIPAA compliant G-Suite, you'll need to sign up for G-Suite enterprise and sign their BAA. See [here](https://support.google.com/a/answer/3407074?hl=en) for more information.
+GSuite will be the core of your startup. When set up correctly, GSuite provides HIPAA compliant file storage (Google Drive), a collaborative database (Google Sheets), and external communication (Gmail). Google handles the security, audit logs, identity management, etc.
+
+To set up HIPAA compliant G-Suite, you'll need to sign up for G-Suite and [sign their BAA](https://support.google.com/a/answer/3407074?hl=en). Enable [Vault](https://support.google.com/a/answer/2462365?hl=en) to retain data for auditing. Require multi-factor authentication.
 
 __Note: video calling with Google Hangouts is not HIPAA compliant.__
 
@@ -71,7 +73,7 @@ If you are looking to launch an iOS and Android app you could embed the Saas app
 
 ### Building your own systems
 
-Handling PHI with your own built systems adds significant complexity to be HIPAA compliant: audit logs, 3rd party audits, vulnerability scanning, etc. This can be partially abstracted using [Heroku Shield](https://www.heroku.com/shield) or [Aptible Deploy](https://www.aptible.com/deploy/). But, if you can, try and your MVP without PHI touching your servers as described [above](#building-web-apps).
+Handling PHI with your own built systems adds significant complexity to be HIPAA compliant: audit-level application logging, centralized log collection, 3rd party security audits, vulnerability scanning, etc. This can be partially abstracted using [Heroku Shield](https://www.heroku.com/shield) or [Aptible Deploy](https://www.aptible.com/deploy/). TrueVault has a [detailed developer guide for HIPAA compliance and application development](https://github.com/truevault/hipaa-compliance-developers-guide). But, if you can, try and build your MVP without PHI touching your servers as described [above](#building-web-apps).
 
 ## The Business Associate Agreement (BAA)
 
