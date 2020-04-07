@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Image from "gatsby-image";
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography";
+import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -33,14 +33,14 @@ const Bio = () => {
         }
       }
     }
-  `);
+  `)
 
-  const { author, social } = data.site.siteMetadata;
+  const { author, social } = data.site.siteMetadata
   return (
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5)
+        marginBottom: rhythm(2.5),
       }}
     >
       <Image
@@ -50,35 +50,44 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
-          borderRadius: `100%`
+          borderRadius: `100%`,
         }}
         imgStyle={{
-          borderRadius: `50%`
+          borderRadius: `50%`,
         }}
       />
       <div>
         <p
           style={{
             marginBottom: "auto",
-            marginTop: "auto"
+            marginTop: "auto",
           }}
         >
-          By <a href="/">
-          {author.name}
-        </a>.
-          {/*{author.summary}*/}
+          By <a href="/">{author.name}</a>.{/*{author.summary}*/}
           {` `}
           Say hello on{" "}
           <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>.
         </p>
-        <form name="email" method="POST" data-netlify="true" className="form-inline" action="/success">
+        <form
+          name="email"
+          method="POST"
+          data-netlify="true"
+          className="form-inline"
+          action="/success"
+        >
           <label htmlFor="email">Get my newsletter:</label>
-          <input className="form-control" type="email" name="email" placeholder="Email" style={{ margin: "5px" }}/>
-          <input type="hidden" name="form-name" value="email"/>
+          <input
+            className="form-control"
+            type="email"
+            name="email"
+            placeholder="Email"
+            style={{ margin: "5px" }}
+          />
+          <input type="hidden" name="form-name" value="email" />
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Bio;
+export default Bio

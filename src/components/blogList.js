@@ -1,6 +1,6 @@
-import React from "react";
-import { rhythm } from "../utils/typography";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import React from "react"
+import { rhythm } from "../utils/typography"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 const BlogList = () => {
   const data = useStaticQuery(graphql`
@@ -21,41 +21,39 @@ const BlogList = () => {
         }
       }
     }
-  `);
-  const posts = data.allMarkdownRemark.edges;
+  `)
+  const posts = data.allMarkdownRemark.edges
   return (
     <div>
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
+        const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
             <header>
               <h2
                 style={{
-                  marginBottom: rhythm(1 / 4)
+                  marginBottom: rhythm(1 / 4),
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h2>
-              <small>
-                {node.frontmatter.date}
-              </small>
+              <small>{node.frontmatter.date}</small>
             </header>
             <section>
               <p
                 className="text-h3"
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt
+                  __html: node.frontmatter.description || node.excerpt,
                 }}
               />
             </section>
           </article>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default BlogList;
+export default BlogList

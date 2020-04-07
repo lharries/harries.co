@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
-import SEO from "../components/seo";
-import BlogList from "../components/blogList";
-import Image from "gatsby-image";
+import SEO from "../components/seo"
+import BlogList from "../components/blogList"
+import Image from "gatsby-image"
 
 const Index = () => {
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(false)
 
   const data = useStaticQuery(graphql`
     query HomeQuery {
@@ -56,11 +56,11 @@ const Index = () => {
         publicURL
       }
     }
-  `);
+  `)
 
   return (
     <div>
-      <SEO title="Luke Harries"/>
+      <SEO title="Luke Harries" />
       <header className="navbar-fixed">
         <div className="container">
           <nav className="navbar navbar-expand-md">
@@ -78,10 +78,16 @@ const Index = () => {
               aria-label="Toggle navigation"
               onClick={() => setNavbar(!navbar)}
             >
-              <span className="fa fa-bars" style={{ color: "#777" }}/>
+              <span className="fa fa-bars" style={{ color: "#777" }} />
             </button>
 
-            <div aria-hidden='true' className="collapse navbar-collapse" id="navbarNav3" style={{display: navbar ? 'block' : 'none'}} onClick={() => setNavbar(false)}>
+            <div
+              aria-hidden="true"
+              className="collapse navbar-collapse"
+              id="navbarNav3"
+              style={{ display: navbar ? "block" : "none" }}
+              onClick={() => setNavbar(false)}
+            >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a className="nav-link" href="#bio">
@@ -111,8 +117,7 @@ const Index = () => {
       <section
         className="fdb-block fullscreen"
         style={{
-          background: `url(${data.circuitboard
-            .publicURL}), linear-gradient(to left, black, blue)`
+          background: `url(${data.circuitboard.publicURL}), linear-gradient(to left, black, blue)`,
         }}
       >
         <div className="container">
@@ -123,7 +128,8 @@ const Index = () => {
           <div className="row text-center justify-content-center">
             <div className="col-12 col-md-8 fdb-box overflowing">
               <h2>
-                <br/>Luke Harries
+                <br />
+                Luke Harries
               </h2>
               <p>Hi! I'm an entrepreneur and software engineer</p>
               <p>
@@ -135,7 +141,8 @@ const Index = () => {
                     className="fa fa-github"
                     aria-hidden="true"
                     title="github"
-                  />&nbsp;
+                  />
+                  &nbsp;
                 </a>
                 &nbsp;
                 <a
@@ -146,7 +153,8 @@ const Index = () => {
                     className="fa fa-linkedin"
                     aria-hidden="true"
                     title="linkedin"
-                  />&nbsp;
+                  />
+                  &nbsp;
                 </a>
                 &nbsp;
                 <a
@@ -157,11 +165,13 @@ const Index = () => {
                     className="fa fa-twitter"
                     aria-hidden="true"
                     title="twitter"
-                  />&nbsp;
+                  />
+                  &nbsp;
                 </a>
                 &nbsp;
                 <a href="https://medium.com/@lharries" aria-label="medium">
-                  <i className="fa fa-medium" aria-hidden="true"/>&nbsp;
+                  <i className="fa fa-medium" aria-hidden="true" />
+                  &nbsp;
                 </a>
               </p>
             </div>
@@ -177,23 +187,22 @@ const Index = () => {
                 <strong>
                   I'm on a mission to solve real problems at scale.
                 </strong>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 To date, I've approached this in several ways: building
                 companies; working as a contract software engineer developing
                 websites, apps, and machine learning pipelines; and consulting
                 for early-stage tech startups on product development, technical
                 hiring, and outsourcing.
-                <br/>
-                <br/>
+                <br />
+                <br />
                 I'm currently building something new. If you'd like to find out
                 more, reach out through{" "}
                 <a href="https://twitter.com/LukeHarries_">Twitter</a> or{" "}
-                <a href="https://www.linkedin.com/in/luke-harries/">
-                  LinkedIn
-                </a>.
-                <br/>
-                <br/>
+                <a href="https://www.linkedin.com/in/luke-harries/">LinkedIn</a>
+                .
+                <br />
+                <br />
                 Previously, I was an AI Resident at Microsoft Research working
                 on deep reinforcement learning. Before, I studied the MSc in
                 Computer Science at UCL, completing my thesis with{" "}
@@ -204,7 +213,8 @@ const Index = () => {
                 capitalists. My work on cognitive neuroscience was{" "}
                 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29604698">
                   published
-                </a>. Alongside, I co-founded Proteam, which we grew to be the
+                </a>
+                . Alongside, I co-founded Proteam, which we grew to be the
                 largest platform for intra-university sport in the UK with
                 9,000+ users.
               </p>
@@ -217,7 +227,7 @@ const Index = () => {
           <div className="row justify-content-center">
             <div className="col col-lg-8">
               <h2>Blog</h2>
-              <BlogList/>
+              <BlogList />
             </div>
           </div>
         </div>
@@ -348,17 +358,18 @@ const Index = () => {
                       <strong>Cambridge Cancer Genomics (YC S17)</strong>,
                       leading the development of SomaticNet - a novel method for
                       detecting cancer mutations.
-                      <br/>
-                      <br/>
+                      <br />
+                      <br />
                       The resulting{" "}
                       <a href="https://arxiv.org/pdf/1811.11674.pdf">
                         paper
                       </a>{" "}
                       was accepted at the Machine Learning for Health workshop
-                      at NeurIPS 2018 and the tool is publically available via <a
-                      href="https://www.ccg.ai/projects/net">
-                      CCG's website
-                    </a>.
+                      at NeurIPS 2018 and the tool is publically available via{" "}
+                      <a href="https://www.ccg.ai/projects/net">
+                        CCG's website
+                      </a>
+                      .
                     </p>
                   </div>
                 </div>
@@ -405,13 +416,13 @@ const Index = () => {
                       During my final year at Cambridge, I co-founded and was
                       CTO of Proteam which we built to solve the lack of
                       organisation of University Sport.
-                      <br/>
-                      <br/>
+                      <br />
+                      <br />
                       The iOS and Android apps allowed students to follow teams,
                       get notified of upcoming games, create team-sheets and
                       much more.
-                      <br/>
-                      <br/>
+                      <br />
+                      <br />
                       We grew the platform to <strong>9,000+ users</strong>{" "}
                       across 6 Universities. You can find an archive of the
                       website <a href="https://harries.co/proteam/">here</a>.
@@ -432,7 +443,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="row-50"/>
+          <div className="row-50" />
 
           <div className="row">
             <div className="col-sm-4 text-left">
@@ -451,8 +462,8 @@ const Index = () => {
                       🎉
                     </span>{" "}
                     Winner of HackCambridge 2019
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     We developed a tool to gamify physiotherapy workouts by
                     using machine learning to classify poses. The aim is to
                     increase adherence of at home workouts. All training and
@@ -479,15 +490,15 @@ const Index = () => {
                       🎉
                     </span>{" "}
                     Winner of HackCambridge's Microsoft Prize 2018
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     For the millions of people with Visual Impairments, images
                     online are inaccessible. We created a chrome extension which
                     uses machine learning to automatically generate the missing
                     image captions. The captions describe what's in the photo,
                     who they are, and what any text says.
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     Visit{" "}
                     <a href="https://visualcognition.co/">
                       VisualCognition.co
@@ -513,21 +524,21 @@ const Index = () => {
                       🎉
                     </span>{" "}
                     Winner of Allia's Serious Impact Hackathon 2017
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     We created the proof of concept for faster, cheaper and more
                     accurate screening of Macular Degeneration. It is built for
                     Google Cardboard which turns any phone into a VR headset.
-                    <br/>
-                    <br/>
-                    Our solution has three parts: <br/>
-                    1. Mapping the functional visual field <br/>
+                    <br />
+                    <br />
+                    Our solution has three parts: <br />
+                    1. Mapping the functional visual field <br />
                     2. Increasing awareness of what it's like living with MD{" "}
-                    <br/>
+                    <br />
                     3. Warping a real-time camera feed to move images out of
                     your blind spot
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     Visit{" "}
                     <a href="https://github.com/sudo-challenge-mapmd/mapper">
                       Github
@@ -557,7 +568,7 @@ const Index = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
