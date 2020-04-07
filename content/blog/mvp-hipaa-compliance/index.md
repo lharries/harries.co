@@ -33,7 +33,7 @@ As a rule of thumb, unless you are employing medical professionals or making hea
 
 **Importantly, you don't need to be directly interacting with a covered entity to be regulated under HIPAA as a business associate**. For example, let's say a hospital is using scheduling software running on AWS cloud hosting. The hospital handles insurance transactions and so they are the covered entity. The scheduling software will be handling patient intake information including their name and email (which are later used in a health insurance transaction) making them a business associate. AWS runs the servers and databases which the scheduling software uses and so AWS is also classified as a business associate.
 
-A clear sign that you need to be HIPAA compliant is if a business partners asks you to sign a [BAA](#the-business-associate-agreement-baa) and thus take the role of a business associate.
+A clear sign that you need to be HIPAA compliant is if a business partner asks you to sign a [BAA](#the-business-associate-agreement-baa) and thus take the role of a business associate.
 
 For more information on HIPAA I'd recommend [Aptible's HIPAA Compliance: Guide for Startups](https://www.aptible.com/hipaa/) or [TrueVault's HIPAA compliance developer guide](https://github.com/truevault/hipaa-compliance-developers-guide)
 
