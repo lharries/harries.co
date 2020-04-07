@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import SEO from "../components/seo"
-import BlogList from "../components/blogList"
+import PostList from "../components/postList"
 import Image from "gatsby-image"
 
 const Index = () => {
@@ -226,8 +226,26 @@ const Index = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col col-lg-8">
-              <h2>Blog</h2>
-              <BlogList />
+              <h2>Guides</h2>
+              <PostList category="guide"/>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col col-lg-8">
+              <h2>Blog Posts</h2>
+              <PostList category="blog"/>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col col-lg-8">
+              <h2>Notes</h2>
+              <PostList category="note"/>
             </div>
           </div>
         </div>

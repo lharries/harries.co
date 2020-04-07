@@ -1,6 +1,7 @@
 ---
 title: What's the God mode?
 date: "2020-03-31T11:22:36"
+category: blog
 ---
 
 If God were to design a login screen what would it look like?
