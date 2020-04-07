@@ -1,5 +1,5 @@
 ---
-title: HIPAA compliance for startups - the MVP guide
+title: Launching a HIPAA compliant MVP
 date: "2020-04-03T11:22:36"
 description: "This is a guide for early-stage HealthTech startups who want to launch an MVP quickly and cheaply while following HIPAA regulation. It's the guide that I wish I had when setting up infrastructure for COVID-19 drive-through testing."
 
