@@ -2,8 +2,7 @@
 title: Launching a HIPAA compliant MVP
 date: "2020-04-03T11:22:36"
 description: "This is a guide for early-stage HealthTech startups who want to launch an MVP quickly and cheaply while following HIPAA regulation. It's the guide that I wish I had when setting up infrastructure for COVID-19 drive-through testing."
-
-
+category: guide
 ---
 
 _Disclaimer: I'm not an expert on HIPAA regulation or a lawyer so don't take this as legal advice. There are likely to be errors in this guide so it's worth doing your own research. If you find any errors please [email me](/contact-me) or submit a [pull request](https://github.com/lharries/harries.co/blob/master/content/blog/mvp-hipaa-compliance/index.md). It's worth discussing your plans with a lawyer. If you can't afford a lawyer then, until you can, ask a founder who has built a similar startup. It's crucial to uncover the unknown unknowns early on._

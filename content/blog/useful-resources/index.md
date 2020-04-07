@@ -1,6 +1,7 @@
 ---
-title: Useful resources for programming, machine learning and MedTech
+title: Useful resources
 date: "2020-01-01T11:22:36"
+category: guide
 ---
 
 A collection of tools, guides, and courses that I found useful or wish I had found earlier! The topics include Computer Science, Machine Learning, Machine Learning applied to Medicine, Deep Learning and Reinforcement Learning.

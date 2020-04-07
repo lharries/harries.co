@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "harriesco",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Luke Harrie's Blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Luke Harries",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/lharries/harries.co/issues"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
@@ -29,6 +29,7 @@
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-remark": "^2.6.59",
     "gatsby-transformer-sharp": "^2.3.19",
+    "lodash": "^4.17.15",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

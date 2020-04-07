@@ -1,6 +1,7 @@
 ---
 title: The hidden power of HackerNews search
 date: "2018-07-29T11:22:36"
+category: blog
 ---
 
 > Hacker News Search is my go-to search engine

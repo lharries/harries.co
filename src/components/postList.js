@@ -2,9 +2,9 @@ import React from "react"
 import { rhythm } from "../utils/typography"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
-const BlogList = () => {
+const PostList = ({category}) => {
   const data = useStaticQuery(graphql`
-    query BlogList {
+    query PostList {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
@@ -16,13 +16,14 @@ const BlogList = () => {
               date(formatString: "MMMM DD, YYYY")
               title
               description
+              category
             }
           }
         }
       }
     }
   `)
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges.filter((edge) => edge.node.frontmatter.category === category)
   return (
     <div>
       {posts.map(({ node }) => {
@@ -56,4 +57,4 @@ const BlogList = () => {
   )
 }
 
-export default BlogList
+export default PostList
