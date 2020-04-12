@@ -1,6 +1,8 @@
 ---
 title: Building credit - why it matters and how to do it? (UK)
-date: "2020-04-07T11:22:36"
+date: "2020-04-12T11:22:36"
+category: guide
+tags: personal-finance
 ---
 
 ## Why should you care about credit?
@@ -9,7 +11,9 @@ Sometime in the future, you'll want a phone, car, or house. Unless you have the 
 
 This credit check will analyse your credit report—a history of all your previous borrowings and repayments—and determine if they should offer you a loan and on what terms.
 
-**If you are young, you'll likely be outright rejected for having no credit history.** It happened to me and most of my friends. It's pretty easy to fix, but it can take a long time to work (1-2 years). You will want to fix it as soon as possible. Give your future self optionality. Below are the steps I, and several of my friends, have followed to fix it:
+**If you are young, you'll likely be outright rejected for having no credit history.** It happened to me and most of my friends. It's pretty easy to fix, but it can take a long time to work (1-2 years). You will want to fix it as soon as possible. Give your future self optionality. Below are the steps to fix it.
+
+_This guide is for people in the UK. I don't think it will translate to other countries._ 
 
 ## How to improve your credit score?
 1. **[Get on the electoral roll](https://www.gov.uk/electoral-register)** and make it public.
@@ -32,7 +36,7 @@ This credit check will analyse your credit report—a history of all your previo
 
 6. **Increasing your credit limit/getting more credit cards**. In general, the larger credit you have access to and the lower credit utilisation, the higher your credit rating will be. Once you've been using your first credit card for 6-12 months you should be able to increase your credit limit either by increasing the credit limit on your existing card or getting another credit card. If you are eligible, you'll likely want a new credit card which also has some perks (although these perks are not as good as the US).
 
-## Which credit card is best?
+## Which credit card should I get?
 
 [MoneySavingExpert](https://www.moneysavingexpert.com/credit-cards/best-credit-card-rewards/) has an up-to-date list of credit cards. As I'm writing this, the best option is the [Amex Platinum Everyday](https://creditcards.moneysavingexpert.com//rewards/americanexpress/amex-platinum-cashback-everyday)—confirm that you are eligible before you apply. You'll need to spend a minimum of £3,000 in the first year. If needed, ask your parents to book the family holiday through the card.
 
