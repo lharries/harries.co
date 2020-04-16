@@ -270,9 +270,6 @@ header + header {
 table tr.no-border th, table tr.no-border td {
   border-top: 0; }
 
-html {
-  scroll-behavior: smooth; }
-
 a {
   color: #0000FF; }
 
