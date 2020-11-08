@@ -1,5 +1,5 @@
 ---
-title: Trustpilot - the need to get incentives right
+title: Trustpilot - when your business model produces challenging incentives
 date: "2020-11-08T11:22:36"
 category: blog
 ---
