@@ -1,5 +1,5 @@
 ---
-title: Trustpilot - when your business model produces challenging incentives
+title: Trustpilot and difficult incentive problems
 date: "2020-11-08T11:22:36"
 category: blog
 ---
