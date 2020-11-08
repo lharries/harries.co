@@ -196,11 +196,7 @@ const Index = () => {
                 hiring, and outsourcing.
                 <br />
                 <br />
-                I'm currently building something new. If you'd like to find out
-                more, reach out through{" "}
-                <a href="https://twitter.com/LukeHarries_">Twitter</a> or{" "}
-                <a href="https://www.linkedin.com/in/luke-harries/">LinkedIn</a>
-                .
+                I'm a co-founder of <a href="https://joinfella.com/">Fella</a> (YC W20) - a startup helping men to tackle binge eating.
                 <br />
                 <br />
                 Previously, I was an AI Resident at Microsoft Research working
