@@ -1,5 +1,5 @@
 ---
-title: Trustpilot and difficult incentive problems
+title: Trustpilot and misaligned incentives
 date: "2020-11-08T11:22:36"
 category: blog
 ---
