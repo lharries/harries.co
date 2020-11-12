@@ -26,7 +26,7 @@ What does this mean for the customer? Believing in Trustpilot as a measure of re
 
 **How can Trustpilot remedy this?**
 
-I think Trustpilot is an awesome service for consumers but the incentive problem is tough... For Trustpilot to truly fix the incentive problem they would need to be directly aligned with the reviewer. But the obvious business models such as a paywalling reviews would strongly interfere with their flywheel.
+I think Trustpilot is an awesome service for consumers but the incentive problem is tough... For Trustpilot to truly fix the incentive problem they would need to be directly aligned with the reviewer. But the obvious business models such as paywalling reviews would strongly interfere with their flywheel.
 
 It's possible to continue charging businesses. But Trustpilot would need to play the long game - not fudging the reviews at any cost. Instead, continuing to be a forcing function for businesses to treat their customers better, and thus improve their score. But, moderating reviews is hard because customer experience is subjective and Trustpilot does not have proper validation for who has and has not been a customer. Solutions to the verification problem seem feasible, such as the Facebook retargeting mechanism of sharing a hashed list of their customer emails.
 
