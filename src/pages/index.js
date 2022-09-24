@@ -190,17 +190,19 @@ const Index = () => {
                 <br />
                 <br />
                 To date, I've approached this in several ways: building
-                companies; working as a contract software engineer developing
-                websites, apps, and machine learning pipelines; and consulting
+                companies; working as a software engineer developing
+                websites, apps, and machine learning pipelines; consulting
                 for early-stage tech startups on product development, technical
-                hiring, and outsourcing.
+                hiring, and outsourcing; and making small angel investments.
                 <br />
                 <br />
-                I'm a co-founder of <a href="https://joinfella.com/">Fella</a> a YC backed startup that helps men with obesity get to a healthier weight.
+                I'm the Head of Product at <a href="https://posthog.com">Posthog</a> an open source product operating system to help you build better products.
                 <br />
                 <br />
-                Previously, I was an AI Resident at Microsoft Research working
-                on deep reinforcement learning. Before, I studied the MSc in
+                Previously, I was the CEO/co-founder of <a href="https://joinfella.com/">Fella</a> 
+                a YC backed startup that helps men with obesity get to a healthier weight.
+                Before, I was an AI Resident at Microsoft Research working
+                on deep reinforcement learning. I studied the MSc in
                 Computer Science at UCL, completing my thesis with{" "}
                 <a href="http://ccg.ai">Cambridge Cancer Genomics</a>, a Y
                 Combinator backed BioTech Startup. I studied pre-med at
