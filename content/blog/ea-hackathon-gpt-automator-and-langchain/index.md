@@ -44,7 +44,7 @@ We created **GPT Automator**. You speak to your computer and it does tasks on yo
 
 Have a watch of the demo:
 
-[![Demo](./demo.png)](https://www.loom.com/share/9a1bda3d62d8440e9193a79ff10dd29)
+[![Demo](./demo.png)](https://www.loom.com/share/9a1bda3d62d8440e9193a79ff10dd291)
 
 It has two main parts:
 
