@@ -1,5 +1,5 @@
 ---
-title: EA London Hackathon - GPT Automator and LangChain
+title: EA London Hackathon - GPT Automator, LangChain and Tool Engineering
 date: "2023-02-12T22:30:00"
 category: blog
 ---
@@ -21,6 +21,39 @@ Chains enable you to combine multiple components into a pipeline - for example, 
 **Agents are where the real power comes from**. Instead of you deciding what the specific sequence of the chain should be, you create a set of tools and have the LLM decide which tool it should use next to perform the task.
 
 The tool could be a simple call to GPT3 or a full python script calling external APIs. To create a tool, you write the python script, give the tool a name e.g. “python_repl”, and give a description of when to use the tool (this also acts as the prompt) e.g. “Use this python reply tool when you are wanting to do maths. This tool evaluates python code and returns the result. For example the input ‘5 ^ 5’ returns  3,125”.
+
+By giving the LLM a number of tools and enabling it to decide when to use them, you can overcome the short-comings where LLMs currently fail such as doing complex maths problems.
+
+But **you can also use the tools to go much further**.
+
+LangChain comes with a bunch of tools that enable you to do things like search google, query wikipedia, or interact with SQL database.
+
+But most of the these tools are “read-only”.
+
+## The hackathon
+
+Chidi and I spent the first 30 minutes brainstorming ideas. He had previously built [Buzz](https://github.com/chidiwilliams/buzz), a local speed-to-text program powered by OpenAI’s Whisper. We started wondering how could we combine Buzz and LangChain.
+
+Eventually we landed on the question “What if we the GPT3 could perform actions on our behalf?” - switching the capabilities of the agents from “read-only” to “read-and-write”
+
+In true hackathon fashion, we spend all day hacking and used the final 5 minutes to merge our branches. We gave a presentation on the tool and luckily the demo gods were on our side!
+
+![Presentation](./presentation.jpeg)
+
+## The result: GPT Automator
+
+In the end we created **GPT Automator**. You speak to your computer and it does tasks on your behalf.
+
+Have a watch of the demo:
+
+[![Demo](./demo.png)](https://www.loom.com/share/9a1bda3d62d8440e9193a79ff10dd29)
+
+It has two main parts:
+
+1. Voice to command: We generate the command using Whisper running locally (a fork of Buzz).
+2. Command to Action: We give the command to a langchain agent equipped with custom tools we wrote. These tools include controlling the operating system of the computer using applescript, and controlling the active browser using javascript. Finally, like any good AI, we have the agent speak out the final result using AppleScript `say "{Result}"` (try typing `say "Hello World!"` into your mac terminal if you haven’t used it before”).
+
+Here's a custom tool we made to have the LLM control the computer using AppleScript:
 
 ```python
 @tool
@@ -54,44 +87,13 @@ def computer_applescript_action(apple_script):
     return decoded_text
 ```
 
-By giving the LLM a number of tools and enabling it to decide when to use them, you can overcome the short-comings where LLMs currently fail such as doing complex maths problems.
-
-But **you can also use the tools to go much further**.
-
-LangChain comes with a bunch of tools that enable you to do things like search google, query wikipedia, or interact with SQL database.
-
-But most of the these tools are “read-only”.
-
-## The hackathon
-
-Chidi and I spent the first 30 minutes brainstorming ideas. He had previously built Buzz, a local speed-to-text program powered by OpenAI’s Whisper. We started wondering how could we combine Buzz and LangChain.
-
-Eventually we landed on the question “What if we the GPT3 could perform actions on our behalf?” - switching the capabilities of the agents from “read-only” to “read-and-write”
-
-In true hackathon fashion, we spend all day hacking and used the final 5 minutes to merge our branches. We gave a presentation on the tool and luckily the demo gods were on our side!
-
-![Presentation](./presentation.jpeg)
-
-## The result: GPT Automator
-
-In the end we created **GPT Automator**. You speak to your computer and it does tasks on your behalf.
-
-Have a watch of the demo:
-
-[![Demo](./demo.png)](https://www.loom.com/share/9a1bda3d62d8440e9193a79ff10dd29)
-
-It has two main parts:
-
-1. Voice to command: We generate the command using Whisper running locally (a fork of Buzz).
-2. Command to Action: We give the command to a langchain agent equipped with custom tools we wrote. These tools include controlling the operating system of the computer using applescript, and controlling the active browser using javascript. Finally, like any good AI, we have the agent speak out the final result using AppleScript `say "{Result}"` (try typing `say "Hello World!"` into your mac terminal if you haven’t used it before”). 
-
 Overall it works surprisingly well!
 
 - “What is 5 x 5?” → It will open a calculator and type in 5 x 5 =
 - “Find me a good restaurant nearby” → It will open up chrome, google search for a restaurant nearby, parse the page, and then return the top results. Sometimes it’s cheeky, and instead will open up the google maps result and say “The best restaurants are the ones at the top of the page on Google maps”. Other times it opens the top link on google - and gets stuck on the Google accessibility page…
 - “Play chess” → It will open up [Chess.com](http://Chess.com) and start clicking around
 
-Here's an example of it running:
+Here's what's printed to the terminal as it runs (watch the demo to see it in action):
 
 ```
 Command: Find a great restaurant near Manchester.
