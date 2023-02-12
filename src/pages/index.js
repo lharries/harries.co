@@ -220,11 +220,11 @@ const Index = () => {
         </div>
       </section>
       <section className="fdb-block" id="blog">
-        <div className="container">
+      <div className="container">
           <div className="row justify-content-center">
             <div className="col col-lg-8">
-              <h2>Guides</h2>
-              <PostList category="guide"/>
+              <h2>Blog Posts</h2>
+              <PostList category="blog"/>
             </div>
           </div>
         </div>
@@ -232,8 +232,8 @@ const Index = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col col-lg-8">
-              <h2>Blog Posts</h2>
-              <PostList category="blog"/>
+              <h2>Guides</h2>
+              <PostList category="guide"/>
             </div>
           </div>
         </div>
