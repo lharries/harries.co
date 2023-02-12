@@ -4,7 +4,7 @@ date: "2023-02-12T22:30:00"
 category: blog
 ---
 
-Yesterday, [Chidi Williams](https://chidiwilliams.com/) and I did the [London EA Hackathon 2023](https://forum.effectivealtruism.org/events/gTSwA8RoGidjpLnf6/london-ea-hackathon) and built a tool to physically control your computer through your voice using Whisper, LangChain and GPT3. It can open and interact with applications, click around in chrome, and synthesize information.
+Yesterday, [Chidi Williams](https://chidiwilliams.com/) and I did the [London EA Hackathon 2023](https://forum.effectivealtruism.org/events/gTSwA8RoGidjpLnf6/london-ea-hackathon). We built a tool to physically control your computer through your voice using Whisper, LangChain and GPT3. It can open and interact with applications, click around in chrome, and synthesize information.
 
 Hackathons are great for trying out new tech - I’ve previously used it to experiment with [tensorflow-js](https://harries.co/#hackathons), [Google Cardboard VR](https://github.com/lharries/mapper), and [Azure’s ML](https://harries.co/#hackathons) apis.
 
@@ -22,7 +22,7 @@ The tool could be a simple call to GPT3 or a full python script calling external
 
 By giving the LLM a number of tools and enabling it to decide when to use them, you can overcome the short-comings where LLMs currently fail such as doing complex maths problems.
 
-But **you can also use the tools to go much further**.
+**You can also use the tools to go much further**.
 
 LangChain comes with a bunch of tools that enable you to do things like search google, query wikipedia, or interact with SQL database.
 
