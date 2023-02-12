@@ -4,8 +4,6 @@ date: "2023-02-12T22:30:00"
 category: blog
 ---
 
-# EA London Hackathon - GPT Automator and LangChain
-
 *All the source code is open-source on [Github](https://github.com/chidiwilliams/gpt-automator)*
 
 Yesterday, [Chidi Williams](https://chidiwilliams.com/) and I did the [London EA Hackathon 2023](https://forum.effectivealtruism.org/events/gTSwA8RoGidjpLnf6/london-ea-hackathon) and built a tool to physically control your computer through your voice using Whisper, LangChain and GPT3. It can open and interact with applications, click around in chrome, and synthesize information.
