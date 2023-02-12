@@ -1,5 +1,5 @@
 ---
-title: EA London Hackathon - GPT Automator, LangChain and Tool Engineering
+title: GPT Automator, LangChain and Tool Engineering - EA London Hackathon
 date: "2023-02-12T22:30:00"
 category: blog
 ---
