@@ -34,7 +34,7 @@ But most of the these tools are “read-only”.
 
 ## The hackathon
 
-Chidi and I spent the first 30 minutes brainstorming ideas. He had previously built [Buzz](https://github.com/chidiwilliams/buzz), a local speed-to-text program powered by OpenAI’s Whisper. We started wondering how could we combine Buzz and LangChain.
+Chidi and I spent the first 30 minutes brainstorming ideas. He had previously built [Buzz](https://github.com/chidiwilliams/buzz), a local speed-to-text program powered by OpenAI’s Whisper. We started wondering how can we combine Buzz and LangChain.
 
 Eventually we landed on the question “What if we the GPT3 could perform actions on our behalf?” - switching the capabilities of the agents from “read-only” to “read-and-write”
 
@@ -53,7 +53,7 @@ Have a watch of the demo:
 It has two main parts:
 
 1. Voice to command: We generate the command using Whisper running locally (a fork of Buzz).
-2. Command to Action: We give the command to a langchain agent equipped with custom tools we wrote. These tools include controlling the operating system of the computer using applescript, and controlling the active browser using javascript. Finally, like any good AI, we have the agent speak out the final result using AppleScript `say "{Result}"` (try typing `say "Hello World!"` into your mac terminal if you haven’t used it before”).
+2. Command to Action: We give the command to a LangChain agent equipped with custom tools we wrote. These tools include controlling the operating system of the computer using applescript, and controlling the active browser using javascript. Finally, like any good AI, we have the agent speak out the final result using AppleScript `say "{Result}"` (try typing `say "Hello World!"` into your mac terminal if you haven’t used it before”).
 
 Here's a custom tool we made to have the LLM control the computer using AppleScript:
 
@@ -158,4 +158,4 @@ tell application "Finder"
 end tell
 ```
 
-We didn’t go into this hackathon with a particular EA focus — instead just wanting to trying out LangChain — but ended up spurring some interesting discussions around prompt engineering, alignment, and having your computer wipe your computer by accident.
+We didn’t go into this hackathon with a particular EA focus — instead just wanting to trying out LangChain — but ended up spurring some interesting discussions around tool engineering, alignment, and having your computer wipe your computer by accident.
