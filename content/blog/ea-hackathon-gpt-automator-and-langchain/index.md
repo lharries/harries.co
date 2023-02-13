@@ -154,4 +154,4 @@ tell application "Finder"
 end tell
 ```
 
-All the code is available on [Github](https://github.com/chidiwilliams/GPT-Automator) and check out Chidi's blog post [here](https://github.com/chidiwilliams/GPT-Automator).
+All the code is available on [Github](https://github.com/chidiwilliams/GPT-Automator) and check out Chidi's blog post [here](https://chidiwilliams.com/post/gpt-automator/).
