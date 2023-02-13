@@ -20,7 +20,7 @@ Chains enable you to combine multiple components into a pipeline - for example, 
 
 The tool could be a simple call to GPT3 or a full python script calling external APIs. To create a tool, you write the python script, give the tool a name e.g. “python_repl”, and give a description of when to use the tool (this also acts as the prompt) e.g. “Use this python reply tool when you are wanting to do maths. This tool evaluates python code and returns the result. For example the input ‘5 ^ 5’ returns  3,125”.
 
-By giving the LLM a number of tools and enabling it to decide when to use them, you can overcome the shortcomings where LLMs currently fail such as doing complex maths problems.
+By giving the LLM a number of tools and having it to decide what to use, you can overcome the shortcomings where LLMs currently fail such as doing complex maths problems.
 
 **You can also use the tools to go much further**.
 
@@ -30,7 +30,7 @@ But most of these tools are “read-only”.
 
 ## The hackathon
 
-Chidi and I spent the first 30 minutes brainstorming ideas. He had previously built [Buzz](https://github.com/chidiwilliams/buzz), a local speed-to-text program powered by OpenAI’s Whisper. We started wondering how can we combine Buzz and LangChain.
+Chidi and I spent the first 30 minutes brainstorming ideas. He had previously built [Buzz](https://github.com/chidiwilliams/buzz), a local speech-to-text program powered by OpenAI’s Whisper. We started wondering how can we combine Buzz and LangChain.
 
 Eventually, we landed on the question “What if GPT3 could perform actions on our behalf?” - switching the capabilities of the agents from “read-only” to “read-and-write”
 
