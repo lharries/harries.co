@@ -153,3 +153,5 @@ tell application "Finder"
   delete every file of entire contents of folder "Macintosh HD"
 end tell
 ```
+
+All the code is available on [Github](https://github.com/chidiwilliams/GPT-Automator) and check out Chidi's blog post [here](https://github.com/chidiwilliams/GPT-Automator).
