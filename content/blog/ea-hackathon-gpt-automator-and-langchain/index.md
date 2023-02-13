@@ -42,7 +42,7 @@ In true hackathon fashion, we spend all day hacking using the final 5 minutes to
 
 We created **GPT Automator**. You speak to your computer and it does tasks on your behalf.
 
-Have a watch of the demo:
+Watch the demo here:
 
 [![Demo](./demo.png)](https://www.loom.com/share/7bfa82c604f3412fbbb04191ce2ae12f)
 
