@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Obfuscate from "react-obfuscate"
 
 const ContactMe = () => {
-  const em1 = "hey@"
+  const em1 = "luke@"
   const em2 = "harr"
   const em3 = "ies.co"
 
