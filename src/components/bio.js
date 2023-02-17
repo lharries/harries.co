@@ -75,7 +75,7 @@ const Bio = () => {
           className="form-inline"
           action="/success"
         >
-          <label htmlFor="email">Get my newsletter:</label>
+          <label htmlFor="email">Subscribe to new posts:</label>
           <input
             className="form-control"
             type="email"

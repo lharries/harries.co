@@ -389,3 +389,17 @@ a {
 footer a {
   color: #0000FF;
 }
+
+article h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+article h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin-top: 3rem;
+}

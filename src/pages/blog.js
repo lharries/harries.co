@@ -8,22 +8,22 @@ import PostList from "../components/postList"
 const Blog = () => {
   return (
     <Layout>
-      <SEO title="All posts"/>
-      <Bio/>
+      <SEO title="All posts" />
+      <Bio />
       <div className="container">
         <div className="row">
-          <h2>Guides</h2>
-          <PostList category="guide"/>
-        </div>
-        <br/>
-        <div className="row">
           <h2>Blog Posts</h2>
-          <PostList category="blog"/>
+          <PostList category="blog" />
         </div>
-        <br/>
+        <br />
+        <div className="row">
+          <h2>Guides</h2>
+          <PostList category="guide" />
+        </div>
+        <br />
         <div className="row">
           <h2>Notes</h2>
-          <PostList category="note"/>
+          <PostList category="note" />
         </div>
       </div>
     </Layout>

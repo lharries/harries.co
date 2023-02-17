@@ -51,7 +51,7 @@ It has two main parts:
 1. Voice to command: We generate the command using Whisper running locally (a fork of Buzz).
 2. Command to Action: We give the command to a LangChain agent equipped with custom tools we wrote. These tools include controlling the operating system of the computer using AppleScript, and controlling the active browser using javascript. Finally, like any good AI, we have the agent speak out the final result using AppleScript `say "{Result}"` (try typing `say "Hello World!"` into your mac terminal if you haven’t used it before”).
 
-Here's a custom tool we made to have the LLM control the computer using AppleScript:
+Here's a custom tool we made to have the LLM control the computer using AppleScript. The prompt is the docstring:
 
 ```python
 @tool
