@@ -2,6 +2,7 @@
 title: YC - My experience and advice for the application and interview
 date: "2021-01-01T11:22:36"
 category: note
+description: If you are an early-stage company, I think YC has incredible value and should still be the default for most founders.
 ---
 
 <img src="https://res.cloudinary.com/djp21wtxm/image/upload/v1633558066/tfgpuoxbr9smi4lnv4sz.png" class="rounded h-72 w-full object-cover mt-16"/>
@@ -10,9 +11,9 @@ category: note
 
 If you are an early-stage company, I think YC has incredible value and should still be the default for most founders. Especially if you are selling a product to startups.
 
-If you already have customers, have a product, and can (or have) raised a seed round from good investors at a high valuation then the benefits are less clear. However, I definitely wouldn't rule it out. There's many smart and well-resourced second-time founders who still go through YC e.g. [Suhail](https://twitter.com/suhail) (the founder of Mixpanel who decided to also go through YC with Mighty). If this is the case, I'd suggest getting advice from founders who entered YC at a later stage about why they still decided to do YC.
+If you already have customers, have a product, and can (or have) raised a seed round from good investors at a high valuation then the benefits are less clear. However, I definitely wouldn't rule it out. There are many smart and well-resourced second-time founders who still go through YC e.g. [Suhail](https://twitter.com/suhail) (the founder of Mixpanel who decided to also go through YC with Mighty). If this is the case, I'd suggest getting advice from founders who entered YC at a later stage about why they still decided to do YC.
 
-**TL;DR** on my reflections: I'm confident YC was the right decision for us. It's significantly increased our chances of building a hugely impactful company. It's probably better suited for B2B but there are also B2C success stories. My advice would be to speak to someone with a similar (but not competing) company who went through YC. I'm happy to introduce if useful.
+**TL;DR** on my reflections: I'm confident YC was the right decision for us. It's significantly increased our chances of building a hugely impactful company. It's probably better suited for B2B but there are also B2C success stories. My advice would be to speak to someone with a similar (but not competing) company who went through YC. I'm happy to introduce you if useful.
 
 ### Why we applied for YC
 
