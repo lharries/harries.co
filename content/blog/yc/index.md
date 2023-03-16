@@ -32,7 +32,7 @@ If you already have customers, have a product, and can (or have) raised a seed r
 ### Where I think YC adds value (from most to least)
 
 - Network
-  - The network is for the rest of your life. When we explored a new B2B idea I had a searchable database of 1000 Seed+ startup founders. I had 60%+ response with personalised cold emails. Many Series B+ founders were wanting to try it out in production and lots of other founders were willing to share their thoughts on the space and industry. I'm in a completely different position to start a company that before going through YC. And, if you are a B2B startup, as you grow there are more later stage YC companies who are willing to be your customers and a fresh stream of new companies each year.
+  - The network is for the rest of your life. When we explored a new B2B idea I had a searchable database of 1000 Seed+ startup founders. I had a 60+ response rate with personalised cold emails. Many Series B+ founders were wanting to try it out in production and lots of other founders were willing to share their thoughts on the space and industry. I'm in a completely different position to start a company than before going through YC. And, if you are a B2B startup, as you grow there are more later-stage YC companies who are willing to be your customers and a fresh stream of new companies each year.
   - I've had candid conversations with 40+ founders who all share industry knowledge that they are only happy to share because you are in YC and there's a strong bond around that.
   - Our network of impressive startup people that we know has improved 10x, many of whom are not directly involved with YC but reached out because we were in YC or we reached out to them due to something related to YC.
   - The YC brand has meant pretty much everyone replies to my LinkedIn adds or Twitter DMs. Huge increase in response to cold emails. This makes reaching out for sales/investment/advice easier.
@@ -43,7 +43,7 @@ If you already have customers, have a product, and can (or have) raised a seed r
   - Easy access to \$150k capital based on a form, a 2-minute recording, and 1 interview.
   - Pre-COVID, the YC brand and network would almost definitely help a first-time founder raise a larger seed which directly makes up for the dilution. In a post-COVID world this might have changed but likely to still help considerably. I'm happy to introduce you to founders who just graduated from the current online batch for you to ask.
 - Launching and press
-  - YC can significantly help get your first 100 users if there are relevant businesses from other batches or if early adopters are techy/pro-sumers.
+  - YC can significantly help get your first 100 users if there are relevant businesses from other batches or if early adopters are techy/prosumers.
   - Guaranteed HN front page; ProductHunt launch help; a whole batch of other YC founders who will upvote and share/try your stuff; much higher chances of getting TechCrunch (which could get you 1000s of users).
 - Hiring?
   - The YC brand is a strong attractor of talent but we are still early so it's hard for me to comment on this. I worked for a startup in Cambridge, UK and a major reason for joining was the YC brand as an indicator of quality.
