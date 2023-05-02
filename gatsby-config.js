@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-plugin-posthog`,
       options: {
         // Specify the API key for your Posthog Project (required)
-        apiKey: "phc_aIYpRzs2pU7hk93fqoTWtNezdeMUsNRCQFw7vnvDoOs",
+        apiKey: "phc_jfeE9G9xq0LtKNkTXiGmSm4tKZ2P3mWjBOS5rmiiYZE",
         // Specify the app host if self-hosting (optional, default: https://app.posthog.com)
         apiHost: "https://app.posthog.com",
         // Puts tracking script in the head instead of the body (optional, default: true)
