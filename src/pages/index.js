@@ -190,20 +190,23 @@ const Index = () => {
                 <br />
                 <br />
                 To date, I've approached this in several ways: building
-                companies; working as a software engineer developing
-                websites, apps, and machine learning pipelines; consulting
-                for early-stage tech startups on product development, technical
-                hiring, and outsourcing; and making small angel investments.
+                companies; working as a software engineer developing websites,
+                apps, and machine learning pipelines; consulting for early-stage
+                tech startups on product development, technical hiring, and
+                outsourcing; and making small angel investments.
                 <br />
                 <br />
-                I'm the Head of Product at <a href="https://posthog.com">Posthog</a> an open source product operating system to help you build better products.
+                I'm currently hacking on new projects.
                 <br />
                 <br />
-                Previously, I was the CEO/co-founder of <a href="https://joinfella.com/">Fella</a> a YC backed startup that helps men with obesity get to a healthier weight. 
-                Before, I was an AI Resident at Microsoft Research working
-                on deep reinforcement learning. I studied the MSc in
-                Computer Science at UCL, completing my thesis with{" "}
-                <a href="http://ccg.ai">Cambridge Cancer Genomics</a>, a Y
+                Previously, I was the Head of Product at{" "}
+                <a href="https://posthog.com">PostHog</a>. Before that I was the
+                CEO/co-founder of <a href="https://joinfella.com/">Fella</a> a
+                YC backed startup that helps men with obesity get to a healthier
+                weight. I was an AI Resident at Microsoft Research working on
+                deep reinforcement learning for automated software testing. I
+                studied the MSc in Computer Science at UCL, completing my thesis
+                with Cambridge Cancer Genomics, a Y
                 Combinator backed BioTech Startup. I studied pre-med at
                 Cambridge where I was the founding President of the Cambridge
                 StartUp Society hosting events with startup founders and venture
@@ -211,7 +214,7 @@ const Index = () => {
                 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29604698">
                   published
                 </a>
-                . Alongside, I co-founded Proteam, which we grew to be the
+                . Alongside, I built Proteam, which we grew to be the
                 largest platform for intra-university sport in the UK with
                 9,000+ users.
               </p>
@@ -220,29 +223,29 @@ const Index = () => {
         </div>
       </section>
       <section className="fdb-block" id="blog">
-      <div className="container">
+        <div className="container">
           <div className="row justify-content-center">
             <div className="col col-lg-8">
               <h2>Blog Posts</h2>
-              <PostList category="blog"/>
+              <PostList category="blog" />
             </div>
           </div>
         </div>
-        <br/>
+        <br />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col col-lg-8">
               <h2>Guides</h2>
-              <PostList category="guide"/>
+              <PostList category="guide" />
             </div>
           </div>
         </div>
-        <br/>
+        <br />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col col-lg-8">
               <h2>Notes</h2>
-              <PostList category="note"/>
+              <PostList category="note" />
             </div>
           </div>
         </div>
