@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import ElevenLabsAudioNative from "../components/elevenlabsAudioNative"
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -38,6 +39,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             {post.frontmatter.date}
           </p>
         </header>
+        <ElevenLabsAudioNative publicUserId="9b517a2f52841ea43ac5edc14153786159279aae9fc7c36244cc11e86a0176e4" />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
