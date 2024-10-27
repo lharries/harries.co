@@ -241,7 +241,7 @@ export const Project = ({
 export const NavBar = () => {
   return (
     <Container>
-      <div className="flex flex-col md:flex-row gap-4 md:gap-0 mt-8 justify-between px-8 md:px-0">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-0 mt-8 justify-between px-8 lg:px-0">
         <Link href="/" className="font-semibold text-xl font-serif">
           Luke Harries
         </Link>
