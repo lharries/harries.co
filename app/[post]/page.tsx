@@ -30,7 +30,11 @@ async function getPost(slug: string) {
   };
 }
 
-export default async function Post({ params }: { params: { post: string } }) {
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ post: string }>;
+}) {
   const { post } = await params;
   const { frontmatter, content } = await getPost(post);
 

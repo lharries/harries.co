@@ -159,6 +159,7 @@ export const Markdown = ({
         return match ? (
           <SyntaxHighlighter
             language={match[1]}
+            // @ts-expect-error - Type assertion to fix the style prop type error
             style={tomorrow}
             customStyle={{
               margin: "0",
