@@ -9,7 +9,7 @@ import {
   BlogArticle,
   Project,
   NavBar,
-  Button,
+  // Button,
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
 

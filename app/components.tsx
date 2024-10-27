@@ -3,10 +3,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  oneDark,
-  tomorrow,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { formatDate } from "../lib/utils";
 
 export function Button({
@@ -157,7 +154,7 @@ export const Markdown = ({
           {children}
         </blockquote>
       ),
-      code: ({ node, className, children, ...props }) => {
+      code: ({ className, children, ...props }) => {
         const match = /language-(\w+)/.exec(className || "");
         return match ? (
           <SyntaxHighlighter
