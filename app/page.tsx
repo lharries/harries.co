@@ -21,7 +21,7 @@ export default function Home() {
     <div>
       <NavBar />
       <div className="mt-6 md:mt-40 flex flex-col gap-8 md:gap-40 pb-40">
-        <Container className="md:grid md:grid-cols-6 flex gap-6 flex-col-reverse">
+        <Container className="md:grid md:grid-cols-6 flex gap-6 flex-col-reverse items-center">
           <Card className="col-span-4">
             <h1 className="text-2xl font-bold font-serif">
               I&apos;m Luke Harries
