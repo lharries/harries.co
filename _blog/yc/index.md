@@ -6,8 +6,6 @@ description: If you are an early-stage company, I think YC has incredible value 
 highlight: true
 ---
 
-<img src="https://res.cloudinary.com/djp21wtxm/image/upload/v1633558066/tfgpuoxbr9smi4lnv4sz.png" class="rounded h-72 w-full object-cover mt-16"/>
-
 ## Luke's Thoughts on YC
 
 If you are an early-stage company, I think YC has incredible value and should still be the default for most founders. Especially if you are selling a product to startups.
