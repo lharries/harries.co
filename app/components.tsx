@@ -7,13 +7,17 @@ import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { formatDate } from "../lib/utils";
 
 export function Button({
-  asLink,
+  asLink = false,
   children,
   href,
+  onClick,
+  disabled = false,
 }: {
-  asLink: boolean;
+  asLink?: boolean;
   children: React.ReactNode;
   href?: string;
+  onClick?: () => void;
+  disabled?: boolean;
 }) {
   if (asLink) {
     return (
@@ -25,7 +29,15 @@ export function Button({
       </a>
     );
   } else {
-    return <button className="border border-black bg-white">{children}</button>;
+    return (
+      <button
+        className="border border-black px-3 py-2 font-sans uppercase text-xs bg-white rounded-md"
+        onClick={onClick}
+        disabled={disabled}
+      >
+        {children}
+      </button>
+    );
   }
 }
 

@@ -9,9 +9,9 @@ import {
   BlogArticle,
   Project,
   NavBar,
-  // Button,
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
+import { ConversationalAI } from "@/components/conversational-ai";
 
 export default function Home() {
   const projects = getProjects();
@@ -47,7 +47,7 @@ export default function Home() {
               reinforcement learning.
             </p>
           </Card>
-          <div className="md:col-span-2 flex items-center md:justify-center px-8 md:px-0">
+          <div className="md:col-span-2 flex items-center px-8 md:px-0 flex-col gap-4">
             <Image
               src="/luke.jpg"
               alt="Luke Harries"
@@ -55,6 +55,7 @@ export default function Home() {
               width={200}
               height={200}
             />
+            <ConversationalAI />
           </div>
         </Container>
 

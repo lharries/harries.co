@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@11labs/react": "^0.0.2",
     "@types/react-syntax-highlighter": "^15.5.13",
     "gray-matter": "^4.0.3",
     "next": "15.0.1",
