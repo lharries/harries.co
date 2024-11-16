@@ -6,7 +6,7 @@ category: guide
 highlight: true
 ---
 
-_Disclaimer: I'm not an expert on HIPAA regulation or a lawyer so don't take this as legal advice. There are likely to be errors in this guide so it's worth doing your own research. If you find any errors please [email me](/contact-me) or submit a [pull request](https://github.com/lharries/harries.co/blob/master/content/blog/mvp-hipaa-compliance/index.md). It's worth discussing your plans with a lawyer. If you can't afford a lawyer then, until you can, ask a founder who has built a similar startup. It's crucial to uncover the unknown unknowns early on._
+_Disclaimer: I'm not an expert on HIPAA regulation or a lawyer so don't take this as legal advice. It's worth discussing your plans with a lawyer. If you can't afford a lawyer then, until you can, ask a founder who has built a similar startup. It's crucial to uncover the unknown unknowns early on._
 
 This guide is for HealthTech startups who want to launch an MVP under HIPAA regulation. It's the guide that I wish I had when setting up infrastructure for COVID-19 drive-through testing. I've compiled it from speaking to health lawyers, HealthTech founders, HIPAA experts, and reading too much regulation.
 
@@ -22,7 +22,7 @@ exclude: ['Summary','Table of Contents']
 
 ## Understanding HIPAA
 
-HIPAA (Health Insurance Portability and Accountability Act) is a US federal law regulating entities which handle health data. By health data, I mean any [protected health information (PHI)](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#protected) related to health insurance transactions. HIPAA has three main rules: privacy, security, and what to do if a "breach" occurs. If HIPAA applies to you, you will need to create and follow a set of internal policies and procedures to become HIPAA compliant. Otherwise, your company will be at risk of heavy penalties—$100 to $50,000 per violation.  
+HIPAA (Health Insurance Portability and Accountability Act) is a US federal law regulating entities which handle health data. By health data, I mean any [protected health information (PHI)](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#protected) related to health insurance transactions. HIPAA has three main rules: privacy, security, and what to do if a "breach" occurs. If HIPAA applies to you, you will need to create and follow a set of internal policies and procedures to become HIPAA compliant. Otherwise, your company will be at risk of heavy penalties—$100 to $50,000 per violation.
 
 HIPAA applies to two types of companies:
 
@@ -53,7 +53,7 @@ GSuite will be the core of your startup. When set up correctly, GSuite provides 
 
 To set up HIPAA compliant GSuite, you'll need to sign up for GSuite and [sign their BAA](https://support.google.com/a/answer/3407074?hl=en). Enable [Vault](https://support.google.com/a/answer/2462365?hl=en) to retain data for auditing. Require multi-factor authentication.
 
-__Note: video calling with Google Hangouts is not HIPAA compliant.__
+**Note: video calling with Google Hangouts is not HIPAA compliant.**
 
 If you plan on sending PHI over email (even Gmail), I'd recommend [Paubox](https://www.paubox.com/). Paubox will encrypt all outgoing messages and attachments. Finally, you'll need to add a [HIPAA email disclaimer](https://www.exclaimer.com/email-signature-handbook/10128-hipaa-email-disclaimer-examples).
 
@@ -65,7 +65,7 @@ If you need to run custom code, you can reduce most security risks by running th
 
 Instead of redirecting your customers to other Saas sites to handle the PHI, embed the Saas apps directly into your website.
 
-For example, if you want a scheduling system integrated into your site: setup [Acuity Scheduling](https://acuityscheduling.com/) and embed the booking form as an iFrame into your react web app. You can style CSS to make the booking form look native and deploy it as a static site from a Github repo using [Netlify](https://www.netlify.com/blog/2016/10/27/a-step-by-step-guide-deploying-a-static-site-or-single-page-app/) 
+For example, if you want a scheduling system integrated into your site: setup [Acuity Scheduling](https://acuityscheduling.com/) and embed the booking form as an iFrame into your react web app. You can style CSS to make the booking form look native and deploy it as a static site from a Github repo using [Netlify](https://www.netlify.com/blog/2016/10/27/a-step-by-step-guide-deploying-a-static-site-or-single-page-app/)
 
 Two Saas apps that might be useful are [Acuity Scheduling](https://acuityscheduling.com/) for online scheduling and [JotForm](https://www.jotform.com/) for form building. Make sure to configure them properly: be on the HIPAA plan; sign the BAA; remove all PHI sent in emails from their servers.
 

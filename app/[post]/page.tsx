@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import Image from "next/image";
 import { Container, Card, NavBar, Markdown } from "../components";
 import { formatDate } from "@/lib/utils";
+import ElevenLabsAudioNative from "@/app/audio-native";
 
 // Get post metadata and content
 export async function generateStaticParams() {
@@ -65,6 +66,10 @@ export default async function Post({
                   {formatDate(frontmatter.date)}
                 </div>
               </div>
+            </div>
+
+            <div className="mt-2">
+              <ElevenLabsAudioNative publicUserId="9b517a2f52841ea43ac5edc14153786159279aae9fc7c36244cc11e86a0176e4" />
             </div>
 
             <div className="mt-2">

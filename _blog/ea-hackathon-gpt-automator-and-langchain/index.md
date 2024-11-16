@@ -3,6 +3,7 @@ title: GPT Automator, LangChain and Tool Engineering - EA London Hackathon
 date: "2023-02-12T22:30:00"
 category: blog
 highlight: true
+description: Building a voice-controlled AI assistant that can control your computer — what could go wrong?
 ---
 
 Yesterday, [Chidi Williams](https://chidiwilliams.com/) and I did the [London EA Hackathon 2023](https://forum.effectivealtruism.org/events/gTSwA8RoGidjpLnf6/london-ea-hackathon). We built a tool to physically control your computer through your voice using Whisper, LangChain, and GPT3. It can open and interact with applications, click around in chrome, and synthesize information.

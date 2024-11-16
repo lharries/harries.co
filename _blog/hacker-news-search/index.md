@@ -2,6 +2,7 @@
 title: The hidden power of HackerNews search
 date: "2018-07-29T11:22:36"
 category: blog
+description: Hacker News is a treasure trove of information. Here's how to use it properly.
 ---
 
 > Hacker News Search is my go-to search engine
@@ -16,7 +17,7 @@ As engineers, we need to rapidly learn new technologies, languages, and skills. 
 
 For example, if you are wanting to learn about [Natural Language Processing](https://hn.algolia.com/?query=natural%20language%20processing&sort=byPopularity&prefix&page=0&dateRange=all&type=all), [Data Science](https://hn.algolia.com/?query=data%20science&sort=byPopularity&prefix&page=0&dateRange=all&type=all), or [LSTMs](https://hn.algolia.com/?query=lstm&sort=byPopularity&prefix&page=0&dateRange=all&type=all) just search for them to find the most relevant articles and useful tutorials.
 
-![Searching for LSTMs](https://cdn-images-1.medium.com/max/4676/1*tVnkEJsEy457QZjnSh53VA.png)*Searching for LSTMs*
+![Searching for LSTMs](https://cdn-images-1.medium.com/max/4676/1*tVnkEJsEy457QZjnSh53VA.png)_Searching for LSTMs_
 
 **2. Finding the top recent articles for a topic/company**
 
