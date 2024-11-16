@@ -1,4 +1,3 @@
-- [ ] Dot between tag and date in projects and blog posts
 - [ ] Design nits
 - [ ] Add PostHog customer interview blog post
 - [ ] Add AudioNative

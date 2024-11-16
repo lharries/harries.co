@@ -103,6 +103,7 @@ export const BlogArticle = ({
       <h2 className="text-lg font-semibold font-serif">{title}</h2>
       <div className="flex gap-2 text-xs text-neutral-600 font-sans">
         <div className="uppercase">{category}</div>
+        <p>&#183;</p>
         <div>{formatDate(date)}</div>
       </div>
       <p className="text-sm">{body}</p>
@@ -228,6 +229,7 @@ export const Project = ({
         <h2 className="text-lg font-semibold font-serif">{title}</h2>
         <div className="flex gap-2 text-xs text-neutral-600 font-sans">
           <div className="uppercase">{category}</div>
+          <p>&#183;</p>
           <div>{formatDate(date)}</div>
         </div>
         <div className="text-sm">
