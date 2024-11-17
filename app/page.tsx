@@ -55,7 +55,7 @@ export default function Home() {
               width={200}
               height={200}
             />
-            <ConversationalAI />
+            {/* <ConversationalAI /> */}
           </div>
         </Container>
 
