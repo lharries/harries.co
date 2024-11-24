@@ -71,7 +71,7 @@ Your choice between in-house writers and contractors should depend on your targe
 
 For contractor management, we've found success with an in-house editor overseeing a pool of Upwork contractors. Don't hesitate to cycle through contractors quickly if their quality doesn't meet your standards. For specialized topics like healthcare, consider hiring contractors with relevant credentials (such as medical degrees) to ensure proper authority and trust.
 
-Bonus tip: Try viewing your operation as a media company rather than just an SEO engine. This content-first mindset encourages you to consider multiple traffic sources—social media, sales team resources, and other channels—rather than viewing content as merely SEO fodder. This approach naturally pushes quality higher and creates more valuable assets for your company.
+Bonus tip: Try viewing your operation as a media company rather than just an SEO engine. This content-first mindset encourages you to consider multiple traffic sources—social media, collateral for your sales team to share, and other channels—rather than viewing content as merely SEO fodder. This approach naturally pushes quality higher and creates more valuable assets for your company.
 
 ### Balancing SEO and conversion
 
@@ -196,4 +196,4 @@ Potential profiles to hire for SEO are:
 - Frontend engineers with design skills and good enough copy/project management ability
 - Excellent writers who can understand your domain
 
-I'd argue that in the early days, you want to start with a driven frontend engineer with some design skills who is keen to learn SEO, as the bulk of the work is in creating great pages that solve user intent. They can also do the execution of getting to table stakes for technical SEO and run the content machine either through contract writers or in-house writers. You can then partner them with an excellent external SEO advisor who can guide what intent to do and give feedback on the pages (but this isn't needed as a full-time job until you're at scale or have a very large number of pages such as running an e-commerce store). Over time, you could transition the content production running to a writer who has interest in this.
+I'd argue that in the early days, you want to start with a driven frontend engineer with some design skills who is keen to learn SEO, as the bulk of the work is in creating great pages that solve user intent. They can also do the execution of getting to table stakes for technical SEO and run the content machine either through contract writers or in-house writers. You can then partner them with an excellent external SEO advisor who can guide what topics and keywords to focus on and give feedback on the pages (but this isn't needed as a full-time job until you're at scale or have a very large number of pages such as running an e-commerce store). Over time, you could transition the content production running to a writer who has interest in this.
