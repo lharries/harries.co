@@ -11,7 +11,6 @@ import {
   NavBar,
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
-import { ConversationalAI } from "@/components/conversational-ai";
 
 export default function Home() {
   const projects = getProjects();
