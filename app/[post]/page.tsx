@@ -6,7 +6,6 @@ import { Container, Card, NavBar, Markdown } from "../components";
 import { formatDate } from "@/lib/utils";
 import ElevenLabsAudioNative from "@/app/audio-native";
 
-// Get post metadata and content
 export async function generateStaticParams() {
   const directories = fs
     .readdirSync(path.join("_blog"), { withFileTypes: true })
@@ -16,6 +15,47 @@ export async function generateStaticParams() {
   return directories.map((slug) => ({
     post: slug,
   }));
+}
+
+type Post = {
+  frontmatter: {
+    title: string;
+    date: string;
+    description?: string;
+  };
+  content: string;
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { post: string };
+}) {
+  const { post } = await params;
+  const { frontmatter } = await getPost(post);
+
+  return {
+    title: `${frontmatter.title} | Luke Harries`,
+    description:
+      frontmatter.description || `Read ${frontmatter.title} by Luke Harries`,
+    alternates: {
+      canonical: `https://harries.co/${post}`,
+    },
+    openGraph: {
+      title: frontmatter.title,
+      description:
+        frontmatter.description || `Read ${frontmatter.title} by Luke Harries`,
+      type: "article",
+      authors: ["Luke Harries"],
+      publishedTime: frontmatter.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: frontmatter.title,
+      description:
+        frontmatter.description || `Read ${frontmatter.title} by Luke Harries`,
+    },
+  };
 }
 
 async function getPost(slug: string) {

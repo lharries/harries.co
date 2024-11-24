@@ -1,7 +1,7 @@
 ---
-title: SEO for startups
+title: SEO for startups — a guide for founders and engineers
 date: "2024-11-24T11:22:36"
-description: "This is the guide I wish I had when learning about SEO. It covers the three main pillars of SEO — understanding the user's intent, solving the user's intent, and getting your pages ranking."
+description: "The guide I wish I had when learning about SEO. We cover understanding the user's intent, solving the user's intent, and getting your pages ranking."
 category: guide
 highlight: true
 ---
@@ -156,6 +156,10 @@ _Example breadcrumbs from the Tripadvisor site_
 You should include the relevant keywords for the user's intent. This likely is a combination of intent-specific keywords as well as common additives such as "free" or "online."
 
 You will want to include the keywords as appropriate in the headers, alt text, metadata, body, slug, and external link text to the pages.
+
+#### Page structure and metadata
+
+To make sure your page structure and metadata are correct, use the [Detailed SEO](https://chromewebstore.google.com/detail/detailed-seo-extension/pfjdepjjfjjahkjfpkcgfmfhmnakjfba?hl=en) Chrome extension.
 
 #### Have you solved the user intent?
 

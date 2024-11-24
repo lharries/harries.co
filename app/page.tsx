@@ -12,6 +12,31 @@ import {
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
 
+export async function generateMetadata() {
+  return {
+    title: `Luke Harries — Personal Website and Blog`,
+    description:
+      "I lead growth at ElevenLabs, one of the fastest growing startups in the world. I do a mix of engineering, marketing and data.",
+    alternates: {
+      canonical: `https://harries.co/`,
+    },
+    openGraph: {
+      title: "Luke Harries — Personal Website and Blog",
+      description:
+        "I lead growth at ElevenLabs, one of the fastest growing startups in the world. I do a mix of engineering, marketing and data.",
+      type: "website",
+      authors: ["Luke Harries"],
+      publishedTime: "2024-11-24",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Luke Harries — Personal Website and Blog",
+      description:
+        "I lead growth at ElevenLabs, one of the fastest growing startups in the world. I do a mix of engineering, marketing and data.",
+    },
+  };
+}
+
 export default function Home() {
   const projects = getProjects();
   const posts = getBlogPosts();
