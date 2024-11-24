@@ -81,6 +81,12 @@ When creating pages, you'll need to balance SEO and conversion. You should start
 
 Treat your pages like a product. Get ideas from competitive pages, speaking to users, what the best in class are doing, then ruthlessly ship useful features and content.
 
+### Content architecture
+
+Another key consideration when creating pages is how they fit into your broader content architecture. The most effective SEO strategies organize content into pillar pages and supporting clusters. A pillar page comprehensively covers a broad topic that's important to your business, while cluster content dives deep into specific aspects of that topic.
+
+For example, if you run a payment platform, your pillar page might cover "International Money Transfers" broadly, with cluster content addressing specific topics like exchange rates, transfer fees, country-specific guides, and payment methods. Each piece of cluster content links back to the pillar and to related cluster content, creating a tight network of topically related pages.
+
 ## Pillar 3: Getting your pages ranking
 
 After understanding what search intent to solve and creating pages to solve it, you will need the content to actually rank in the search engine results page (SERP). SEO follows a power law with the coveted position #1 having the most traffic.
@@ -131,7 +137,7 @@ Here's some other ideas for getting backlinks: collaborate with other companies 
 
 #### Topical authority
 
-Popularized by Ethan who runs Graphite, if you have articles that rank well for existing topics, this will increase your probability of ranking for related topics. You can start with more long-tail topics and build up to the high-value topics.
+If you have articles that rank well for existing topics, this will increase your probability of ranking for related topics. You can start with more long-tail topics and build up to the high-value topics.
 
 ### On-page SEO
 
