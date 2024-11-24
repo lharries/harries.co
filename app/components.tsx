@@ -155,6 +155,9 @@ export const Markdown = ({
       h3: ({ children }) => (
         <h3 className="text-lg font-bold font-serif mb-2 mt-4">{children}</h3>
       ),
+      h4: ({ children }) => (
+        <h4 className="text-base font-bold font-serif mb-2 mt-4">{children}</h4>
+      ),
       ul: ({ children }) => (
         <ul className="list-disc pl-5 mb-4 text-base">{children}</ul>
       ),
