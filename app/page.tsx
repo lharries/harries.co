@@ -11,6 +11,7 @@ import {
   NavBar,
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
+import { ConversationalAI } from "@/components/conversational-ai";
 
 export async function generateMetadata() {
   return {
@@ -79,7 +80,7 @@ export default function Home() {
               width={200}
               height={200}
             />
-            {/* <ConversationalAI /> */}
+            <ConversationalAI />
           </div>
         </Container>
 
