@@ -29,7 +29,7 @@ type Post = {
 export async function generateMetadata({
   params,
 }: {
-  params: { post: string };
+  params: Promise<{ post: string }>;
 }) {
   const { post } = await params;
   const { frontmatter } = await getPost(post);
