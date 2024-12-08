@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getBlogPosts();
   return [
     {
-      url: "https://harries.co",
+      url: "https://harries.co/",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
