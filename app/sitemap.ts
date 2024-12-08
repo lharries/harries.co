@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     ...posts.map((post) => ({
-      url: `https://harries.co/${post.slug}`,
+      url: `https://harries.co/${post.slug}/`,
       lastModified: post.date || new Date(),
       priority: 1,
     })),
