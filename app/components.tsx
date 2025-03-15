@@ -5,6 +5,8 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { formatDate } from "../lib/utils";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 export function Button({
   asLink = false,
@@ -137,6 +139,8 @@ export const Markdown = ({
   textSize?: string;
 }) => (
   <ReactMarkdown
+    remarkPlugins={[remarkMath]}
+    rehypePlugins={[rehypeKatex]}
     components={{
       a: ({ children, href }) => (
         <ParagraphLink href={href}>{children}</ParagraphLink>

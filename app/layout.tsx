@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Noto_Serif } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import "katex/dist/katex.min.css";
 
 export const metadata: Metadata = {
   title: "Luke Harries",
