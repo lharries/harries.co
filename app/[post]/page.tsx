@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Container, Card, NavBar, Markdown } from "../components";
 import { formatDate } from "@/lib/utils";
 import ElevenLabsAudioNative from "@/app/audio-native";
+import { TableOfContents } from "../components/TableOfContents";
 
 export async function generateStaticParams() {
   const directories = fs
@@ -79,43 +80,63 @@ export default async function Post({
   const { post } = await params;
   const { frontmatter, content } = await getPost(post);
 
+  // Extract headings from markdown content
+  const headings = content
+    .split("\n")
+    .filter((line) => line.startsWith("##"))
+    .map((line) => {
+      const level = line.match(/^#+/)?.[0].length || 2;
+      const text = line.replace(/^#+\s/, "");
+      const id = text.toLowerCase().replace(/[^\w]+/g, "-");
+      return { id, text, level };
+    });
+
   return (
     <div>
       <NavBar />
       <div className="mt-10 pb-40">
-        <Container className="max-w-screen-md">
-          <Card>
-            <h1 className="text-2xl font-bold font-serif">
-              {frontmatter.title}
-            </h1>
+        <Container>
+          <div
+            className={`grid grid-cols-1 ${
+              headings.length > 0
+                ? "lg:grid-cols-[240px_850px]"
+                : "lg:grid-cols-[850px] justify-center"
+            } gap-8 lg:gap-16`}
+          >
+            <TableOfContents headings={headings} />
+            <Card>
+              <h1 className="text-2xl font-bold font-serif">
+                {frontmatter.title}
+              </h1>
 
-            {/* Author byline */}
-            <div className="flex items-center gap-3">
-              <Image
-                src="/luke.jpg"
-                alt="Luke Harries"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <div className="flex flex-col">
-                <div className="font-serif text-sm font-medium">
-                  Luke Harries
-                </div>
-                <div className="text-sm text-neutral-600 font-serif">
-                  {formatDate(frontmatter.date)}
+              {/* Author byline */}
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/luke.jpg"
+                  alt="Luke Harries"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+                <div className="flex flex-col">
+                  <div className="font-serif text-sm font-medium">
+                    Luke Harries
+                  </div>
+                  <div className="text-sm text-neutral-600 font-serif">
+                    {formatDate(frontmatter.date)}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-2">
-              <ElevenLabsAudioNative publicUserId="9b517a2f52841ea43ac5edc14153786159279aae9fc7c36244cc11e86a0176e4" />
-            </div>
+              <div className="mt-2">
+                <ElevenLabsAudioNative publicUserId="9b517a2f52841ea43ac5edc14153786159279aae9fc7c36244cc11e86a0176e4" />
+              </div>
 
-            <div className="mt-2">
-              <Markdown body={content} />
-            </div>
-          </Card>
+              <div className="mt-2">
+                <Markdown body={content} />
+              </div>
+            </Card>
+          </div>
         </Container>
       </div>
     </div>

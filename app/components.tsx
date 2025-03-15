@@ -51,7 +51,7 @@ export const Container = ({
   className?: string;
 }) => {
   return (
-    <div className={`max-w-screen-lg m-auto ${className}`}>{children}</div>
+    <div className={`max-w-[1200px] mx-auto px-8 ${className}`}>{children}</div>
   );
 };
 
@@ -150,18 +150,50 @@ export const Markdown = ({
           {children}
         </CustomParagraph>
       ),
-      h1: ({ children }) => (
-        <h1 className="text-2xl font-bold font-serif mb-4 mt-8">{children}</h1>
-      ),
-      h2: ({ children }) => (
-        <h2 className="text-xl font-bold font-serif mb-3 mt-6">{children}</h2>
-      ),
-      h3: ({ children }) => (
-        <h3 className="text-lg font-bold font-serif mb-2 mt-4">{children}</h3>
-      ),
-      h4: ({ children }) => (
-        <h4 className="text-base font-bold font-serif mb-2 mt-4">{children}</h4>
-      ),
+      h1: ({ children }) => {
+        const id =
+          typeof children === "string"
+            ? children.toLowerCase().replace(/[^\w]+/g, "-")
+            : "";
+        return (
+          <h1 id={id} className="text-2xl font-bold font-serif mb-4 mt-8">
+            {children}
+          </h1>
+        );
+      },
+      h2: ({ children }) => {
+        const id =
+          typeof children === "string"
+            ? children.toLowerCase().replace(/[^\w]+/g, "-")
+            : "";
+        return (
+          <h2 id={id} className="text-xl font-bold font-serif mb-3 mt-6">
+            {children}
+          </h2>
+        );
+      },
+      h3: ({ children }) => {
+        const id =
+          typeof children === "string"
+            ? children.toLowerCase().replace(/[^\w]+/g, "-")
+            : "";
+        return (
+          <h3 id={id} className="text-lg font-bold font-serif mb-2 mt-4">
+            {children}
+          </h3>
+        );
+      },
+      h4: ({ children }) => {
+        const id =
+          typeof children === "string"
+            ? children.toLowerCase().replace(/[^\w]+/g, "-")
+            : "";
+        return (
+          <h4 id={id} className="text-base font-bold font-serif mb-2 mt-4">
+            {children}
+          </h4>
+        );
+      },
       ul: ({ children }: React.ComponentPropsWithoutRef<"ul">) => (
         <ul className="list-disc pl-5 mb-4 not-prose text-base [&_ul]:mb-0 [&_ol]:mb-0">
           {children}
@@ -266,11 +298,8 @@ export const Project = ({
 export const NavBar = () => {
   return (
     <Container>
-      <div className="flex flex-col md:flex-row gap-4 md:gap-0 mt-8 justify-between px-8 lg:px-0 items-center">
-        <Link
-          href="/"
-          className="font-semibold text-3xl font-serif text-center"
-        >
+      <div className="flex flex-col md:flex-row gap-4 md:gap-0 mt-8 justify-between items-center">
+        <Link href="/" className="font-semibold text-3xl font-serif">
           Luke Harries
         </Link>
         <div className="flex gap-2">
@@ -288,3 +317,5 @@ export const NavBar = () => {
     </Container>
   );
 };
+
+export { TableOfContents } from "./components/TableOfContents";
