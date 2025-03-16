@@ -13,9 +13,9 @@ If you aren't launching multiple times a month, you're either shipping too slowl
 
 In this blog post, I'll share a framework for how to run effective launches. It can be simplified to:
 
-$$
-\text{Launch Impact} = \text{Product}^{\text{Messaging} \times \text{Launch assets}} \times \text{Distribution}
-$$
+```
+Launch Impact = (Product ^ (Messaging × Launch assets)) × Distribution
+```
 
 ## The launch checklist
 
