@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter, Noto_Serif } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "katex/dist/katex.min.css";
+import { PostHogProvider } from "@/lib/posthog";
 
 export const metadata: Metadata = {
   title: "Luke Harries",
@@ -31,7 +32,7 @@ export default function RootLayout({
       <body
         className={`antialiased font-sans ${notoSerif.variable} ${inter.variable}`}
       >
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
       <GoogleAnalytics gaId="G-BSD4EYKFL6" />
     </html>
