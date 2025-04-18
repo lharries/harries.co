@@ -57,19 +57,26 @@ export default function Home() {
                 ElevenLabs
               </ParagraphLink>
               , one of the fastest growing startups in the world. I do a mix of
-              engineering, marketing and data.
+              marketing, product, engineering and developer experience.
             </p>
-            <p>Alongside, I do small angel investments in startups.</p>
+            <p>
+              Alongside, I angel invest $5-$15k in startups. I'm proud to have
+              backed some exceptional companies including Lovable and Runna.
+            </p>
             <p>
               Previously, I was interim head of product at{" "}
               <ParagraphLink href="https://posthog.com">PostHog</ParagraphLink>{" "}
-              and, before that, co-founder of{" "}
+              and co-founded{" "}
               <ParagraphLink href="https://fellahealth.com">
                 Fella Health
               </ParagraphLink>
               , a YC backed HealthTech company that treats thousands of patients
               per month. I started my career at Microsoft Research working on
               reinforcement learning.
+            </p>
+            <p>
+              I studied pre-med at Cambridge University. My parents are still
+              hopeful that I might become a doctor.
             </p>
           </Card>
           <div className="md:col-span-2 flex items-center px-8 md:px-0 flex-col gap-4">
