@@ -5,7 +5,7 @@ category: guide
 description: A guide to hiring your first growth hire. Who should they be? How should you evaluate them? Do you go for a generalist or a specialist? And how should you think about agencies, contractors and advisors?
 ---
 
-You’ve raised money. You’ve built a product. You’ve [run your first launch](https://harries.co/launch-your-product). You’ve got your first users. Now you need to grow. Who should you hire to help you? This guide will cover who you should hire and how you should hire them.
+You’ve raised money. You’ve built a product. You’ve [run your first launch](/launch-your-product). You’ve got your first users. Now you need to grow. Who should you hire to help you? This guide will cover who you should hire and how you should hire them.
 
 Growth and marketing teams can have very specialized roles. If you ask the wrong person, here’s what you’ll hear:
 
@@ -29,7 +29,7 @@ Luckily, at the start you don’t need this level of specialization. Instead, hi
 
 ## Your first growth hire — a Growth Marketer
 
-What does the first growth hire do? They should deeply understand the product, iterate with you on messaging and positioning, create the website, run the launches and then stand up and test new growth channels. No one has heard of your startup and so it’s a mistake to hire someone who only wants to do product marketing (defining the messaging/positioning and making the collateral). Instead, they should make sure this is done well but be primarily responsible for top of funnel metrics: brand awareness, sign ups, subscribers, leads.
+What does the first growth hire do? They should deeply understand the product, iterate with you on messaging and positioning, create the website, [run the launches](/launch-your-product) and then stand up and test new growth channels such as [SEO](/seo-for-startups). No one has heard of your startup and so it’s a mistake to hire someone who only wants to do product marketing (defining the messaging/positioning and making the collateral). Instead, they should make sure this is done well but be primarily responsible for top of funnel metrics: brand awareness, sign ups, subscribers, leads.
 
 For job title — I lean towards Growth Marketer.
 
