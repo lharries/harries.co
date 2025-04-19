@@ -128,10 +128,7 @@ export default function Home() {
 
         <Container className="mx-auto flex flex-col md:flex-row w-full gap-6">
           {growthArticles.map((article, index) => (
-            <Card
-              key={index}
-              className="w-full px-0 py-0 overflow-hidden group"
-            >
+            <Card key={index} className="w-full group" noPadding>
               <a href={article.href} className="w-full">
                 <div
                   className={clsx(

@@ -59,14 +59,17 @@ export const Container = ({
 export const Card = ({
   children,
   className,
+  noPadding = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  noPadding?: boolean;
 }) => {
   return (
     <div
       className={clsx(
-        "bg-white py-8 px-8 flex flex-col gap-4 rounded-md",
+        "bg-white flex flex-col gap-4 rounded-md",
+        !noPadding && "py-8 px-8",
         className
       )}
     >
