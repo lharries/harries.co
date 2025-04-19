@@ -12,6 +12,7 @@ import {
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
 import { ConversationalAI } from "@/components/conversational-ai";
+import clsx from "clsx";
 
 export async function generateMetadata() {
   return {
@@ -133,7 +134,10 @@ export default function Home() {
             >
               <a href={article.href} className="w-full">
                 <div
-                  className={`${article.bgColorClass} relative w-full pt-[56.25%] overflow-hidden rounded-t-md`}
+                  className={clsx(
+                    article.bgColorClass,
+                    "relative w-full pt-[56.25%] overflow-hidden rounded-t-md"
+                  )}
                 >
                   <Image
                     src={article.imagePath}
@@ -144,7 +148,11 @@ export default function Home() {
                 </div>
                 <div className="bg-white p-6 h-50">
                   <div
-                    className={`uppercase font-sans ${article.textColorClass} text-sm mb-1`}
+                    className={clsx(
+                      "uppercase font-sans",
+                      article.textColorClass,
+                      "text-sm mb-1"
+                    )}
                   >
                     {article.category}
                   </div>
