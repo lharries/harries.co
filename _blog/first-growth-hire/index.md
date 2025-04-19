@@ -1,8 +1,8 @@
 ---
-title: Who should your first growth hire be?
+title: Your first growth hire
 date: "2025-04-19T11:22:36"
 category: guide
-description: A guide to hiring your first growth hire. Who should they be? How should you evaluate them? Do you go for a generalist or a specialist? And how should you think about agencies, contractors and advisors?
+description: Who should they be? How should you evaluate them? Do you go for a generalist or a specialist? And how should you think about agencies, contractors and advisors?
 ---
 
 You’ve raised money. You’ve built a product. You’ve [run your first launch](/launch-your-product). You’ve got your first users. Now you need to grow. Who should you hire to help you? This guide will cover who you should hire and how you should hire them.

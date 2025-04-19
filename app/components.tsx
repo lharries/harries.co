@@ -7,6 +7,7 @@ import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { formatDate } from "../lib/utils";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import clsx from "clsx";
 
 export function Button({
   asLink = false,
@@ -64,7 +65,10 @@ export const Card = ({
 }) => {
   return (
     <div
-      className={`bg-white py-8 px-8 flex flex-col gap-4 ${className} rounded-md`}
+      className={clsx(
+        "bg-white py-8 px-8 flex flex-col gap-4 rounded-md",
+        className
+      )}
     >
       {children}
     </div>

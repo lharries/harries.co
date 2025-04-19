@@ -42,6 +42,39 @@ export default function Home() {
   const projects = getProjects();
   const posts = getBlogPosts();
 
+  const growthArticles = [
+    {
+      title: "Your first growth hire",
+      href: "/first-growth-hire",
+      category: "Hiring",
+      bgColorClass: "bg-orange-50",
+      textColorClass: "text-orange-500",
+      imagePath: "/blog/first-growth-hire/cover.png",
+      description:
+        "Who should they be? How should you evaluate them? Do you go for a generalist or a specialist?",
+    },
+    {
+      title: "SEO for startups",
+      href: "/seo-for-startups",
+      category: "SEO",
+      bgColorClass: "bg-blue-50",
+      textColorClass: "text-blue-500",
+      imagePath: "/blog/seo-for-startups/cover.png",
+      description:
+        "The guide I wish I had when learning about SEO. Understand the user's intent, solving the user's intent, and getting your pages ranking.",
+    },
+    {
+      title: "Launch your product",
+      href: "/launch-your-product",
+      category: "Launching",
+      bgColorClass: "bg-orange-50",
+      textColorClass: "text-green-500",
+      imagePath: "/blog/launch-your-product/cover.png",
+      description:
+        "A launch is a high-leverage moment to tell the world about your new product or feature. Here's how to make it count.",
+    },
+  ];
+
   return (
     <div>
       <NavBar />
@@ -90,6 +123,41 @@ export default function Home() {
             />
             <ConversationalAI />
           </div>
+        </Container>
+
+        <Container className="mx-auto flex flex-col md:flex-row w-full gap-6">
+          {growthArticles.map((article, index) => (
+            <Card
+              key={index}
+              className="w-full px-0 py-0 overflow-hidden group"
+            >
+              <a href={article.href} className="w-full">
+                <div
+                  className={`${article.bgColorClass} relative w-full pt-[56.25%] overflow-hidden rounded-t-md`}
+                >
+                  <Image
+                    src={article.imagePath}
+                    alt={article.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div className="bg-white p-6 h-50">
+                  <div
+                    className={`uppercase font-sans ${article.textColorClass} text-sm mb-1`}
+                  >
+                    {article.category}
+                  </div>
+                  <h3 className="text-lg font-bold font-serif mb-2">
+                    {article.title}
+                  </h3>
+                  <div className="text-sm text-gray-500 mt-auto">
+                    {article.description}
+                  </div>
+                </div>
+              </a>
+            </Card>
+          ))}
         </Container>
 
         <Container>
