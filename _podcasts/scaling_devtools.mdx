@@ -1,0 +1,1517 @@
+---
+title: Scaling Dev Tools
+date: "2025-06-29T11:22:36"
+category: youtube
+description: How to grow developer tools, why launches matter so much, and why a hackathon can change your life
+url: https://www.youtube.com/watch?v=l4HfPPvRhTs
+cover: /podcasts/scaling_devtools.jpg
+---
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "56.25%",
+    height: 0,
+    overflow: "hidden",
+    maxWidth: "100%",
+    background: "#000",
+  }}
+>
+  <iframe
+    src="https://www.youtube.com/embed/l4HfPPvRhTs"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+    frameBorder="0"
+    allowFullScreen
+    title="Scaling Dev Tools"
+  />
+</div>
+
+_Transcript generated with [ElevenLabs Speech to Text](https://elevenlabs.io/speech-to-text)_
+
+00:00:00,140 --> 00:00:11,960 [Luke]
+... maximize the impact of your launches, be a little louder. You know your customers well, you know where they hang out. Take the incredible work that your engineering product research team is doing and amplify it to the world.
+
+00:00:11,960 --> 00:00:19,079 [Jack]
+Hi, everyone. You're listening to Scaling Dev Tools. I'm joined today by Luke from ElevenLabs, and we dig into the origin story of ElevenLabs.
+
+00:00:19,079 --> 00:00:37,459 [Luke]
+And then Peter's like, "I think I can be the first person to make human-like speech with AI." So he quit Google, built his own GPU set. Matty was still working at Palantir and basically, like, sharing his salary with Peter. They started with 11 voices. They started with 11 customers.
+
+00:00:37,459 --> 00:00:39,559 [Jack]
+How they created such a cool voice model.
+
+00:00:39,559 --> 00:00:46,319 [Luke]
+Peter managed to cross this threshold, like, make the best models. Like, imagine there are really not many GPUs.
+
+00:00:46,319 --> 00:00:48,539 [Jack]
+Launches and why they matter so much.
+
+00:00:48,539 --> 00:00:58,459 [Luke]
+And so, the core assets, normally the first one we actually start with is the tweet thread. So it's like, what's the hook? And there's a top tip as you start with the word introducing.
+
+00:00:58,459 --> 00:00:59,059 [Jack]
+Enjoy the episode.
+
+00:00:59,059 --> 00:01:04,039 [Luke]
+Hi, I'm Luke Harries. It's great to be here with you, Jack.
+
+00:01:04,039 --> 00:01:04,839 [Jack]
+Nice.
+
+00:01:04,839 --> 00:01:08,019 [Luke]
+So yeah , great to be here. I'm excited to chat.
+
+00:01:08,019 --> 00:01:15,819 [Jack]
+Yeah. So yeah, for people that don't know, ElevenLabs is, like, the, like, best way to generate voice.
+
+00:01:15,819 --> 00:01:45,419 [Luke]
+Yes, yes. So the way I describe ElevenLabs is we have the best AI audio models. And so we do this for text-to-speech. We were the first company to make human-like speech with AI. Uh, we do speech-to-text, so we've got the highest benchmarking, uh, transcription models. And then we also create AI agents with voices, so conversational AI. And, and we basically take these, like, core foundation models, um, which really is, like, you know, proper researchers-
+
+00:01:45,419 --> 00:01:45,579 [Jack]
+Mm
+
+00:01:45,579 --> 00:02:09,219 [Luke]
+... transformers applied to audio, and then we build different products on top. So we have a consumer app, which is called our Reader app; we have a creator product, which is for making voiceovers for videos or audiobooks; and we have, um, developer products for our, like, API platform; and then these conversational AI voice agent builders. So yeah, quite a few different products going on.
+
+00:02:09,219 --> 00:02:14,299 [Jack]
+Yeah, super cool. I, I have not used it for the developer side, but... Which I'll ask about in a second.
+
+00:02:14,299 --> 00:02:14,359 [Luke]
+Yes.
+
+00:02:14,359 --> 00:02:23,239 [Jack]
+But I'll just say, like, the few ways that I've used it. Uh, so we use it in Scaling Dev Tools for, like, intros when I wanna say, like, Reddit comments and stuff.
+
+00:02:23,239 --> 00:02:23,259 [Luke]
+Yes.
+
+00:02:23,259 --> 00:02:40,539 [Jack]
+Like, it was, like, in the intro saying what people had said on Reddit in different voices. Like, creating a... I used it for my nan's 90th birthday video, where I did, like, a her life using, and I, you know... Jean, Jean was born in 1938 or something.
+
+00:02:40,539 --> 00:02:41,119 [Jack]
+And, uh, in... on this street-
+
+00:02:41,119 --> 00:02:43,199 [Luke]
+You won't be showing this to your grandma, this podcast .
+
+00:02:43,199 --> 00:02:56,879 [Jack]
+Yeah , I won't show, I won't show her. Um, and then I also used it when I was, like, uh, trying to... I cre- this was ages ago, but, like, I created, like, a kind of audio book about FFmpeg to, like, learn more about how, like, the filters work and, like-
+
+00:02:56,879 --> 00:02:57,299 [Luke]
+Very cool
+
+00:02:57,299 --> 00:03:08,139 [Jack]
+... using ChatGPT and generating. And it's... ElevenLabs is super cool. So, um... But maybe you could tell us about the developer products as well, like how this... how people can use it as devs.
+
+00:03:08,139 --> 00:03:46,679 [Luke]
+Yeah, 100%. So there's two main ways people use it. So yeah, lots of people who use it are the creators and they use our UI products, but everything right from the start, we've also exposed as APIs. And so the simplest API we have and the most used one is text-to-speech, which is you just send in text and you generate really high-quality audio. And we have two different models you can use for this. We have our, uh, multilingual model, which is like our big model, takes a little longer, but really does, like, the emotion right and it's fantastic for async use cases. So it's used by companies like Captions, HeyGen, Synthesia, um, and that's actually-
+
+00:03:46,679 --> 00:03:46,699 [Jack]
+Mm
+
+00:03:46,699 --> 00:04:38,719 [Luke]
+... where the business got started, on, like, the API side. Um, and then over time, we've, like, refined these models, made them more powerful and smaller. And so we have, um, the other class of models, which is, like, the low latency models, and so this is Flash and Turbo. And those models are really fantastic for stuff like the, the real-time use cases, so if you're creating a sales agent or you're creating a customer support agent or you're creating a tutor. And what we found... So that's kind of the text-to-speech APIs, and then the other main one is the speech-to-text APIs. And so you can take this podcast, you can feed it in. Uh, it's also ridiculously cheap. Like, feeding in this entire podcast would only be a couple of cents, um, and you can feed in the enti- yeah, like, uh, cou- or pennies for the Brit.
+
+00:04:38,719 --> 00:04:39,419 [Jack]
+Thank you. Wow.
+
+00:04:39,419 --> 00:04:41,939 [Luke]
+Uh, re- re- rewired my brain to be dollars. And-
+
+00:04:41,939 --> 00:04:42,639 [Jack]
+No, that's good.
+
+00:04:42,639 --> 00:05:01,719 [Luke]
+But yeah, you, you can feed in the whole podcast and it would give you, like, the most accurate transcript. You can also have audio events, so you could ha- like, have it output the breathing and the other bits. Um, and you can also get, like, character level timestamps, so if you're making, like, captions type product.
+
+00:05:01,719 --> 00:05:01,759 [Jack]
+Yeah.
+
+00:05:01,759 --> 00:05:14,719 [Luke]
+Um, and what we found, though, was lots of people were taking these really cool APIs, so text-to-speech, speech-to-text, they were plugging those together to create full AI agents and, like, putting an LLM in the middle.
+
+00:05:14,719 --> 00:05:14,739 [Jack]
+Yeah.
+
+00:05:14,739 --> 00:05:35,199 [Luke]
+And, and so by about the 20th company that we had helped build these, uh, agents with text-to-speech, L- uh, speech-to-text, LLM, text-to-speech and turn-taking, we're like, "Okay, maybe we should, like, help people build that as well." And so that's why our conversational AI pro- product is where you can build these end-to-end voice agents.
+
+00:05:35,199 --> 00:05:38,079 [Jack]
+Oh, that's cool. That's really cool.
+
+00:05:38,079 --> 00:05:38,539 [Luke]
+Yeah.
+
+00:05:38,539 --> 00:05:40,999 [Jack]
+Um, didn't realize you had that. I need to try that.
+
+00:05:40,999 --> 00:05:41,259 [Luke]
+Yeah.
+
+00:05:41,259 --> 00:05:41,759 [Jack]
+Um.
+
+00:05:41,759 --> 00:06:07,547 [Luke]
+Yeah, it's, it's good fun. And the, the way that we've set it up is you can either, uh, bring your own brain, so lots of companies, you know, particularly at larger scale, you've already built an LLM-based or text-based product where you have, like, the LLM you like, you have the RAG, you have the evals, you have that all set up, and you can basically wrap it with, like...... voice in, voice out and turn taking.
+
+00:06:07,547 --> 00:06:07,848 [Jack]
+Mm.
+
+00:06:07,848 --> 00:06:40,928 [Luke]
+And so that's one use case. Or the other way is, like, if you're a small startup, we provide, like, the hosted rack, the hosted LLM. Like, you can select from any of the top LLM providers, um, like, at cost for the LLMs. And what's really cool about that is, like, you can get to production so quick. So, you can just type in your prompt, select your voice, and then you have the full agent. And you can either deploy it, like, connect a phone number or, like, put it straight on your website. Like, on my website, you can actually go and chat to me about any of my articles, and that's just-
+
+00:06:40,928 --> 00:06:41,487 [Jack]
+Oh, really?
+
+00:06:41,487 --> 00:06:44,728 [Luke]
+Yeah. I built in, like, five minutes, so...
+
+00:06:44,728 --> 00:06:47,307 [Jack]
+Okay, so it- and it's like audio chat with Luke.
+
+00:06:47,307 --> 00:06:48,807 [Luke]
+Yes. Yes. Yeah, yeah. With my own voice though.
+
+00:06:48,807 --> 00:06:53,127 [Jack]
+And it knows what blog? You can ask anything about, like, stuff that you've written?
+
+00:06:53,127 --> 00:06:56,787 [Luke]
+Yes. Yeah, yeah, exactly. So it's got all my blog posts loaded in, yeah.
+
+00:06:56,787 --> 00:07:00,727 [Jack]
+Okay. Very, very cool.
+
+00:07:00,727 --> 00:07:45,587 [Jack]
+Scaling DevTools is sponsored by WorkOS. If things start going well, some of your customers are gonna start asking for enterprise features. Things like audit trails, SSO, Skim provisioning, role-based access control. These things are hard to build, and you could get stuck spending all your time doing that instead of actually making a great dev tool. That's why WorkOS exists. They help you with all of those enterprise features, and they're trusted by OpenAI, Vercel, and Perplexity. And if you use them for user management, you get your first million, yes million, monthly active users for free. I honestly don't know any dev tools that have a million monthly active users, apart from GitHub maybe. So that'll get you pretty far. Here's what Kyle from Depot has to say about WorkOS.
+
+00:07:45,587 --> 00:08:38,267 [Work OS]
+We use WorkOS to effectively add all of the SSO and Skim to Depot. It's single-handedly, like, one of the best developer experiences I've ever seen for what is, like, a super painful problem, if you were to go and try to roll it out yourself. So, for us, we can effectively offer SSO and Skim, and it's like two clicks of a button, and we don't ever have to think about it. It's, like, one of the best features, uh, that we can add to Depot. It's super affordable, which effectively allows us to, like, break the SSO tax, uh, joke, and essentially say, like, you can have SSO and Skim as, like, an add-on onto your monthly plan. Like, it's no problem. Uh, so it really allows smaller startups to essentially offer, like, that enterprise feature, uh, without a huge engineering investment behind it. Like, it's literally we can just use a tool behind the scenes, and our life is exponentially easier.
+
+00:08:38,267 --> 00:08:47,347 [Jack]
+I think the biggest question I had about ElevenLabs is, like, sort of, like, how? How? Because, um, it felt like
+
+00:08:47,347 --> 00:08:54,847 [Jack]
+it came out, and it was, like, so much better than everything else. I was like, "Who are, who are these guys?" Like, "How did they do this?"
+
+00:08:54,847 --> 00:09:31,627 [Luke]
+Yeah. So n- ElevenLabs was founded, um, by two guys, Matty and Peter, and they're both Polish. They grew up in Poland. They're childhood best friends, and they're both super smart, so. Uh, Peter, he went to, uh, Oxford, and then Cambridge, and then Google. And Matty, he went to, like, Imperial, AEC at Mass, and then BlackRock, and Palantir. And they're both, like, super smart, childhood best friends. And they would get together, and they would, like, use their vacation time to go together on weekends on holiday and just, like, hack on projects.
+
+00:09:31,627 --> 00:09:32,107 [Jack]
+Really?
+
+00:09:32,107 --> 00:09:36,307 [Luke]
+Yeah, yeah. They would, like, just hack together, um, which I think is a sick way to-
+
+00:09:36,307 --> 00:09:37,387 [Jack]
+Yeah, absolutely. Yeah
+
+00:09:37,387 --> 00:11:00,267 [Luke]
+... use your vacation time. Like, more people should do that. They, growing up in Poland in the early 2000s, and even now, when you listen to movies or TV shows, like, Poland's a pretty small country relative to the world. Not that many people outside of Poland speak Polish. And so when you translate films and movies into Polish, and largely they don't translate it, so you just get the subtitles. Or if they do translate it, they just have one speaker, one voice actor who does the entire thing. So, if you imagine watching Friends with Rachel and Ross, and they're both played by one middle-aged Polish man- ... the love scene's not gonna be any good. And so- ... what, uh, what Matt and Peter were riffing on is like, "How can we make it so we can take, like, any content and turn it into any language?" And so when you, like, decompose that problem, it's like, okay, what do you need to do? Well, first you need to, like, understand what they're saying, what the emotion is. Then you need to, like, translate it into the other language, and then you need to turn that text into speech. Um, and so they're like, "Okay, decompose the problem. Let's first try and tackle the text into speech." And Peter, like, ex-Google, he basically spent all his time throughout, um, throughout his life just, like, working on his own research projects. And
+
+00:11:00,267 --> 00:11:07,387 [Luke]
+this problem in making human-like speech, it's not a new problem. Like, we've been doing it literally since the 1700s-
+
+00:11:07,387 --> 00:11:07,447 [Jack]
+Mm-hmm
+
+00:11:07,447 --> 00:11:27,267 [Luke]
+... with, like, wind-powered machines going through various pipes. You then had the early digital speech synthesis machines with, like, Stephen Hawking. And Stephen Hawking's voice is great. It's very distinctively him. It's fantastic for accessibility, but you wouldn't want to get, like, read your kids a bedtime story with Stephen Haw-
+
+00:11:27,267 --> 00:11:27,307 [Jack]
+Yeah.
+
+00:11:27,307 --> 00:11:35,267 [Luke]
+... Hawking's voice. Unless you're saying it's Stephen Hawk- it's, like, you know, a wholly different experience to calm with Matthew McConaughey with those deep tones.
+
+00:11:35,267 --> 00:11:35,707 [Jack]
+Yeah, yeah.
+
+00:11:35,707 --> 00:11:47,907 [Luke]
+So he was like, "Can I turn text into speech?" Like, tackled this problem, left Google, built his own GPU rack, and, like, managed to do it. And then ElevenLabs launched-
+
+00:11:47,907 --> 00:11:48,387 [Jack]
+Really?
+
+00:11:48,387 --> 00:11:48,607 [Luke]
+Uh, yeah.
+
+00:11:48,607 --> 00:11:51,327 [Jack]
+So he just did it, like, built his own GPU rack time?
+
+00:11:51,327 --> 00:12:20,231 [Luke]
+He, yeah. And there's a, there's a cool bit whereby Peter tells Matty, like, they had hacked together various, like, prototypes at point, or, like, different bits around audio. And then Peter's like-I think I can be the first person to, like, make human-like speech with AI. And so he quit Google, he built his own GPU set. Matty was still working at Palantir and basically, like, sharing his salary with Peter.
+
+00:12:20,231 --> 00:12:21,672 [Jack]
+Oh, that's cool.
+
+00:12:21,672 --> 00:12:47,411 [Luke]
+And then Peter, like, built it, and, like, as they're nearing the move, it's, like, Matty then quit Palantir as well. Like, they properly co-founded, incorporated the company. Um, and yeah. And then they- they started with 11 voices. They exposed it through API and UI. It's just, like, literally a small text box on the site where you could type in text. Um, and they started with 11 customers.
+
+00:12:47,411 --> 00:12:47,432 [Jack]
+No-
+
+00:12:47,432 --> 00:13:06,711 [Luke]
+The 11 V2 customers, yeah. Uh, you'll see the word 11 a lot. And they really realized they had something when someone took their entire book, and paragraph by paragraph entered this into this small text box on the site to generate the book and then stitched it together.
+
+00:13:06,711 --> 00:13:07,252 [Jack]
+Oh my gosh. That must've taken days.
+
+00:13:07,252 --> 00:13:12,851 [Luke]
+Yeah, days of, like, copying and p- We have- we have much better systems for that now, but yeah.
+
+00:13:12,851 --> 00:13:17,052 [Jack]
+Yeah, yeah, yeah, yeah. Wow. The- that salary sharing. Do you know Veed?
+
+00:13:17,052 --> 00:13:17,531 [Luke]
+Yes. Yeah, yeah.
+
+00:13:17,531 --> 00:13:19,191 [Jack]
+I think that's also how they started.
+
+00:13:19,191 --> 00:13:19,632 [Luke]
+Really? Yeah, yeah.
+
+00:13:19,632 --> 00:13:24,871 [Jack]
+Was, I think, uh, I think S- I can't remember if Saba or Tim was working.
+
+00:13:24,871 --> 00:13:24,892 [Luke]
+Yeah.
+
+00:13:24,892 --> 00:13:28,472 [Jack]
+And then the other one was, like, doing ha- taking half the salary.
+
+00:13:28,472 --> 00:13:28,851 [Luke]
+Yeah, yeah.
+
+00:13:28,851 --> 00:13:29,671 [Jack]
+And that, yeah.
+
+00:13:29,671 --> 00:13:31,111 [Luke]
+That's a really cool way to do it.
+
+00:13:31,111 --> 00:13:37,451 [Jack]
+No, I think it's- I think it's- it is a very cool- cool way. The thing I was curious was, like, the data as well. Like, does it, like, how did they train, like...
+
+00:13:37,451 --> 00:13:37,472 [Luke]
+Yeah.
+
+00:13:37,472 --> 00:13:43,771 [Jack]
+Just, like, one... 'Cause one guy with GPUs in his room. Also, like, it seems like the da- the voice data would've been really cool.
+
+00:13:43,771 --> 00:13:48,011 [Luke]
+Yeah. The data... So in general, we don't talk about our, like, training data.
+
+00:13:48,011 --> 00:13:48,492 [Jack]
+Yeah, secret.
+
+00:13:48,492 --> 00:13:50,291 [Luke]
+'Cause, like, voice is so competitive.
+
+00:13:50,291 --> 00:13:50,611 [Jack]
+Yeah.
+
+00:13:50,611 --> 00:13:56,492 [Luke]
+And so, like, there's just certain things where, like, you know, I can talk a lot about other, but that we're just like, you know-
+
+00:13:56,492 --> 00:13:56,871 [Jack]
+Okay, okay, okay.
+
+00:13:56,871 --> 00:13:58,711 [Luke]
+... competitors would love to know.
+
+00:13:58,711 --> 00:13:58,972 [Jack]
+Yeah, yeah.
+
+00:13:58,972 --> 00:14:18,931 [Luke]
+And so, yeah. The... But what the- the interesting thing with training these audio models is, unlike other types, like intelligence, where you do need a ton of GPUs. Like, Peter managed to get, like, cross this threshold, like make the best models, like, on actually really not very many GPUs.
+
+00:14:18,931 --> 00:14:19,231 [Jack]
+Mm.
+
+00:14:19,231 --> 00:14:26,931 [Luke]
+And now we have scaled it, and, like, the more you scale it, you do now see increasing results. But that was, like, quite an interesting quirk of the training.
+
+00:14:26,931 --> 00:14:27,031 [Jack]
+Yeah, yeah. Yeah.
+
+00:14:27,031 --> 00:14:33,651 [Luke]
+Which, like, you may not have otherwise been able to, like, one guy pretty much in his bedroom.
+
+00:14:33,651 --> 00:14:35,451 [Jack]
+It's a good constraint as well to start with.
+
+00:14:35,451 --> 00:14:35,611 [Luke]
+Yeah.
+
+00:14:35,611 --> 00:14:38,651 [Jack]
+But like, if you have that, prove that it could be good, and then-
+
+00:14:38,651 --> 00:14:39,191 [Luke]
+Yeah, 100%.
+
+00:14:39,191 --> 00:14:40,211 [Jack]
+... blow some money .
+
+00:14:40,211 --> 00:14:40,751 [Luke]
+Yeah, yeah, yeah.
+
+00:14:40,751 --> 00:14:45,411 [Jack]
+Yeah . Um, okay, cool. And then you yourself have been-
+
+00:14:45,411 --> 00:14:45,431 [Luke]
+Mm.
+
+00:14:45,431 --> 00:14:54,751 [Jack]
+I was saying to you before that, like, next time you join an early stage startup, I just need to apply to whatever company it is. Because, I mean, you've worked with Posthog.
+
+00:14:54,751 --> 00:14:54,871 [Luke]
+Yeah.
+
+00:14:54,871 --> 00:14:55,931 [Jack]
+Now ElevenLabs, like-
+
+00:14:55,931 --> 00:14:57,071 [Luke]
+Yeah, yeah.
+
+00:14:57,071 --> 00:15:01,631 [Jack]
+I mean, people know Posthog, I think, as well. Like, amazing company.
+
+00:15:01,631 --> 00:15:01,651 [Luke]
+Yeah.
+
+00:15:01,651 --> 00:15:04,091 [Jack]
+Um, how did you join ElevenLabs?
+
+00:15:04,091 --> 00:15:07,151 [Luke]
+Yeah, so, um,
+
+00:15:07,151 --> 00:16:04,051 [Luke]
+Matty and I, when we were 19, one of my best friends, he's Polish, and- and we were studying at Cambridge together. I was actually a medical student, but spent all my time coding, hacking on projects, trying to do startups. And my friend Philip, me and him would hack together on various things. And he was like, "Luke, there's HackCambridge," which is, like, the biggest hackathon in the university. Um, "I've got two friends, let's just go do it one weekend." I was like, "Yeah, sure, sounds like a lot of fun." Turns out this hackathon's probably the most important weekend of my life. So it was me, Philip, and Matty. Matty who then went on to found ElevenLabs. Um, and we get together and we actually built something which is, like, uh, it's completely different to ElevenLabs but similar space. Which is, it would help blind people use the internet by running the images on the website through a vision model, generating captions, and then reading that out loud.
+
+00:16:04,051 --> 00:16:04,071 [Jack]
+Oh, really?
+
+00:16:04,071 --> 00:16:12,911 [Luke]
+Yeah. So it's, like, slightly funky audio related bit. Um, but it worked really well. Because the issue is, like, you know, loads of pages on the internet-
+
+00:16:12,911 --> 00:16:12,931 [Jack]
+More accessible. Yeah
+
+00:16:12,931 --> 00:16:16,971 [Luke]
+... don't have captions, so they can't tell. You just hear image, like, "What's the image?"
+
+00:16:16,971 --> 00:16:17,391 [Jack]
+Yeah.
+
+00:16:17,391 --> 00:16:50,111 [Luke]
+Um, so we did this hackathon, and we actually ended up winning the Microsoft prize. And so we each got an Xbox, we're like, "Oh, this is sick." Like, we all immediately sold it on eBay for- ... for 350 quid. Um, and then, uh, we, like, just stayed in touch. And what's been amazing with that group, and it's why, like, if you can just do, like, the only tip I think I would give young people is, um, like, do hackathons with your smartest friends, or do projects with your startest- smartest friends. Don't call it a startup.
+
+00:16:50,111 --> 00:16:50,131 [Jack]
+Yeah.
+
+00:16:50,131 --> 00:17:59,091 [Luke]
+Don't try and raise money. At least for... Just get some projects under your belt and work with people who you think are amazing. Um, and Philip who organized this hackathon, he went on to found WordWhere, which raised the largest seed round ever from YC. Um, they're building, like, what's the new version of Zapier but in an LLM-first world where you can basically, like, type in natural text where I want to build no-code tool. And- and then Matty went to found on ElevenLabs. Um, and so me and Matty, we basically catch up every six months and riff on different ideas. Um, and the story of how I joined ElevenLabs is that, um, I basically missed out on investing in it. I was like, "Oh no, I've mucked up." So the- the story in the investing is we caught up and he goes, um, "Yeah, Luke, I've, uh, I'm just- just leaving Google to found a company." Um, and we were swimming in the Hampstead Heath ponds, which for the Americans, a pond's a small dirty puddle of water. And yes, we- we do actually go swimming on them in London. There's not- there's not the lovely Californian ocean like they're used to.
+
+00:17:59,091 --> 00:17:59,131 [Jack]
+Yeah .
+
+00:17:59,131 --> 00:19:18,375 [Luke]
+So we- we're going swimming in these ponds, he taps the thing, and he's like, "Oh, it's 11 degrees, my company's called ElevenLabs." And I'm like, "That's a pretty weird... ElevenLabs? Like, what's the- what's the product do?" He goes, "Well, step number one, we're gonna build the best..."... AI audio models in the world, so we're gonna build the best text-to-speech models, like human-like speech. I'm like, "Cool, but like what's that actually? You s- you're building some AI model." Um, and then he goes, "Well, number two, we're gonna sell it everyone. We're gonna build a reader app where people can read articles out loud, uh, on their commutes. We're going to build a creator platform where people can make audiobooks and voiceovers for their videos. We're gonna create a developer platform where we give API accessor- access, and we're going to build a way for people to make end-to-end voice agents." And I was like, "What do you mean you're gonna sell it everyone?" He goes, "Yeah, from like companies like Netflix to dub their videos to, um, you know, the best startup founders." I'm like, "That's a terrible go-to market. What do you mean you're selling it to every..." Like, no, surely you need like one persona you go deep on. He's like, "Yeah, I think we're like... Well, we'll just build the models first and then we'll see how it goes." And it turns out they build the models and they launched and it went incredibly. And he didn't explicitly ask to invest, but I'd done like a little bit by then.
+
+00:19:18,375 --> 00:19:19,215 [Jack]
+You could've pushed.
+
+00:19:19,215 --> 00:19:35,355 [Luke]
+Could've, should've pushed. Should've pushed. That was a mistake. Um, but then we basically stayed, you know... We still were chatting every so often, and I would constantly get VC friends pinging me being like, "I heard ElevenLabs has just got this many users or created this much audio." I was like, "Oh my God."
+
+00:19:35,355 --> 00:19:35,755 [Jack]
+Oh my God.
+
+00:19:35,755 --> 00:19:35,775 [Luke]
+And-
+
+00:19:35,775 --> 00:19:36,835 [Jack]
+The FOMO must've been insane.
+
+00:19:36,835 --> 00:19:45,435 [Luke]
+The FOMO was building. And then Matty at some point rings me and goes, "Oh, Luke, we're looking for someone to do like all the growthy things at ElevenLabs."
+
+00:19:45,435 --> 00:19:45,455 [Jack]
+Yeah.
+
+00:19:45,455 --> 00:19:56,135 [Luke]
+Like, "Help us get more users, do SEO, do paid ads." And I was like, "Well, I've never formally done growth stuff." Like, post ...product, I founded my own company where you're doing like all the-
+
+00:19:56,135 --> 00:19:56,295 [Jack]
+Yeah, yeah
+
+00:19:56,295 --> 00:20:03,435 [Luke]
+... COE type things, basically, you know, building the first version of product. And I very much saw myself as like more of an engineer.
+
+00:20:03,435 --> 00:20:03,615 [Jack]
+Mm-hmm.
+
+00:20:03,615 --> 00:20:05,755 [Luke]
+But I was like, "Sure, I'll join."
+
+00:20:05,755 --> 00:20:05,895 [Jack]
+Yeah.
+
+00:20:05,895 --> 00:20:16,135 [Luke]
+Give it a go. Um, and it's been a lot of... I've actually really enjoyed like the... I've reframed in my head what marketing is, uh, which I think has helped. So yeah, I've really enjoyed. Have enjoyed it.
+
+00:20:16,135 --> 00:20:17,235 [Jack]
+How have you framed that?
+
+00:20:17,235 --> 00:20:53,635 [Luke]
+Um, I think basically it's just like how do you tell the world about the incredible work the research and the engineering team is doing? And what's, what I've realized I really like with ElevenLabs, and it's like, it's not necessarily me building the product. I'm like, "Look at the incredible models that Peter has built, or the incredible, um, APIs that Tim and Flavio, or the incredible conversational AI product that Josef has built." And it's like, how do we use our creativity to just like tell the story in the best possible way?
+
+00:20:53,635 --> 00:20:53,655 [Jack]
+Mm-hmm.
+
+00:20:53,655 --> 00:21:09,775 [Luke]
+Like, how do we make this incredible launch video which really encapsulates what this conversational AI product is? Like, takes it down to the core abstract in a way which will resonate. How do we create like pages for SEO which genuinely add value?
+
+00:21:09,775 --> 00:21:09,935 [Jack]
+Yeah.
+
+00:21:09,935 --> 00:21:37,155 [Luke]
+So when you type in text-to-speech Hindi, we have a speech box where you can like type in any Hindi and it'll generate it. Like, that's genuinely useful. And so I think the reframes from like these small growth hacks of like your own stuff which feels a bit egotistical, to like, no, how do we like tell the story of what the team's doing in an amazing way? And then like also do that in a way where we deliver more value.
+
+00:21:37,155 --> 00:21:41,835 [Jack]
+Yeah. And I guess that is a lot easier to do when it is such a kind of growing-
+
+00:21:41,835 --> 00:21:43,155 [Luke]
+Yeah. Yeah.
+
+00:21:43,155 --> 00:21:43,155 [Jack]
+Yeah.
+
+00:21:43,155 --> 00:21:46,995 [Luke]
+I mean, I, I, I always joke it's like,
+
+00:21:46,995 --> 00:22:20,675 [Luke]
+like the growth team, we, we try our best. We have some incredible people on the team. But like it's, it's a different game when you're playing with the quality of these models and products. And the, the analogy I use is, it's like we're in a car race. Like, me and you, we're both racing along, we're doing engineering, we're doing product, we're speaking to users, we're creating SEO pages, we're scaling marketing. Like, we're in a normal car race, and then Peter and the research team just come in and give you a nitro boost. I'm like, like genuinely, they drop-
+
+00:22:20,675 --> 00:22:20,695 [Jack]
+Yeah
+
+00:22:20,695 --> 00:22:23,755 [Luke]
+... the best, uh, speech text model in the world.
+
+00:22:23,755 --> 00:22:23,895 [Jack]
+Yeah.
+
+00:22:23,895 --> 00:22:30,835 [Luke]
+It's like suddenly the sales team has a much easier job, or like our marketing video is gonna be way better.
+
+00:22:30,835 --> 00:22:36,075 [Jack]
+Yeah, that's actually... 'Cause I think for that one es- especially, 'cause I'm obviously interested in that-
+
+00:22:36,075 --> 00:22:36,095 [Luke]
+Yes
+
+00:22:36,095 --> 00:22:43,415 [Jack]
+... 'cause the podcast and stuff, it's like, it's just... If, if, if, if you can say, "Okay, that is actually the best in the world," it's like-
+
+00:22:43,415 --> 00:22:43,435 [Luke]
+Yes.
+
+00:22:43,435 --> 00:22:44,115 [Jack]
+Okay, well-
+
+00:22:44,115 --> 00:22:45,015 [Luke]
+Yeah.
+
+00:22:45,015 --> 00:22:47,475 [Jack]
+Kind of, that's, that kind of trumps everything where you're like...
+
+00:22:47,475 --> 00:22:56,275 [Luke]
+And the nice thing about the speech-to-text model, which we haven't cracked in text to speech, speech to text is so objective. There's a ground truth.
+
+00:22:56,275 --> 00:22:56,295 [Jack]
+Mm-hmm.
+
+00:22:56,295 --> 00:22:58,015 [Luke]
+We know exactly what we said.
+
+00:22:58,015 --> 00:22:58,335 [Jack]
+Yeah.
+
+00:22:58,335 --> 00:23:16,315 [Luke]
+We've not, um... Yeah, like you know exactly what you said. You can compare benchmark, you can score it, and ElevenLabs beats the new version of Whisper, it beats Gemini, it beats blah-de-blah, and it does it in all these different languages. Whereas the tricky thing with text to speech is, and why I respect sound designers so much, is like-
+
+00:23:16,315 --> 00:23:16,495 [Jack]
+Yeah
+
+00:23:16,495 --> 00:23:22,015 [Luke]
+... you need to have your ear attuned to like helping work out, like
+
+00:23:22,015 --> 00:23:35,975 [Luke]
+work out which is the better voice. And what we find is when customers A-B test our voices versus other voices in their application, like retention goes up, engagement goes up, but you don't necessarily have that same like core benchmark.
+
+00:23:35,975 --> 00:23:36,155 [Jack]
+Yeah.
+
+00:23:36,155 --> 00:23:36,475 [Luke]
+And-
+
+00:23:36,475 --> 00:23:39,195 [Jack]
+So it's kind of like down, downstream from-
+
+00:23:39,195 --> 00:23:39,715 [Luke]
+Yes.
+
+00:23:39,715 --> 00:23:39,735 [Jack]
+What-
+
+00:23:39,735 --> 00:23:53,895 [Luke]
+Yeah, yeah. You see it on your business metrics. If you have a great ear, you can hear it. Um, and then there's like a few other axes then where like we've tried to make it super clear like we have the widest selection of fantastic voices. So-
+
+00:23:53,895 --> 00:23:54,035 [Jack]
+Yeah
+
+00:23:54,035 --> 00:24:01,175 [Luke]
+... you can use like, um, a British voice or you could use Californian voice, or you could use older man, younger man-
+
+00:24:01,175 --> 00:24:01,195 [Jack]
+Mm-hmm
+
+00:24:01,195 --> 00:24:10,675 [Luke]
+... conversational audiobook style. There's all these different axes, uh, of voices which we've tried to really make it so you can experience the different power and variety of these models.
+
+00:24:10,675 --> 00:24:15,935 [Jack]
+Yeah. What we should do actually, and I need to... And I'll put this in the, in the notes so you know that-
+
+00:24:15,935 --> 00:24:15,975 [Luke]
+Yes
+
+00:24:15,975 --> 00:24:22,832 [Jack]
+... I actually remember to do it.If you don't see that, then don't trust it. But like, we should use the raw, like, we should transcribe this with-
+
+00:24:22,832 --> 00:24:23,111 [Luke]
+Yeah.
+
+00:24:23,111 --> 00:24:24,091 [Jack]
+... um-
+
+00:24:24,091 --> 00:24:24,372 [Luke]
+Yeah, 100%
+
+00:24:24,372 --> 00:24:26,532 [Jack]
+... and not touch it at all so that people can-
+
+00:24:26,532 --> 00:24:27,452 [Luke]
+Yeah, yeah, raw transcripts. Yeah.
+
+00:24:27,452 --> 00:24:29,011 [Jack]
+So that people can assess, um-
+
+00:24:29,011 --> 00:24:29,111 [Luke]
+Yeah
+
+00:24:29,111 --> 00:24:31,131 [Jack]
+... as well. Um, that would be super cool.
+
+00:24:31,131 --> 00:24:32,931 [Luke]
+Yeah, yeah, 100%.
+
+00:24:32,931 --> 00:24:37,531 [Jack]
+Um, yeah. And also like, I saw that the Lex Fridman thing.
+
+00:24:37,531 --> 00:24:37,871 [Luke]
+Mm.
+
+00:24:37,871 --> 00:24:39,572 [Jack]
+Was that, was that big? 'Cause-
+
+00:24:39,572 --> 00:24:50,991 [Luke]
+Yeah. So Lex, we've been really fortunate to work with Lex on a couple of projects. Um, so Lex Fridman has this fantastic podcast. He interviewed Volodymyr Zelenskyy.
+
+00:24:50,991 --> 00:24:52,252 [Jack]
+Yeah, listen to that one.
+
+00:24:52,252 --> 00:25:41,691 [Luke]
+Uh, which is like, you know, the president of Ukraine, absolutely massive interview. And during their conversation, they're speaking a combination of English, uh, Ukrainian, and Russian, all within the same podcast. And the number of people, there's not... You know, it's very important that people who speak all those languages, as one person, understand that. But it's also b- important to, like, everyone across the world, who maybe only speaks English or only speaks Russian or only speaks Ukrainian, can also understand the full podcast. And so what we did was we worked with his team to translate that such that everyone, eh, could do it. And when we say translate or dub these, what we do is we create their voice clone from their voice, and then generate, like regenerate basically the impa-
+
+00:25:41,691 --> 00:25:41,871 [Jack]
+Mm
+
+00:25:41,871 --> 00:25:47,671 [Luke]
+... the entire thing, uh, using either the English or the, or the Russian or the Ukrainian.
+
+00:25:47,671 --> 00:25:48,551 [Jack]
+That's really cool.
+
+00:25:48,551 --> 00:25:48,571 [Luke]
+Yeah.
+
+00:25:48,571 --> 00:25:51,951 [Jack]
+And did it just kinda happen organically or was it something that you were like?
+
+00:25:51,951 --> 00:25:58,011 [Luke]
+I think he basically wanted... So he's, I think,
+
+00:25:58,011 --> 00:26:00,511 [Luke]
+Russian, Ukraine. I'm not exactly sure where he's from.
+
+00:26:00,511 --> 00:26:00,531 [Jack]
+Yeah.
+
+00:26:00,531 --> 00:26:11,251 [Luke]
+But he had planned this podcast. And was like... And we worked together on different bits and things before to dub his general podcast. And he was like, "Okay, we would love your help to, like, do this."
+
+00:26:11,251 --> 00:26:11,571 [Jack]
+Yeah.
+
+00:26:11,571 --> 00:26:21,431 [Luke]
+And, um, dubbing isn't yet at the point where it's, like, fully end-to-end fantastic, um, without human intervention.
+
+00:26:21,431 --> 00:26:21,451 [Jack]
+Mm-hmm.
+
+00:26:21,451 --> 00:26:46,211 [Luke]
+So the way we do, we have couple of different versions of dubbing. You can either use, like, end-to-end dubbing, which is, like, fine for consumer use cases. Like, we've not really crossed the threshold yet of it being fantastic. There's Dubbing Studio, where you can go in and, like, manually edit the translations. And actually, lots of the issue is on the translation side, um, rather than, like, the voice generation. But you can go in-
+
+00:26:46,211 --> 00:26:46,331 [Jack]
+Mm-hmm
+
+00:26:46,331 --> 00:27:26,951 [Luke]
+... and manually edit the translations and regenerate. Or we have this fully managed service called Eleven Productions, where we work with you to do the translation. And that's what we arranged with Lex Fridman's team is like, okay, as soon as he'd finished the podcast, he would send us all the things and 24 hours later, we'd turn around the full stuff. And what we didn't realize, we thought it was going to be mainly Ukrainian or mainly... I think we thought it was, actually, we thought it was, yeah, mainly gonna be Ukrainian. And then we get the audio files come in, and we're like, "Oh wow, they're selling, they're saying English, Ukrainian and Russian, all within the same sentence."
+
+00:27:26,951 --> 00:27:26,971 [Jack]
+Yeah.
+
+00:27:26,971 --> 00:27:34,291 [Luke]
+And so we need people who are like expert-level translators because the pressure if you mistranslate global leaders-
+
+00:27:34,291 --> 00:27:34,331 [Jack]
+Yeah.
+
+00:27:34,331 --> 00:27:37,351 [Luke]
+... is huge. Yeah.
+
+00:27:37,351 --> 00:27:38,031 [Jack]
+Yeah.
+
+00:27:38,031 --> 00:27:38,131 [Luke]
+Yeah.
+
+00:27:38,131 --> 00:27:38,231 [Jack]
+It's like-
+
+00:27:38,231 --> 00:27:42,891 [Luke]
+So we had that one, and then we had another fantastic one with Modi, who's the President of India.
+
+00:27:42,891 --> 00:27:43,311 [Jack]
+Yeah, yeah, yeah.
+
+00:27:43,311 --> 00:27:46,291 [Luke]
+Which was, yeah, a real privilege for our team to do.
+
+00:27:46,291 --> 00:27:49,231 [Jack]
+Okay, and that one was probably a bit, a little bit easier.
+
+00:27:49,231 --> 00:27:52,771 [Luke]
+Um, from the technical side, yes, still very high stakes.
+
+00:27:52,771 --> 00:27:53,051 [Jack]
+Yeah, yeah.
+
+00:27:53,051 --> 00:27:55,611 [Luke]
+Um, but yeah, we were very pleased with how that one came out.
+
+00:27:55,611 --> 00:28:03,211 [Jack]
+Okay, that's really cool. But I, I feel like Lex, Lex is kind of, like, feeding into, like, the developer, so the developed products.
+
+00:28:03,211 --> 00:28:03,231 [Luke]
+Yes.
+
+00:28:03,231 --> 00:28:13,171 [Jack]
+I felt like... I mean, I saw a survey recently, and I think Lex Fridman was like top five podcasts for developers. And then the reach beyond that is obviously massive.
+
+00:28:13,171 --> 00:28:14,051 [Luke]
+Yes.
+
+00:28:14,051 --> 00:28:17,431 [Jack]
+Um, it must have driven a lot of growth on, like, the developer product.
+
+00:28:17,431 --> 00:28:32,731 [Luke]
+So we do a few different things for the developer products. So we do partnerships with fantastic people like Lex. We do our AI Engineer Pack. I'm not sure if you've seen that, where we partnered with companies like WorkOS and Recen-
+
+00:28:32,731 --> 00:28:32,771 [Jack]
+Oh, cool.
+
+00:28:32,771 --> 00:28:34,411 [Luke]
+Basically, all the top-
+
+00:28:34,411 --> 00:28:34,531 [Jack]
+Yeah
+
+00:28:34,531 --> 00:28:35,891 [Luke]
+... developer tools in the world.
+
+00:28:35,891 --> 00:28:36,771 [Jack]
+Yeah. Shout-out WorkOS-
+
+00:28:36,771 --> 00:28:37,211 [Luke]
+If you want free credits-
+
+00:28:37,211 --> 00:28:38,351 [Jack]
+... sponsor in the podcast as well.
+
+00:28:38,351 --> 00:29:17,871 [Luke]
+Yeah. Shout-out to WorkOS. Um, if you want free credits to like any of the top dev tools in the world, MongoDB, Mistral, BlackFrost, li- like, go to aiengineerpack.com. You sign up with GitHub. And as long as you have, like, legitimate GitHub, we will give you, I think it's about $50 in credits for all these different tools. So if you're hacking around, that's really fantastic. That's driven a lot of growth. Um, and then we have, like, a developer experience team, who I personally think they have the best job in the world. And if I, uh, was to switch jobs, I want to join that team, which is they just build cool products and cool demos with their product.
+
+00:29:17,871 --> 00:29:17,891 [Jack]
+Really?
+
+00:29:17,891 --> 00:29:37,551 [Luke]
+So yeah. I did one recently, which was Siri. Is Siri, like, iPhone dictation's actually pretty bad, um, and like, you're constantly having to go back and edit. So I built like an Apple shortcut which, um, uses our speech-to-text to transcribe what you say. So you just double tap-
+
+00:29:37,551 --> 00:29:37,751 [Jack]
+Huh
+
+00:29:37,751 --> 00:29:55,111 [Luke]
+... the back of your phone or hold down the action button. Uses speech text. You can go on a monologue for 10 minutes, and then it feeds it to OpenAI's LLM or you can do Gemini or any others, and it cleans it up. So say I go, "Hey, James, it is great to meet you. Ha. Actually, hey, Jack, it's great to meet you."
+
+00:29:55,111 --> 00:29:55,551 [Jack]
+Yeah.
+
+00:29:55,551 --> 00:29:58,171 [Luke]
+It will just automatically adjust it to, "Hey, Jack."
+
+00:29:58,171 --> 00:29:58,451 [Jack]
+Yeah.
+
+00:29:58,451 --> 00:30:01,311 [Luke]
+And then that wor- so that's like one demo we did.
+
+00:30:01,311 --> 00:30:01,511 [Jack]
+Sick.
+
+00:30:01,511 --> 00:30:05,411 [Luke]
+Uh, we did a really cool Eleven Labs MTP server demo.
+
+00:30:05,411 --> 00:30:05,771 [Jack]
+Oh, nice.
+
+00:30:05,771 --> 00:30:51,479 [Luke]
+Um, where you can even use... So conversational AI, on the fly, you can just say, "Order me a pizza from this number," and it will on the spot make you an AI agent and then phone that number.... the agent will then have the prompt, "Your job is to order a pizza with these toppings," da la. It will do it. And cheekily, in the video, we even had it like negotiate the price of the pizza- ... just with ourselves. But like... And then, and then like... It genuinely can work for like automating any phone call. So there's like the MCP server and there's lots. And we have this like fun process for like launching products and features where we run it through. So yeah, launches are really big for us. We try and maximize the impact of every, like, new model.
+
+00:30:51,479 --> 00:30:58,519 [Jack]
+Okay, cool. And then you've just taken over Louis, uh, from Louis, right? On the, um, AI Tinkers?
+
+00:30:58,519 --> 00:31:07,819 [Luke]
+Oh, yes. Yeah, yeah, yeah. So Louis, um, yeah, AI Tinkers, for people who don't know, I honestly think it's the highest quality
+
+00:31:07,819 --> 00:31:11,299 [Luke]
+engineering community I've ever been to. Like, the people are fantastic.
+
+00:31:11,299 --> 00:31:11,699 [Jack]
+Yeah.
+
+00:31:11,699 --> 00:31:16,219 [Luke]
+They're super friendly, and there's a real, like, home brew computer club vibe.
+
+00:31:16,219 --> 00:31:16,399 [Jack]
+Yeah.
+
+00:31:16,399 --> 00:31:45,519 [Luke]
+And so I'd been attending the London one since like the very first lot. I demoed some automated AI email roundup that I built, and then I think I've done a couple of demos since then. Um, and it's just an incredible community, and so when Louis told me... Louis's the founder of Bloop, which does, um, Cobalt to Java conversion using LLMs, really cool product. And, and when Louis was like, "I'm heading to New York. We've got these big banking customers to close."
+
+00:31:45,519 --> 00:31:46,459 [Jack]
+You're like, "I gotta swoop in."
+
+00:31:46,459 --> 00:31:56,199 [Luke]
+No, I was like, "What's happening to the community?" I was like, "You started this thing." I mean, Louis's done a fantastic... Louis's also been the biggest champion-
+
+00:31:56,199 --> 00:31:56,279 [Jack]
+Yeah
+
+00:31:56,279 --> 00:31:58,599 [Luke]
+... for AI in London that I know.
+
+00:31:58,599 --> 00:31:58,939 [Jack]
+And also hilarious, also-
+
+00:31:58,939 --> 00:32:00,159 [Luke]
+And I was like, "You're leaving."
+
+00:32:00,159 --> 00:32:00,339 [Jack]
+Hilarious as well.
+
+00:32:00,339 --> 00:32:01,179 [Luke]
+What's going on?"
+
+00:32:01,179 --> 00:32:02,339 [Jack]
+Hilarious, hilarious guy as well.
+
+00:32:02,339 --> 00:32:08,179 [Luke]
+I know. No, he's also... Yeah, I mean he's really funny. So when he was leaving, I was like, "What are you gonna do?"
+
+00:32:08,179 --> 00:32:08,279 [Jack]
+Yeah.
+
+00:32:08,279 --> 00:32:29,159 [Luke]
+And then he's like, "Well, would you be up for doing it when I'm away?" I was like, "Listen, it's your baby. If you ever come back, it's yours again." But like, I would be honored to, to help keep it going. So yeah, we're, we're... I've got a few plans for what I want to do. Louis did a fantastic job, like meetups every few months, super high quality. I'd probably love to make it a monthly thing. I think now just the pace of, like-
+
+00:32:29,159 --> 00:32:29,219 [Jack]
+Mm-hmm
+
+00:32:29,219 --> 00:32:43,859 [Luke]
+... AI, like the new model droppings. We now have the OpenAI Image Gen model. We now have... There's just so many cool things which I think we can, uh, get some incredible speakers to come through and, uh, yeah, see if we can scale it up a bit further.
+
+00:32:43,859 --> 00:32:59,159 [Jack]
+Yeah. The thing that I like, I think most about, uh, AI Tinkers, I think Louis did really well, was like he... And I've spoken to him about this on the show, but he... I think he has this cool, like, you have to present work that you-
+
+00:32:59,159 --> 00:32:59,419 [Luke]
+Yes
+
+00:32:59,419 --> 00:33:00,679 [Jack]
+... did yourself.
+
+00:33:00,679 --> 00:33:01,059 [Luke]
+Yes.
+
+00:33:01,059 --> 00:33:05,119 [Jack]
+And then he also is, like, so good at interrupting people.
+
+00:33:05,119 --> 00:33:16,859 [Luke]
+Yeah. Yeah, yeah. The... Yeah, so the rule is you need to present your own work. And that basically means no dev rails, no salespeople, no marketers. It's like the vibe is home brew computer club.
+
+00:33:16,859 --> 00:33:17,219 [Jack]
+Yeah.
+
+00:33:17,219 --> 00:33:27,539 [Luke]
+Like, we do allow sponsors to keep the events going. But, like, if you want your sponsor to speak, it has to be the engineer who actually built the thing. And then, yeah, the bit which I don't... will be very hard for me to fail is-
+
+00:33:27,539 --> 00:33:28,519 [Jack]
+Yeah, you've gotta do it.
+
+00:33:28,519 --> 00:33:30,419 [Luke]
+... he just does hilarious heckles.
+
+00:33:30,419 --> 00:33:31,079 [Jack]
+Yeah.
+
+00:33:31,079 --> 00:33:38,679 [Luke]
+And his main heckle, if you've ever been, is, "Make the font size bigger!" Because, like, it will be, yeah, like-
+
+00:33:38,679 --> 00:33:38,839 [Jack]
+Yeah.
+
+00:33:38,839 --> 00:33:39,439 [Luke]
+You know, pretty much-
+
+00:33:39,439 --> 00:33:41,999 [Jack]
+Everyone always does that. Everyone does the small...
+
+00:33:41,999 --> 00:33:42,239 [Luke]
+Everyone always does it. And the-
+
+00:33:42,239 --> 00:33:42,559 [Jack]
+Yeah.
+
+00:33:42,559 --> 00:33:59,659 [Luke]
+I had this, like, running joke mainly with myself, which is like, "Which will come first, AGI or X?" And, uh, one I did recently was like, "AGI or reliable autofill?" Like, how has no one solved that? Uh, another one is like, "AGI or, like, screen mirroring?"
+
+00:33:59,659 --> 00:33:59,679 [Jack]
+Yeah.
+
+00:33:59,679 --> 00:34:07,259 [Luke]
+Because everyone comes up, they plug in their screen, they then see a second monitor- ... on the presenter.
+
+00:34:07,259 --> 00:34:07,739 [Jack]
+Yeah.
+
+00:34:07,739 --> 00:34:10,999 [Luke]
+And they're like, "Okay, I now need to assist in preferences." Anyway.
+
+00:34:10,999 --> 00:34:13,679 [Jack]
+Yeah. It's, it's crazy. Yeah. Um, and-
+
+00:34:13,679 --> 00:34:15,359 [Luke]
+But some problems are just hard.
+
+00:34:15,359 --> 00:34:15,499 [Jack]
+Yeah.
+
+00:34:15,499 --> 00:34:19,919 [Luke]
+Like, how has no one solved that as a OS level thing? But anyway.
+
+00:34:19,919 --> 00:34:27,059 [Jack]
+Yeah. Yeah. It's, it's wild. I guess they need, um... I feel like Raycast are, like, trying to solve, like, just a ton of things.
+
+00:34:27,059 --> 00:34:27,179 [Luke]
+Yeah.
+
+00:34:27,179 --> 00:34:31,079 [Jack]
+I don't know if it's like... If it's just, like, anything
+
+00:34:31,079 --> 00:34:33,119 [Jack]
+annoying, I feel like maybe Raycast can do it.
+
+00:34:33,119 --> 00:34:40,719 [Luke]
+Raycast, Raycast is fantastic. The, um, the killer feature I think they've done recently is the focus mode-
+
+00:34:40,719 --> 00:34:41,359 [Jack]
+Oh, it's so good
+
+00:34:41,359 --> 00:34:42,639 [Luke]
+... where it turns off Slack-
+
+00:34:42,639 --> 00:34:42,739 [Jack]
+Yeah
+
+00:34:42,739 --> 00:34:45,539 [Luke]
+... sets a timer, doesn't let you open it again, just really slick interface.
+
+00:34:45,539 --> 00:34:47,239 [Jack]
+And you set a goal as well. I quite like that. It's quite cool.
+
+00:34:47,239 --> 00:34:56,319 [Luke]
+Yeah, set a goal. The only thing I've messaged Thomas being like, "Please, can you ship this?" is, like, automatically change your Slack notification status to, like-
+
+00:34:56,319 --> 00:34:56,639 [Jack]
+Ah
+
+00:34:56,639 --> 00:34:58,699 [Luke]
+... focus mode back in however long-
+
+00:34:58,699 --> 00:34:58,719 [Jack]
+Yeah
+
+00:34:58,719 --> 00:35:08,619 [Luke]
+... the duration is. Because the tricky thing... Like, it's f- I feel fine doing it, which is like, turn off Slack and... But I can imagine if you're, like, a new employee or something-
+
+00:35:08,619 --> 00:35:08,719 [Jack]
+Yeah
+
+00:35:08,719 --> 00:35:10,439 [Luke]
+... you feel like you need to keep that green-
+
+00:35:10,439 --> 00:35:12,019 [Jack]
+Need to get the fast replies and stuff
+
+00:35:12,019 --> 00:35:16,359 [Luke]
+... circle on. And I'm like, "No, like, do deep work. That's where everything meaningful actually happens."
+
+00:35:16,359 --> 00:35:16,379 [Jack]
+Yeah.
+
+00:35:16,379 --> 00:35:24,659 [Luke]
+"Turn off Slack." But it would maybe be nice, just a signal of like, "Hey, I'm still, like, working, but, you know, I've turned off my Slack."
+
+00:35:24,659 --> 00:35:31,439 [Jack]
+Yeah, yeah, yeah, yeah. True, that'll be cool. I think they, they, they're gonna get some Elevenlabs in their, uh, in Raycast.
+
+00:35:31,439 --> 00:35:35,759 [Luke]
+I, I personally think... So this hacky prototype I built on Shortcuts-
+
+00:35:35,759 --> 00:35:35,779 [Jack]
+Yeah
+
+00:35:35,779 --> 00:35:46,619 [Luke]
+... which actually, if people are interested, works really well. And all you have to do is click the iCloud Shortcut link and then you get it in your iPhone, as well as on your Mac.
+
+00:35:46,619 --> 00:35:46,879 [Jack]
+Mm-hmm.
+
+00:35:46,879 --> 00:35:53,499 [Luke]
+And you combine it through a shortcut. So it works really well. The only tricky bit is you then need to, like, add in your Elevenlabs API key and your, like-
+
+00:35:53,499 --> 00:35:53,539 [Jack]
+Mm-hmm
+
+00:35:53,539 --> 00:36:02,219 [Luke]
+... OpenAPI or Gemini, OpenAI or Gemini key. Um, but I was saying to Thomas, like, "Surely you guys should do, like, a super Whisper killer."
+
+00:36:02,219 --> 00:36:02,379 [Jack]
+Yeah, yeah.
+
+00:36:02,379 --> 00:36:07,219 [Luke]
+Because they already have the fantastic interface. It's all set up. They're doing all these AI features, but-
+
+00:36:07,219 --> 00:36:07,319 [Jack]
+Yeah
+
+00:36:07,319 --> 00:36:08,119 [Luke]
+... we will see.
+
+00:36:08,119 --> 00:36:14,059 [Jack]
+Yeah, I think he's showing some cool stuff they're doing where, like, you could just say, like, "Change the desktop background."
+
+00:36:14,059 --> 00:36:14,499 [Luke]
+Oh, really?
+
+00:36:14,499 --> 00:36:15,759 [Jack]
+And it would do it and stuff.
+
+00:36:15,759 --> 00:36:16,279 [Luke]
+Oh, cool. Yeah, yeah.
+
+00:36:16,279 --> 00:36:16,579 [Jack]
+It's like that-
+
+00:36:16,579 --> 00:36:18,419 [Luke]
+Yeah, I have no insight into their roadmap.
+
+00:36:18,419 --> 00:36:18,439 [Jack]
+Yeah, they could put some stuff.
+
+00:36:18,439 --> 00:36:22,199 [Luke]
+I also think certain companies, the roadmaps are very clear.
+
+00:36:22,199 --> 00:36:22,339 [Jack]
+Yeah.
+
+00:36:22,339 --> 00:36:38,396 [Luke]
+And certain ones are really hard. Like, Posthog, what was very cool was, like-... we have this very clear ICP of product engineers. And then, like, almost as pretty clear of, like, what's all the features that product engineers need to build products? Raycast, I don't know how they prioritize-
+
+00:36:38,396 --> 00:36:38,396 [Jack]
+It's not-
+
+00:36:38,396 --> 00:36:39,896 [Luke]
+... like, what they build.
+
+00:36:39,896 --> 00:36:39,916 [Jack]
+Yeah.
+
+00:36:39,916 --> 00:36:41,115 [Luke]
+But yeah, kudos to them.
+
+00:36:41,115 --> 00:36:43,455 [Jack]
+Just, just make computers and phones better is like the feeling.
+
+00:36:43,455 --> 00:36:45,255 [Luke]
+Yeah, they're not playing easy mode.
+
+00:36:45,255 --> 00:36:46,375 [Jack]
+Yeah, yeah, yeah.
+
+00:36:46,375 --> 00:36:46,375 [Luke]
+Yeah.
+
+00:36:46,375 --> 00:37:03,775 [Jack]
+Um, okay, so on... Like, you talked a bit about the growth stuff, but like, with ElevenLabs it seems like there'd be so many people using it. You get this, like, crazy growth. What, what really actually, like, matters? Like, what, what can you do that matters?
+
+00:37:03,775 --> 00:37:18,236 [Luke]
+So the biggest thing we try and do is maximize our launches. And so the research and the engineering team just creates incredible models, incredible products, and the best thing we can do is just make sure it gets out in front of everyone.
+
+00:37:18,236 --> 00:37:18,315 [Jack]
+Mm-hmm.
+
+00:37:18,315 --> 00:37:43,195 [Luke]
+And so we have a process by which we run through every launch. And so when we get told there's a new model, like speech-to-text, we go, "Okay, is this a tier one launch?" Is this like top, big, we want everyone to know about it, it should be surround sound the entire week at that launch? Or is this tier two, which is like, it's a really cool feature, we should be loud about it, but it's not like, let's use all our resources possible-
+
+00:37:43,195 --> 00:37:43,255 [Jack]
+Yeah
+
+00:37:43,255 --> 00:37:47,675 [Luke]
+... to let everyone... And then tier three is basically like, it's on the change log and the email list.
+
+00:37:47,675 --> 00:37:47,935 [Jack]
+Yeah, yeah.
+
+00:37:47,935 --> 00:37:57,495 [Luke]
+So the idea is, um, you know, when something comes, and wh- actually the growth team is constantly looking for, like, what's the engineering team shipped, which should be launches.
+
+00:37:57,495 --> 00:37:57,855 [Jack]
+Mm-hmm.
+
+00:37:57,855 --> 00:38:06,195 [Luke]
+And then we run it through our checklist. And so I have actually a blog post which goes into all of this with, like, literal templates that we use for our launches.
+
+00:38:06,195 --> 00:38:06,215 [Jack]
+Oh really?
+
+00:38:06,215 --> 00:38:53,835 [Luke]
+And, and for a tier one launch, the first thing we do is, like, when the product's ready, it's like, "What's the core messaging we want to get across?" And there's normally one primary message, which we want everyone to think about. And for us with speech-to-text is like the, uh, the most accurate speech-to-text model in the world. So, like, that's y- if we do our launch right, that's the only thing, like, if it's one thing, that's the only thing they remember. There's normally then a couple of secondary, like, value props and messages we want to get across. So it would be like, it's feature complete, so it has diarization, it has character level timestamps, word level timestamps. So that's, like, uh, a second bit. Another one would be, um, it supports many different languages.
+
+00:38:53,835 --> 00:38:54,035 [Jack]
+Mm-hmm.
+
+00:38:54,035 --> 00:39:17,195 [Luke]
+And, like, more languages than ever before. So 99 plus languages. One, like, side point is, a really cool bit is, before you just didn't have accurate transcription models for Serbian, for Malay, for Gujarati, which is, like, millions of people who just don't have transcription as a thing. Like, iPhone dictation does not work for them. And, like, now we do. So that was-
+
+00:39:17,195 --> 00:39:17,655 [Jack]
+Super cool.
+
+00:39:17,655 --> 00:39:29,155 [Luke]
+So we're like, "But what's the primary message we get across?" Then we turn that into our core assets. And so the core assets, normally first one we actually start with is the Tweet thread.
+
+00:39:29,155 --> 00:39:29,175 [Jack]
+Really?
+
+00:39:29,175 --> 00:39:32,015 [Luke]
+So it's like, what's the hook? So-
+
+00:39:32,015 --> 00:39:32,035 [Jack]
+Mm-hmm
+
+00:39:32,035 --> 00:39:35,175 [Luke]
+... and there's a top tip, is you start with the word introducing.
+
+00:39:35,175 --> 00:39:35,275 [Jack]
+Introducing.
+
+00:39:35,275 --> 00:39:36,235 [Luke]
+Or launching.
+
+00:39:36,235 --> 00:39:36,275 [Jack]
+Yeah.
+
+00:39:36,275 --> 00:39:38,715 [Luke]
+Like, make it super clear you're launching something cool.
+
+00:39:38,715 --> 00:39:38,855 [Jack]
+Yeah, yeah.
+
+00:39:38,855 --> 00:40:22,215 [Luke]
+So go like, "Introducing the world's most accurate speech-to-text model." Boom, one line, line break, nice and clear. Copywriting matters, nice and clear. Then you go into, like, bullet point list or paragraph with some of these secondary bits, or reinforcing the first bit, or, you know, on benchmarks it beats x, beats Whisper and it beats... Um, so that, and then we attach a video. And so every tier one and tier launch, tier two launch video we do, we make a video. And videos are hugely underrated overall. Social algorithms massively focus on video, so you need, like, a video. And there's a couple of different types of videos. One is motion design, which is kind of like
+
+00:40:22,215 --> 00:40:32,995 [Luke]
+design, Figma style design or animated, like, design which is animated. So that's one. Uh, the second one is, like, the founder led videos-
+
+00:40:32,995 --> 00:40:33,075 [Jack]
+Mm-hmm
+
+00:40:33,075 --> 00:40:36,715 [Luke]
+... where, like, you, as the founder, are there introducing it.
+
+00:40:36,715 --> 00:40:53,735 [Luke]
+And maybe it's okay given I've spoken very positively about Raycast. Raycast, their product's amazing. Actually, if you look at their most recent launch video, founder led videos are really risky, I think, for launches because often you speak for about, like, a couple of minutes before you even2 introduce the feature.
+
+00:40:53,735 --> 00:40:53,875 [Jack]
+Mm-hmm.
+
+00:40:53,875 --> 00:41:10,115 [Luke]
+And with the TikTok level of attention, so, like, make sure you get your, like, your, your core message is the most accurate speech-to-text model. Say that in pretty much the first sentence. Because if you look at then the retention of the video, people drop off.
+
+00:41:10,115 --> 00:41:10,295 [Jack]
+Yeah.
+
+00:41:10,295 --> 00:41:11,095 [Luke]
+So, like-
+
+00:41:11,095 --> 00:41:11,935 [Jack]
+Need to get it in the first.
+
+00:41:11,935 --> 00:41:21,135 [Luke]
+You need to front load it. Uh, so that founder style videos I think are actually a bit risky, unless you're excellent at editing. Um, and then the third one is more, like, screen share.
+
+00:41:21,135 --> 00:41:21,375 [Jack]
+Mm-hmm.
+
+00:41:21,375 --> 00:41:28,095 [Luke]
+And particularly for developer audience who love to nerd out about, like, product and tech details, that, that can work really well. So-
+
+00:41:28,095 --> 00:41:32,335 [Jack]
+And that's, like, further down the chain, like, people that are really interested go and watch the screen share. Or-
+
+00:41:32,335 --> 00:41:36,715 [Luke]
+Yes, yeah. Um, but actually for tier two videos we often lead with a screen share.
+
+00:41:36,715 --> 00:41:36,775 [Jack]
+Mm-hmm.
+
+00:41:36,775 --> 00:41:47,295 [Luke]
+Because it's, like, you know, one feature we've just shipped is agent to agent transfers. Do... So you can create different agents. You can even create human agents, or hum-
+
+00:41:47,295 --> 00:41:47,315 [Jack]
+Oh.
+
+00:41:47,315 --> 00:41:50,475 [Luke]
+... humans you then transfer the call to.
+
+00:41:50,475 --> 00:41:50,515 [Jack]
+Mm-hmm.
+
+00:41:50,515 --> 00:41:51,615 [Luke]
+So say you phone up, it's like-
+
+00:41:51,615 --> 00:41:51,635 [Jack]
+Yeah
+
+00:41:51,635 --> 00:41:57,695 [Luke]
+... "Hey, I'm Luke from ElevenLabs," or, like, "I want a refund." It's like, maybe the AI isn't allowed to deal with that, so they-
+
+00:41:57,695 --> 00:41:57,815 [Jack]
+Yeah
+
+00:41:57,815 --> 00:42:11,395 [Luke]
+... forward it to a hu-... So for that, we can actually, like, within an hour, within half an hour, film a quick screen share of a compelling demo, like, showing the technical details. And you as an engineer who's maybe already considering this product or these types-
+
+00:42:11,395 --> 00:42:11,415 [Jack]
+Yeah
+
+00:42:11,415 --> 00:42:13,815 [Luke]
+... of products, that's actually exactly what you'd want to see.
+
+00:42:13,815 --> 00:42:13,875 [Jack]
+Yeah.
+
+00:42:13,875 --> 00:42:15,675 [Luke]
+You don't need flashy motion design.
+
+00:42:15,675 --> 00:42:16,275 [Jack]
+Yeah, yeah.
+
+00:42:16,275 --> 00:42:52,563 [Luke]
+Um, so yeah, if we do the X or Twitter thread, we do the video, um, and that's normally the com- blog posts for new models with, like, ideally technical details, benchmarks, is really great.... and then you explode those into what we call, like distribution. So then repost to every channel, repost to X, repost to Threads, repost to Bluesky, uh, launch it on product hand. And actually, if you've got the core of these assets, it's actually really quick to do that, and then get your team to boost it, be loud, be proud about the incredible product and- and model you've just launched.
+
+00:42:52,563 --> 00:42:57,323 [Jack]
+Yeah. That- that's actually really cool. So what- what do people search to find the blog post? It's just like...
+
+00:42:57,323 --> 00:43:01,743 [Luke]
+Um, so my website's harrys.co and it's called Launch Your Product.
+
+00:43:01,743 --> 00:43:02,643 [Jack]
+Okay, cool.
+
+00:43:02,643 --> 00:43:02,663 [Luke]
+Yeah.
+
+00:43:02,663 --> 00:43:04,503 [Jack]
+People should go and check that out. Sounds great.
+
+00:43:04,503 --> 00:43:05,024 [Luke]
+Yeah.
+
+00:43:05,024 --> 00:43:12,483 [Jack]
+Um, okay. Yeah, and I guess this is just way easier, again saying this, is like if you have done something so cool-
+
+00:43:12,483 --> 00:43:13,203 [Luke]
+Yes, yeah
+
+00:43:13,203 --> 00:43:21,043 [Jack]
+... um, would you use the same method if you're like, you know, more of a kind of like traditional dev tool that's like, you know, uh-
+
+00:43:21,043 --> 00:43:25,443 [Luke]
+Yeah. I think a great example would be what Resend does.
+
+00:43:25,443 --> 00:43:25,883 [Jack]
+Mm.
+
+00:43:25,883 --> 00:43:32,183 [Luke]
+Resend is building a like reliable email API and like corresponding features around that.
+
+00:43:32,183 --> 00:43:32,923 [Jack]
+Yep.
+
+00:43:32,923 --> 00:43:37,083 [Luke]
+If you don't market it well, it's pretty boring. Like it's not a new problem.
+
+00:43:37,083 --> 00:43:37,943 [Jack]
+Yeah.
+
+00:43:37,943 --> 00:43:56,343 [Luke]
+You know, you've had SendGrid, you've had... Like there's probably like 50 other email. Like Amazon does email sending. Like it's not particularly new, it's not particularly sexy, but like every time they launch something, they still put in the time to make like the feature great, to create like these fantastic React interfaces.
+
+00:43:56,343 --> 00:43:56,363 [Jack]
+Yeah.
+
+00:43:56,363 --> 00:44:19,103 [Luke]
+Like they do make the products great, but then also they're like proud of like, "Hey, we've just shipped this feature." And the really cool thing about launches as a channel as opposed to an SEO or paid marketing or something else is like every time you do a launch, you're telling your new customers, "Hey, we're shipping quickly. We've just built this incredible feature for you."
+
+00:44:19,103 --> 00:44:19,183 [Jack]
+Yeah.
+
+00:44:19,183 --> 00:44:35,143 [Luke]
+Like, "Come use this with the rest of our product." But also you're telling all your existing features, "Hey, this is like a new feature we've just shipped which you should probably use." So it helps with acquisition, helps with activation. Maybe someone signed up, they didn't activate, they got stuck.
+
+00:44:35,143 --> 00:44:35,523 [Jack]
+Yeah.
+
+00:44:35,523 --> 00:45:09,303 [Luke]
+They're like, "I really needed agent-to-agent transfers. Now I've churned." It's like, "Oh no, actually they come back, they activate." Um, and then they retain because like suddenly they're going deeper, they're using all these cool features. So yeah, I think pretty much every product should be thinking, like create a checklist for your launch. Yours, every company will look different depending on who their audience is, where they hang out. At- at Posthog we really cared about like hacker news. Could we... Like the sign was, does your blog... If you had like a hacker news post like really rank, that was like a wow, we've- we've-
+
+00:45:09,303 --> 00:45:09,883 [Jack]
+We've done a good job.
+
+00:45:09,883 --> 00:45:29,483 [Luke]
+We've done a good job. Um, so everyone will look different, but like create the checklist, iterate, make your launches impactful, and like you as growthy teams or developer relations or developer experience teams, like you owe it to your engineers and product teams and research teams to take the incredible work they do and get it out for everyone else.
+
+00:45:29,483 --> 00:45:31,123 [Jack]
+Yeah. Okay, so we're coming towards the end.
+
+00:45:31,123 --> 00:45:31,143 [Luke]
+Yeah.
+
+00:45:31,143 --> 00:45:43,943 [Jack]
+I just wanted like one last question to ask you is like, you have started, you worked at like two of, I mean the best dev tools around, fastest growing, especially when you think like,
+
+00:45:43,943 --> 00:45:53,403 [Jack]
+uh, UK somewhat affiliated at least and Posthog would say they're Pr- or Eleven Labs would say British company, but like
+
+00:45:53,403 --> 00:45:57,623 [Jack]
+what are, how- how do you pick where to work?
+
+00:45:57,623 --> 00:47:33,843 [Luke]
+Both of them are pretty esoteric. You know, I've only got two data points. The first one with Posthog was I asked Dalton, so I founded a company which went through YC, and when I was working out my next move I was like, ideally I do want to start another company again soon. And I was like, "Dalton's fantastic, he's our group partner. He's given me more good advice than anyone else in the world." And I was like, "Dalton," like, "I'm working out what I should do next. Like should I launch another company straight away? Should I like go join a super early stage one? Should I join a, like scale up?" And he goes, "Well, Luke, you've never s- really seen what like true PMF feels like, what scale really feels like. And so I think you should like at least spend some time in a super fast growing company." And so that's why I like joined Posthog and helped them tackle some of their product stuff. Um, but I think that like looking back, probably the core signal is... I think there's different stages, but the most important thing is like are the founders truly excellent? Um, do they have a really great proxy is like, are there really great investors you really trust? Like is A16Z involved with the company? That's normally a really great sign. And or Sequoia or- or the top firms. And then the product, like is this a product you really deeply resonate with and really want to use? Like Posthog I'd used as a product and I knew it was great and like I'd deployed my own version of Posthog on a Kubernetes cluster, um, and like used it to ship my own products. Eleven Labs had actually built like a- a AI priest which would send you t- So I had-
+
+00:47:33,843 --> 00:47:33,863 [Jack]
+Really?
+
+00:47:33,863 --> 00:47:36,663 [Luke]
+As soon as they launched, I was like playing around with their API.
+
+00:47:36,663 --> 00:47:36,723 [Jack]
+Oh my gosh.
+
+00:47:36,723 --> 00:47:42,923 [Luke]
+I was like this is incredible, and how it would work is just like you could send it questions via text, it would send back voice notes.
+
+00:47:42,923 --> 00:47:43,883 [Jack]
+That's really cool.
+
+00:47:43,883 --> 00:47:58,943 [Luke]
+So like really play with the APIs, like is this something great? Is it like a 10X better product? And so far I do think I've been very lucky, but I think if you choose founders which are really excellent, which want to build something massive, not just some quick sell.
+
+00:47:58,943 --> 00:47:58,963 [Jack]
+Mm.
+
+00:47:58,963 --> 00:48:06,723 [Luke]
+Like founders who are really excellent with excellent investors and like the product is really differentiated and fantastic.
+
+00:48:06,723 --> 00:48:06,743 [Jack]
+Mm.
+
+00:48:06,743 --> 00:48:13,403 [Luke]
+And you join at like a seed or series A, like there should be a lot of like scale to go and-
+
+00:48:13,403 --> 00:48:13,603 [Jack]
+Yeah
+
+00:48:13,603 --> 00:48:20,543 [Luke]
+...hopefully you're only just getting started at this point. And at least Eleven Labs now, like we genuinely are still... We're only two years old.
+
+00:48:20,543 --> 00:48:20,663 [Jack]
+Yeah.
+
+00:48:20,663 --> 00:48:30,263 [Luke]
+We're- we're just getting started, we're hiring a lot, we're 200 people now, we're growing very quickly, so I mean, to- to give a cheeky answer, I would suggest they join Eleven Labs.
+
+00:48:30,263 --> 00:48:30,283 [Jack]
+Yeah.
+
+00:48:30,283 --> 00:48:37,243 [Luke]
+And like one of the really cool things about joining at like this stage with Eleven Labs is like there's still so much upside.
+
+00:48:37,243 --> 00:48:37,623 [Jack]
+Yeah.
+
+00:48:37,623 --> 00:48:43,823 [Luke]
+Like we're only $3 billion company, we genuinely think we can be- beat like the next Google, we can-
+
+00:48:43,823 --> 00:48:44,003 [Jack]
+Yeah
+
+00:48:44,003 --> 00:49:11,519 [Luke]
+...beat OpenAI, we can be in like...... trillions of dollars is, like, genuinely what everyone is aiming for in terms of size, size, and the impact being like, "Can we get the best enterprises in the world? Can we get all of them? Can we get the best creators, the best developers?" We're going, like, multiproduct and we're only 200 people now. And I personally find the, like, scaling phase super fun because there's still lots of, like, zero to one cool stuff, but there's also, like-
+
+00:49:11,519 --> 00:49:11,640 [Jack]
+Yeah
+
+00:49:11,640 --> 00:49:15,659 [Luke]
+... you know, you get lots of people, fantastic talent joining.
+
+00:49:15,659 --> 00:49:16,300 [Jack]
+Mm-hmm.
+
+00:49:16,300 --> 00:49:17,199 [Luke]
+So yeah, it's a lot of fun.
+
+00:49:17,199 --> 00:49:18,899 [Jack]
+Is it remote or you- do you have offices?
+
+00:49:18,899 --> 00:49:30,839 [Luke]
+So we are technically remote first, um, but we do have in-person offices in New York; London; Warsaw; San Francisco; um, soon India; Japan; Korea. So like-
+
+00:49:30,839 --> 00:49:30,960 [Jack]
+Wow
+
+00:49:30,960 --> 00:49:42,079 [Luke]
+... we're scaling up these hubs. And what we find, yeah, love working with the best talent wherever, and if you prefer to work from home, work from home. If you prefer being in the office, come join us in the office.
+
+00:49:42,079 --> 00:49:54,960 [Jack]
+Cool, okay. Amazing. Um, and then can I just ask, 'cause you have one rogue question, do you have any final things that you would say to people listening running a dev tool?
+
+00:49:54,960 --> 00:50:15,699 [Luke]
+Yeah. I think if you're running a dev tool, it would be, yeah, just maximize the impact of your launches. Like, you're already building really cool stuff. You know your customers well, you know where they hang out. Just, like, be a little louder. Take the incredible work that your engineering product research team is doing and amplify it to the world.
+
+00:50:15,699 --> 00:50:19,699 [Jack]
+Okay. That was amazing. Um, Luke, that was really fun.
+
+00:50:19,699 --> 00:50:19,979 [Luke]
+Yeah.
+
+00:50:19,979 --> 00:50:20,159 [Jack]
+That was like-
+
+00:50:20,159 --> 00:50:20,680 [Luke]
+Really enjoyed it
+
+00:50:20,680 --> 00:50:25,219 [Jack]
+... super galvanized. I'm like, me- let me- let me get my CV ready.
+
+00:50:25,219 --> 00:50:25,399 [Luke]
+When are you gonna launch-
+
+00:50:25,399 --> 00:50:25,399 [Jack]
+Yeah.
+
+00:50:25,399 --> 00:50:27,279 [Luke]
+When are you gonna launch, uh, your-
+
+00:50:27,279 --> 00:50:27,299 [Jack]
+Yeah
+
+00:50:27,299 --> 00:50:27,939 [Luke]
+... your product?
+
+00:50:27,939 --> 00:50:28,460 [Jack]
+I-
+
+00:50:28,460 --> 00:50:29,779 [Luke]
+That's the-
+
+00:50:29,779 --> 00:50:32,640 [Jack]
+That's- That's the question. Um, yeah. Uh-
+
+00:50:32,640 --> 00:50:36,559 [Luke]
+But yeah, either that or the CV, I would love to see either.
+
+00:50:36,559 --> 00:50:38,439 [Jack]
+Yeah. Um, thanks so much, Luke.
+
+00:50:38,439 --> 00:50:38,719 [Luke]
+Yeah.
+
+00:50:38,719 --> 00:50:40,759 [Jack]
+And, uh, yeah. Thanks, everyone, for listening.
+
+00:50:40,759 --> 00:50:41,799 [Luke]
+Fantastic. Thank you. Really fun.
+
+00:50:41,799 --> 00:50:42,799 [Jack]
+Oh, we got the first handshake on this.
+
+00:50:42,799 --> 00:50:43,979 [Luke]
+Yes. Oh, really? Huh?
+
+00:50:43,979 --> 00:50:46,599 [Jack]
+I think so. Yeah. We should redo it often.
+
+00:50:46,599 --> 00:50:46,879 [Luke]
+Yeah.
+
+00:50:46,879 --> 00:50:47,060 [Jack]
+Yeah.

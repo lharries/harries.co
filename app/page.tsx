@@ -11,6 +11,7 @@ import {
   NavBar,
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
+import { getPodcasts } from "../lib/podcasts";
 import { ConversationalAI } from "@/components/conversational-ai";
 import clsx from "clsx";
 
@@ -42,6 +43,7 @@ export async function generateMetadata() {
 export default function Home() {
   const projects = getProjects();
   const posts = getBlogPosts();
+  const podcasts = getPodcasts();
 
   const growthArticles = [
     {
@@ -158,6 +160,57 @@ export default function Home() {
                   </h3>
                   <div className="text-sm text-gray-500 mt-auto">
                     {article.description}
+                  </div>
+                </div>
+              </a>
+            </Card>
+          ))}
+        </Container>
+
+        <Container className="mx-auto flex flex-col md:flex-row w-full gap-6">
+          {podcasts.map((podcast, index) => (
+            <Card key={index} className="w-full group" noPadding>
+              <a
+                href={podcast.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <div className="relative w-full pt-[56.25%] overflow-hidden rounded-t-md group">
+                  {podcast.useBlurredBackground ? (
+                    <>
+                      <div
+                        className="absolute inset-0 bg-cover bg-center blur-md scale-110 transition-transform duration-300 group-hover:scale-125"
+                        style={{ backgroundImage: `url(${podcast.cover})` }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Image
+                          src={podcast.cover}
+                          alt={podcast.title}
+                          width={300}
+                          height={300}
+                          className="object-contain transition-transform duration-300 group-hover:scale-110 rounded-md max-h-full max-w-full"
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <Image
+                      src={podcast.cover}
+                      alt={podcast.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  )}
+                </div>
+                <div className="bg-white p-6 h-50">
+                  <div className="uppercase font-sans text-purple-500 text-sm mb-1">
+                    PODCAST
+                  </div>
+                  <h3 className="text-lg font-bold font-serif mb-2">
+                    {podcast.title}
+                  </h3>
+                  <div className="text-sm text-gray-500 mt-auto">
+                    {podcast.description}
                   </div>
                 </div>
               </a>

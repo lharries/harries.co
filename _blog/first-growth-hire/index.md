@@ -46,7 +46,7 @@ The core skills needed for this are:
 - Data fluency.
   - Why? They’ll be standing up new channels, analyzing results and allocating budget. If they run an A/B test but don’t take into account that the arms are unbalanced you’ll be doubling down on the worse option — and compounding the wrong way…
 
-They should have high-agency, be a ridiculously quick learner and not be afraid to learn new tools/systems.
+They should be able to work fully independently without engineering support. Evaluate if they are high-agency, a ridiculously quick learner and not afraid to learn new tools/systems.
 
 I explicitly don’t believe you need years of growth or marketing experience. Some of the best growth people we have hired were previous founders and PMs with no formal marketing experience. Hire for gradient over y-intercept. People launching their own projects and companies is a great indicator having the abilities listed as well as high agency.
 
@@ -78,6 +78,8 @@ The roles you hire next will vary based on the market and your existing team’s
 - Motion Designer / Videographer / Creative Producer
   - Create the videos for your launches, social media, website, customer stories and more. Videos are dominating social media algorithms and are still underrated.
 
+_Depending on your product and likely growth channels, you might want to hire one of these as the first growth hire. For example, if you're building a marketplace a Growth Engineer (frontend leaning) make make sense as the first hire to lean into programmatic SEO._
+
 ## When to hire channel specialists?
 
 As you near PMF and start to prove out acquisition channels you want to double down on them. Hire a specialist to focus on just that channel and the associated KPIs. Make it their one thing and one thing only.
@@ -90,7 +92,7 @@ When a channel is working and having only one person on that channel becomes a b
 
 For B2B, the initial loop of building a great product and launching it should be able to get you to PMF. If it doesn’t, you likely haven’t cracked the right product/positioning yet. Your paid ads won’t be positive ROAS and spending time optimizing the ads and funnel will just waste attention. Instead, have your Growth Marketer set up protective bidding on your own brand, conquesting and maybe a quick test of the main keywords.
 
-For consumer, this is different however. With B2B, you know that if you can get customers to love your product and your ACV is high enough you can scale with a sales team. However, for consumer if you’ve built a great product that someone loves there’s not the same guarantee you’ll be able to scale acquisition. You need to more closely iterate on the growth loop as part of the initial product work which could include paid acquisition.
+For consumer, this is different. With B2B, you know that if you can get customers to love your product and your ACV is high enough you can scale with a sales team. However, for consumer if you’ve built a great product that someone loves there’s not the same guarantee you’ll be able to scale acquisition. You need to more closely iterate on the growth loop as part of the initial product work which could include paid acquisition.
 
 ## Should you hire agencies, contractors, and advisors?
 
@@ -108,6 +110,6 @@ Alternatively, have your Growth Marketer work with an external channel expert fo
 
 It’s now time to hire your first growth hire. Most likely this should be a Growth Marketer. Write an excellent job ad (test your own copywriting skills). Source widely through friends, investors and past colleagues. Screen for excellent proof of work, do a relevant take home challenge, and test how they think live. Hire for gradient over y-intercept. Then supplement the team with Growth Engineers, Website Designers, Brand Designers and Motion Designers. Over time, as you prove channels and reach PMF hire in individuals to focus on just one channel. Then turn those individuals into teams. Leverage agencies, contractors and advisors as needed, but be cautious.
 
-It’s becoming a meme that the goal is to have a \$1 billion dollar company with just 1 employee (you). But there’s no prize for revenue per employee. The prize is for impact and long-term free cash flow. It’s better to have a \$2 billion dollar company with 100 employees than a \$1Bn dollar company with 1 employee. Management has overhead but with the right people you’ll get way further and have more fun doing so.
+It’s becoming a meme that the goal is to have a \$1 billion dollar company with just 1 employee (you). But there’s no prize for revenue per employee. The prize is for impact and long-term free cash flow. It’s better to have a \$2 billion dollar company with 100 employees than a \$ billion dollar company with 1 employee. Management has overhead but with the right people you’ll get way further and have more fun doing so.
 
 Overall, you as the founder are ultimately responsible for growth. But you can hire excellent people to help you get there.

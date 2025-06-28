@@ -1,0 +1,593 @@
+---
+title: How I AI
+date: "2025-06-29T11:22:36"
+category: youtube
+description: The exact AI playbook (MCPs, GPTs, Granola) that saved ElevenLabs $100k+ & helps them ship daily
+url: https://www.youtube.com/watch?v=l4HfPPvRhTs
+cover: /podcasts/how_i_ai.jpg
+---
+
+_Transcript generated with [ElevenLabs Speech to Text](https://elevenlabs.io/speech-to-text)_
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "56.25%",
+    height: 0,
+    overflow: "hidden",
+    maxWidth: "100%",
+    background: "#000",
+  }}
+>
+  <iframe
+    src="https://www.youtube.com/embed/l4HfPPvRhTs"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+    frameBorder="0"
+    allowFullScreen
+    title="Scaling Dev Tools"
+  />
+</div>
+
+00:00:00,099 --> 00:00:05,859 [Luke]
+When you are editing, as much as possible, try and edit the underlying prompt rather than the actual output.
+
+00:00:05,859 --> 00:00:22,039 [Claire]
+I like that you have here the URA and then gives a very specific identity and job to be done at the top of this, and then you have very specific instructions where you say, "You must do A, B, C, D," and it's quite particular.
+
+00:00:22,039 --> 00:00:37,299 [Luke]
+This saved us $40,000 a year for the tool, so immediately canceled it, over $100,000 in agency costs. I think the highlight though is just not having to deal with more SaaS vendors, more agencies constantly trying to get us sold.
+
+00:00:37,299 --> 00:02:41,919 [Claire]
+Welcome back to How I AI. I'm Claire Vu, product leader and AI obsessive here on a mission to help you build better with these new tools. Today we have a great conversation with Luke Harries, head of growth at ElevenLabs. Luke shows us how to make everything launch by making everything automated with AI. He shows us his secret flows for generating case studies and tweets on the fly, how he saved his company tens of thousands of dollars by, yes, being a marketer that coded in Cursor, and explains what an MCP is and how he hooked it up to WhatsApp. Let's get to it. This episode is brought to you by Orkes, the company behind open source Conductor, the platform-powering complex workflows and process orchestration for modern enterprise apps and agentic workflows. Legacy business process automation tools are breaking down. Siloed low-code platforms, outdated process management systems and disconnected API management tools weren't built for today's event-driven, AI-powered, cloud-native world. Orkes changes that. With Orkes Conductor, you get a modern orchestration layer that scales with high reliability, supports both visual and code-first development, and brings human, AI and systems together in real time. It's not just about tasks, it's about orchestrating everything, APIs, microservices, data pipelines, human-in-the-loop actions and even autonomous agents. So build, test and debug complex workflows with ease, add human approvals, automate backend processes and orchestrate agentic workflows at enterprise scale, all while maintaining enterprise-grade security, compliance and observability. Whether you're modernizing legacy systems or scaling next-gen AI-driven apps, Orkes helps you go from idea to production fast. Orkes, orchestrate the future of work. Learn more and start building at orkes.io. That's O-R-K-E-S.io.
+
+00:02:41,919 --> 00:02:43,499 [Claire]
+Hey Luke, thanks for joining.
+
+00:02:43,499 --> 00:02:44,619 [Luke]
+Thanks for having me.
+
+00:02:44,619 --> 00:03:02,919 [Claire]
+In 2025, we've talked a lot about vibe coding, Cursor this and v0 that, but we have not talked enough, I think, about vibe marketing. So what do you think the future of an AI CMO is in the next couple years?
+
+00:03:02,919 --> 00:04:23,499 [Luke]
+There's all these tools like Lovable and Cursor and the rate of software production's going to go exponential, but it's not gonna matter if no one's actually using your tool, and so what's important is actually getting the product into market, getting people to know about your new features. At ElevenLabs, we have this launch process. So basically, every new feature we do, every new model, we run it through this massive checklist, which is, like, "Okay, we need to first work out what are the value props. Then we need to work out, 'What's the core messaging?' Then we need to work out, 'Who's it for?' Then we need to turn that into the blog post, the X post," and it- it takes a lot of time, these massive launch processes. And so the thing I'm really excited for the AI CMO is being able to go from every single new feature or new product and translating that into your entire launch process, making the assets, making the videos, making the images, but then also going beyond the launch. So what are those, then, evergreen channels that you'll be testing? And so, uh, let's say ElevenLabs, we launched the best speech-to-text model. Okay, we need to be running Google Ads for that. So then it will spin up, understand all the various keywords, spin up the Google Ads. It will optimize the landing pages. So I think this entire thing is gonna change massively, um, and we're already using a few of these different workflows, and I'm excited to talk you through them.
+
+00:04:23,499 --> 00:04:43,099 [Claire]
+Yeah, and I think one of the best ways that companies can market is actually just telling great customer stories, and I know you have a workflow for getting case studies out. You're lucky enough to have probably tons of customers that love you. So can you walk us through how you use AI to make case study writing really easy?
+
+00:04:43,099 --> 00:04:56,459 [Luke]
+With case studies, you know, you sign a great customer, and you now want to be able to tell the story about how they actually use your product. And so what we're gonna do live, Claire, is I'm going to have you write a case study for ElevenLabs. I know you've used ElevenLabs.
+
+00:04:56,459 --> 00:04:56,879 [Claire]
+I have.
+
+00:04:56,879 --> 00:05:16,759 [Luke]
+And- and what we're going to be using is the tools Granola, which is a fantastic transcription tool. It's a note-taking tool. Uh, and we're going to use ChatGPT, actually, with a custom GPT, which will then, uh, translate that into an excellent blog post, and as a bonus, we'll write a tweet in a, in our company voice inst- as well.
+
+00:05:16,759 --> 00:05:23,399 [Claire]
+Okay, I'm excited, and I am a happy ElevenLabs customer, and you didn't pay me to say that, so...
+
+00:05:23,399 --> 00:05:43,399 [Luke]
+I- I did not. Um, so what I'm going to do is I'm going to open up Granola, and I'm going to do a case study interview with Claire. I'm going to just ask you two quick questions, and then we'll use the transcript for this. So, Claire, fantastic to meet you, and I would love to understand how you use ElevenLabs in your work.
+
+00:05:43,399 --> 00:07:46,163 [Claire]
+Yes, so at, uh, my company, we have to produce a lot of customer-facing live events. It's the way that we connect with developers and customers in our community, and those live events can be either in-person events or they can be recorded, streamed events, and we put a lot of preparation into the messaging and the way we present our products at those events. So ahead of our user conference that's coming up in a couple weeks, we actually build a script for what our product keynote will look like, and it's me, it's our CEO, it's our SVP of product, it's engineers demoing. It's a Q&A with customers, and we like to run through and rehearse those keynotes.And the rehearsals are very expensive, from a time perspective. I just named 10 people that have to be in the room, we have to walk through this script, we have to record it and then listen to it later, and we're really trying to nail a very specific set of timing. You know, we only have 30 minutes or so to get all this content in. And if you are participating in the dry run, it's actually really hard to listen for, "Is this good?" as a third party observer of this keynote. So one of the things that I do with ElevenLabs that I find super useful is actually build prototypes of keynotes. So I load in the script into the... I think it's called the Studio Flow, and I give everybody in the company and our customers different accents. My boss has this lovely British accent so I gave him a British accent. I give myself a different accent. I pick voices for everybody in the keynote, and then I actually generate a proto- uh, like an audio prototype of the keynote and send it around for people to listen to for two things. One, timing, to make sure, do we have enough content? Do we have too little content from a timing perspective? And then two, does it narratively flow and sound natural and is easy to understand and listen to because it's a virtual event? And I found that that little flow, which I guess for the HowAI AI listeners is also- ... a little... uh, a mini HowAI AI-
+
+00:07:46,163 --> 00:07:46,583 [Luke]
+We've got the bonus
+
+00:07:46,583 --> 00:07:48,303 [Claire]
+... built in, built into the flow-
+
+00:07:48,303 --> 00:07:48,323 [Luke]
+Yes
+
+00:07:48,323 --> 00:07:51,163 [Claire]
+... has been really useful for us to make sure we get high quality events going.
+
+00:07:51,163 --> 00:07:56,123 [Luke]
+Fantastic. And so what I do is, you know, basically chat through in more detail-
+
+00:07:56,123 --> 00:07:56,143 [Claire]
+Mm-hmm
+
+00:07:56,143 --> 00:08:01,123 [Luke]
+... and then try and get out some, some concrete, concrete facts, the use cases.
+
+00:08:01,123 --> 00:08:01,143 [Claire]
+Yeah.
+
+00:08:01,143 --> 00:08:10,243 [Luke]
+Clare's already said she's using the Studio product, um, and maybe you would even go as far as using voice cloning of your different customers so we may-
+
+00:08:10,243 --> 00:08:10,303 [Claire]
+Yep
+
+00:08:10,303 --> 00:08:18,064 [Luke]
+... include that in the case study, and maybe you could give me a metric, so how has this driven ROI for your company? How has this doubled the revenue of LaunchDarkly?
+
+00:08:18,064 --> 00:08:35,143 [Claire]
+Yeah, so I, I think it saves us significant amount of time internally, so there's definitely hours and hours saved in terms of iterating on something like a keynote. And then if we make it high quality then our customers hear more about our great products, and then of course we get to sell more.
+
+00:08:35,143 --> 00:08:40,863 [Luke]
+Yeah, fantastic. So and maybe even you, you say a statistic like it saves you-
+
+00:08:40,863 --> 00:08:41,283 [Claire]
+Yeah. I'll save-
+
+00:08:41,283 --> 00:08:43,423 [Luke]
+... uh, five hours of meeting prep time.
+
+00:08:43,423 --> 00:08:48,703 [Claire]
+Yes. Yes. It saves me 10 hours of meeting prep time. Let's make this one a good case study for you.
+
+00:08:48,703 --> 00:08:54,163 [Luke]
+Perfect. Great. Uh, so then I click Stop Transcript, uh, and generate the notes.
+
+00:08:54,163 --> 00:09:06,103 [Claire]
+So all this time Granola is sort of recording what we're saying and, um, analyzing it on, on the back end, so now what we're getting is this auto summary based on all the stuff that I just said.
+
+00:09:06,103 --> 00:09:41,523 [Luke]
+Yeah, and, and Granola's super smart. I was actually speaking with, uh, one of the founders. It's pretty cool. It actually would take Clare's email, use that to enrich it to work out your job title, and so it pulls in all this extra context to make these fantastic, uh, summaries and transcripts whether it's for case studies or, or meeting notes. And what we then do is I've created a custom GPT which we use throughout the company, and it's the ElevenLabs Copy Editor. And I'll just edit the GPT so you can, uh, see here what the prompt is.
+
+00:09:41,523 --> 00:09:50,903 [Claire]
+And for those listening, uh, a GPT is a ChatGPT sort of like customized chat bot that has content and instructions in it.
+
+00:09:50,903 --> 00:10:46,243 [Luke]
+Yeah. You can think of it as a, as a very easy way to share a prompt. Um, and so this is the real prompt we use, and what I've done is I've fed in our tone of voice guide, and so I've said how, "You're an expert editor, you're a writing assistant specializing in the ElevenLabs communication style. Uh, you must enforce American English spelling," even though it breaks my heart. "You're a serious research-led tone of voice similar to Palantir, SpaceX." So it goes into quite a lot of detail, talks about preferences for types of words, and then it includes some, um, example blog posts that we've done. It includes some example tweets that we've done, so different case studies and tweets that we're very happy with. What I'm then able to do is use this GPT. I paste in the Granola summary, so I'll say, "Create a case study
+
+00:10:46,243 --> 00:10:52,783 [Luke]
+of how Clare uses ElevenLabs for LaunchDarkly."
+
+00:10:52,783 --> 00:11:12,143 [Luke]
+And then I go, "Here's the summary of the call." And I find Granola normally gives the best summary as well as pulls in this extra context. And then for bonus points I then actually copy the raw transcript from Granola as well in case it wants to grab any points. So here's the raw transcript.
+
+00:11:12,143 --> 00:11:21,863 [Claire]
+Can I tell you what an amateur Granola user I am, which is- ... I did not know how, I did not know how to get to that transcript, so little tip for Clare here.
+
+00:11:21,863 --> 00:12:52,813 [Luke]
+Yeah. And then so I'll, I'll also just say for the Studio product, and then I hit send. And I find pretty much the first time it gets something that's usable. Here we go. It's now writing that out, "How LaunchDarkly uses ElevenLab Studio to prototype product keynotes." And one of the, like, key prompts that I've given to the GPT is to make the headers, like, skimmable summaries of the article. So we've got cutting prep time in half live events, prototyping keynotes, and because I've done the raw transcripts as well it pulls that one out too. And I'll often do, like, one or two iterations actually just in the asking, so maybe it's including certain hyperlinks for other SEO articles. Maybe it's got certain product details wrong if you want to include pricing, and then we put that live on our blog. The other thing then is, if you think about... I love to treat everything I can as launches, so if you think about your case study as a launch, like, first of all you have to write it, but then the distribution really matters. And so what I've also done in this GPT is tell it what a great tweet looks like, even the aesthetics of a great tweet, like, "Okay, come up with a hook line and then do a few, like, either bullet points or a short paragraph, then do an image." And so if I go, "Write it as a... Write a tweet thread for this," it will then-... rewrite that into a tweet summary. And it writes these handy brackets around, like-
+
+00:12:52,813 --> 00:12:52,833 [Claire]
+Oh!
+
+00:12:52,833 --> 00:13:11,174 [Luke]
+... what should the assets actually be. Uh, this is the bit where I don't think we have a full A- AI CMO just yet, which is, I'm really excited about their ima- image generation models, the new GPT models, because then I think you will actually be able to do, like, end-to-end launches and case studies by pulling this in.
+
+00:13:11,174 --> 00:13:23,573 [Claire]
+Yeah. So this, this tweet generation chat right now not only writes the content, but actually puts these placeholders of what media you would need to make an effective tweet. So a screenshot-
+
+00:13:23,573 --> 00:13:23,793 [Luke]
+Yes
+
+00:13:23,793 --> 00:13:26,813 [Claire]
+... or, or something like that.
+
+00:13:26,813 --> 00:13:26,834 [Luke]
+Yeah.
+
+00:13:26,834 --> 00:13:43,853 [Claire]
+And so here you've gone from, I don't know, we spent three minutes where I- I blabbed a little bit about a, a use case to a very polished case study, a tweet, and then I'm presuming you're gonna do three or four other other things off this one, one asset pretty quickly.
+
+00:13:43,853 --> 00:13:53,634 [Luke]
+Yeah. So then you would do the LinkedIn post. Uh, you maybe would write it in the style of, you could have a, uh, GPT in the style of your founder's tone of voice.
+
+00:13:53,634 --> 00:13:53,773 [Claire]
+Yeah.
+
+00:13:53,773 --> 00:14:02,693 [Luke]
+So then you basically paste it into that and he's got the asset too. Um, and then the way I'd always zoom out and think about this is, how do you actually put this into a workflow?
+
+00:14:02,693 --> 00:14:02,734 [Claire]
+Mm-hmm.
+
+00:14:02,734 --> 00:14:44,093 [Luke]
+So I think the best growth systems, you can do these one-off efforts, but things get busy, you know, your time gets taken up and really, how do you build it into a system? And so concretely, set up a Zapier such that each time you get to close one deal in your sales force, it sends them an email with your Calendly link and you just get booked. Fantastic different customers, maybe it's a month into their, into their contract, where all you have to do is rock up, have a nice chat with them. You can even get GPT to summarize or pre-prepare what the different bullet points and topics you should cover. Chuck it through your Granola and then Chat GPT flow and you'll, you'll be turning out five case studies a month in no time.
+
+00:14:44,093 --> 00:15:15,413 [Claire]
+This is a great flow, because I often find things like case studies or little marketing assets are easy to make, but you have to remember to do them. And if they take time, you, you know, you get put in a meeting, or you have to pass it to somebody else and you just sort of forget and you slow down the next steps and then you produce less assets. So, I think it not only makes it easier to produce the assets, but it makes sure that that engine keeps going, 'cause you as a human are not responsible for that, that next step.
+
+00:15:15,413 --> 00:15:40,733 [Luke]
+And a common theme, uh, I think we touch on in, in one of the next examples as well, is like, when you're editing, as much as possible, try and edit the underlying prompt rather than the actual output. And so if you're like, "Ah, it always does headings which don't, you know, maybe they're not particularly strong," or, "I like more numbers," or, "I like more concrete stats," make sure to incorporate that back into the underlying prompt.
+
+00:15:40,733 --> 00:15:44,613 [Claire]
+And on that point, can we go back to the, the GPT just for a quick minute?
+
+00:15:44,613 --> 00:15:44,633 [Luke]
+Yes.
+
+00:15:44,633 --> 00:17:00,613 [Claire]
+'Cause I'd like to call out some things that I think you do pretty well here in, in the prompting that I think folks can learn from. Okay. So, uh, from, from a prompt perspective, you know, very commonly, everybody starts with the URA. And so, I like that you have here the URA and then gives a very specific identity and job to be done at the top of this. Basically making sure that copy that comes out of ElevenLabs matches, matches the strategy or matches the, the tone of voice and the brand. And then you have very specific instructions where you say, "You must do A, B, C, D." And it's quite, quite particular, which I think is nice. Um, some folks I know love very general prompting, but I find that if you have a point of view of what your tone of voice should be, this sort of, like, very precise formatting prompting is, is very important. And then you've broken down those instructions by types of content generated. So you have instructions for tweets, instructions for blog posts. And then the last thing at the end, um, which I also think people underutilize, is good examples. And I have a question. Do you use any bad examples in here, or is it, is it all good examples?
+
+00:17:00,613 --> 00:17:10,733 [Luke]
+I mean, they were comically bad when- ... when I was coming up. We do actually use, uh, for the next workflow I'll show you, we do actually use bad examples for that, for translation.
+
+00:17:10,733 --> 00:17:10,753 [Claire]
+Yeah.
+
+00:17:10,753 --> 00:17:48,993 [Luke]
+But, you know, a bad blog post is clearly a bla- a bad blog post. Um, and actually if I was... One extra thing I found sometimes, I think, you know, to draw back the learning from the Granola team, like, give it as much context as possible. So if I was to extend this further, I think it would, I would give it a lot of information around, like, what's the core messaging for each different product that we want to get across and really nail? And then it knows, when I'm doing the different interviews, "Ah, the studio product, we really want to e- emphasize how you can do, like, multi-dialog complex speech." Um, then it would draw that out too.
+
+00:17:48,993 --> 00:18:12,773 [Claire]
+Yeah. The other thing that I think people worry about is that, like, AI on top of AI on top of AI becomes very lossy. And I like the idea that you use the Granola summary, but then you also use the raw transcript. So then you have both sort of the, the high level summary as well as some raw context. And because these contact windows are so big, the chat can make sense of it.
+
+00:18:12,773 --> 00:18:16,493 [Luke]
+And without doing the raw transcript, you wouldn't get any of the lovely quotes as well-
+
+00:18:16,493 --> 00:18:16,673 [Claire]
+Yeah. Oh, right.
+
+00:18:16,673 --> 00:18:17,893 [Luke]
+... on what the customer exactly says.
+
+00:18:17,893 --> 00:19:51,725 [Claire]
+I didn't even think of that. Okay. Well, this is... I'm gonna steal this workflow. This is so, so great and so fast. And, uh, I love your philosophy of everything is a launch. So that's a, that's a really good way to, to think about things. This episode is brought to you by Retool. There's a huge gap between impressive AI demos and AI apps that deliver real value inside your business. While most AI solutions can only generate text, Retool lets you build apps that take meaningful action by connecting directly to your business systems and data.With Retool, developers combine the power of code with the speed of visual building to create AI-powered tools that solve real problems. No more writing endless integration code or building UIs from scratch. The results speak volumes. The University of Texas Medical Branch increased diagnostic capacity tenfold. Amazon's GenAI team uses Retool to make complex AI accessible to enterprise customers. And Ramp saved eight million dollars while boosting efficiency by 20%. That's why over 10,000 companies, from startups to Fortune 500s, trust Retool as their AI app layer. Retool, because AI should do more than talk. It should work. So, I know you had another use case where you were using a external tool or some sort of tool and you actually just built a solution that saved the company quite a bit of money.
+
+00:19:51,725 --> 00:22:27,045 [Luke]
+Yeah. So this one was, um, for ElevenLabs, we're in a whole bunch of different countries and it's very important to us that we localize all our content. And so we want our homepage to be in Hindi, in Spanish, in German, in Polish, in Japanese. Um, and I set out about this process of, how do you go about localizing the website? And I spoke to loads of the top experts, and apparently what you're meant to do, you set up a very expensive localization tool. Uh, so the one we chose, I won't name the name, but it was 40,000 dollars a year. Uh, and it quickly went up, or they kept on trying to push it up. So it's four- you're now paying 40,000 dollars a year for this tool. And then the tool, you then need lots of humans inside to actually do all the translation work. So then you're getting agencies which you're paying about 100,000 dollars for. Um, and we set up this flow. There was actually quite a lot of engineering work to connect it to our CMS, to connect it to our codebase. Um, and I was like, "Okay, fantastic. I've done all that." Uh, but the AI translation is terrible. And then we found out that agencies and the humans were terrible, because you're constantly playing this cost game, um, of trying to minimize the cost so you can't get anyone who's any good. And meanwhile, we have AI, which is, like, utterly taking off. And I had this situation where my kee- team kept on sending me screenshots back from ChatGPT, being like, "Oh no, this one's better instead." And I'm like, "Well, if we're just using ChatGPT for the reference of what's better, why don't we just use ChatGPT for the whole thing?" Um, and so I've got this, uh, Figma board where I've kind of laid out in a bit more detail what we started with and what we went to. But basically, we ripped out this entire tool. All of the agencies wrote a very small server where all it does is take the string, has a prompt per language explaining what the tone of voice is for that language and the context, sends it back, whether that's into GitHub or Payload. Um, this saved us 40,000 dollars a year for the tool, so immediately canceled it. Over 100,000 dollars in agency costs. And previously, we were waiting days to get the translations back. Whereas, this is now instant and, if anything is very sensitive, like, say, our pricing page, we just have one of our team, so we're already a decently large team. One of our team just to do a quick sense check and if there- anything's wrong, again, we update the prompt rather than the source code as much as we can to make it- make it better.
+
+00:22:27,045 --> 00:22:43,485 [Claire]
+So, you just re- replaced this tool. And what I think is so interesting is I have this debate internally, as somebody who provides SaaS software, you provide SaaS software. And I, uh, I think one of the existential threats in the SaaS industry-
+
+00:22:43,485 --> 00:22:43,685 [Luke]
+Yes
+
+00:22:43,685 --> 00:22:59,025 [Claire]
+... is the cost of building going to zero. And I talked to so many people and they say, "Ugh, teams will never build this inter- like, why would you?" But then what I think you're showing is i- it can actually be quite cost-effective and improve quality-
+
+00:22:59,025 --> 00:22:59,045 [Luke]
+Yes
+
+00:22:59,045 --> 00:23:03,685 [Claire]
+... to think about building these tools yourselves. And did you... I mean, who built this? Was it the engineering team?
+
+00:23:03,685 --> 00:23:03,705 [Luke]
+So, this-
+
+00:23:03,705 --> 00:23:05,265 [Claire]
+Like, who actually hands off?
+
+00:23:05,265 --> 00:23:27,045 [Luke]
+... I did the first 90% in one day. And then I got one of the engineers to help j- so I literally built it all in curs- I was actually ill, so I was meant to be skiing. I was lying in bed and I was having to deal with the fact that we'd just gone through three different agencies who didn't meet our quality bar for translation.
+
+00:23:27,045 --> 00:23:27,065 [Claire]
+Yeah.
+
+00:23:27,065 --> 00:23:45,565 [Luke]
+And I was like, "I cannot be bothered to get a fourth agency." I mean, I'm just gonna rewrite it all. Uh, so I did the bulk, and then, um, yeah, one of the fantastic engineers on our team, he helped, uh, helped get it into production. I think the highlight though is just not having to deal with more SaaS vendors, more agencies-
+
+00:23:45,565 --> 00:23:45,585 [Claire]
+Yeah
+
+00:23:45,585 --> 00:23:55,865 [Luke]
+... constantly trying to get upsold. And my broader, the broader question of, like, is all SaaS dead? I think no. But I think human in the loop SaaS.
+
+00:23:55,865 --> 00:23:55,885 [Claire]
+Yeah.
+
+00:23:55,885 --> 00:24:22,445 [Luke]
+Like, if your job is about putting low skilled workers in some sort of flow, which translation is, I think that's very risky because just the AI... And, like, at the moment, we still do need a little bit of, like, every week or two where you have someone just give a quick scan, "Is it all great?" And they do make little tweaks. But, you know, give it two years' time. I would much rather bet on the AI costs getting cheaper and the quality going up rather than paying for more agencies.
+
+00:24:22,445 --> 00:24:49,525 [Claire]
+So maybe I have three- three takeaways here. One is you really should reconsider looking at build versus buy on some things, especially if you're not satisfied with the quality of the buy. It's worth- worth the investment. So I think that's- that's thing one. Thing two is, look out. Your marketers are gonna hop into Cursor and get it 90% done and then hand it to you engineers. So you might as well do it yourself.
+
+00:24:49,525 --> 00:24:51,125 [Luke]
+They'll be- they'll be making more work.
+
+00:24:51,125 --> 00:24:59,185 [Claire]
+Yeah, they'll be making more. And three, um...Do you know how many software products I have built out of the frustration that I'm supposed to be on vacation-
+
+00:24:59,185 --> 00:24:59,205 [Luke]
+Yes
+
+00:24:59,205 --> 00:25:08,106 [Claire]
+... but I am actually sick? That is, like, the perfect, the perfect time to get something new done. Um, so winter season is, is a highly -
+
+00:25:08,106 --> 00:25:08,165 [Luke]
+Yeah
+
+00:25:08,165 --> 00:25:11,005 [Claire]
+... productive season for me because I'm always sick.
+
+00:25:11,005 --> 00:25:14,705 [Luke]
+You n- you need to get them in the multi-year deals not ending in a holiday.
+
+00:25:14,705 --> 00:25:22,765 [Claire]
+I have to ask, do you feel like this is, should we, should we, SaaS eats its own tail? Would you ever productionize this and sell this to others? Is it very custom?
+
+00:25:22,765 --> 00:25:24,845 [Luke]
+No, I think we're gonna open source it.
+
+00:25:24,845 --> 00:25:24,865 [Claire]
+Oh, cool.
+
+00:25:24,865 --> 00:25:31,806 [Luke]
+So there's a couple of, there's a couple of things that I'll just show you. Um, if enough people in your YouTube comments-
+
+00:25:31,806 --> 00:25:32,085 [Claire]
+Okay
+
+00:25:32,085 --> 00:27:12,605 [Luke]
+... uh, say to open source it, we'll open source it. But just to add, uh, you know, this basically summarizes what it was, is you have all your code in GitHub. You have your, like, strings, and then you push it into this SaaS tool. And the biggest issue, truthfully, was they didn't allow you to edit the prompt of the AI. And so there was just no way the translation would be any good, understand your brand language, understand the glossary. And they quoted us about six months before they were gonna ship the ability to edit prompts. And I think it's because the whole business model is based on, "No, get these humans in it." Um, and so instead, what we shipped was this, whereby it's just a GitHub action which understands, runs every time you changes, change the keys in your translation dictionary, sends it to an LLM, with a prompt per LLM, and saves it back. And that works way better. And, and then the same with RCMS, we just built into it a, uh, translate button, which again, just sends it in. And it was so nice just having one source of truth. All the text is either in your... Well, two, I guess. E- either in your CMS for the blogs, or it's in the code base for your core pages. Also, another shout-out, this is, this is not a paid advertisement to Cursor, but we wrote this Cursor rule, which does all the lift. One of the things with the engineers was like, "It's quite annoying to have to extract all your strings," and so we wrote this one Cursor rule where you just say, "Extract, like, translate the strings," and it grabs them all into this en.json file, nicely wraps it, handles server side or, or client side wrangling. So that was pretty fun.
+
+00:27:12,605 --> 00:27:15,525 [Claire]
+So, I'm making the first request. Everybody in the comments...
+
+00:27:15,525 --> 00:27:15,745 [Luke]
+Yes.
+
+00:27:15,745 --> 00:27:19,265 [Claire]
+... do it for me as well. I would like this open source because I would-
+
+00:27:19,265 --> 00:27:19,385 [Luke]
+Yeah
+
+00:27:19,385 --> 00:27:35,005 [Claire]
+... 100% use this, use this flow. And, you know, I think people get scared when you hear, you know, human in the loop is out. But I do think there's this opportunity for folks to operate at a s- at a higher level of their craft. And so, you know-
+
+00:27:35,005 --> 00:27:35,065 [Luke]
+Yeah
+
+00:27:35,065 --> 00:27:59,565 [Claire]
+... this is not the fun part of translating, is taking string A into string B. Then you can start doing things like, does this match localized style? Is this appropriate? Is this how we wanna talk to our customers in this region? And so I do think there's this ability for humans to then add a layer of quality, um, and use of their intellect and skills that is higher level than, than this.
+
+00:27:59,565 --> 00:28:43,825 [Luke]
+Yeah, and the really cool... So, we spoke through the Cursor rule. The GitHa- GitHub action is here, which is basically instantly on each push, it generates that. But exactly as you said, we just have this prompts file per, um, per language, which talks to, again, our brand guidelines, translation style, keywords. And the cool thing is, you can define that, and like, you can really take the care and the nuance exactly how you want to represent your brand. And then you'll be pretty confident that that's then, uh, scaled up across any content you're then putting out in future. And before, truthfully, we weren't planning on translating, you know, every blog page. But now, like, you actually can do, and it's a much better experience for your users.
+
+00:28:43,825 --> 00:28:49,805 [Claire]
+Have you tested putting these language-specific prompts in the na- in the language itself?
+
+00:28:49,805 --> 00:28:52,605 [Luke]
+So we explicitly decided not to-
+
+00:28:52,605 --> 00:28:53,065 [Claire]
+Mm-hmm
+
+00:28:53,065 --> 00:28:56,705 [Luke]
+... because I wouldn't have then been otherwise able to vet-
+
+00:28:56,705 --> 00:28:56,865 [Claire]
+Yeah
+
+00:28:56,865 --> 00:28:59,185 [Luke]
+... that we were consistent.
+
+00:28:59,185 --> 00:28:59,285 [Claire]
+Yeah. Yeah.
+
+00:28:59,285 --> 00:29:18,585 [Luke]
+Um, but I did, I'm not sure if you saw that tweet I did, but I did say that recently over... Basically, someone asked a doc system a question in Arabic, and it replied, "Well, because the docs are in English, I'll reply in English." It's like, no, you, you do definitely want it to reply in the language, uh, the language you want.
+
+00:29:18,585 --> 00:29:23,005 [Claire]
+I love this, and I love that you built, built most of this. And is the maintenance cost very high?
+
+00:29:23,005 --> 00:29:25,245 [Luke]
+There's none. There's none.
+
+00:29:25,245 --> 00:29:25,825 [Claire]
+Oh. Okay.
+
+00:29:25,825 --> 00:29:35,525 [Luke]
+The, um... Well, it hasn't broken so far. Um, I mean, it's just because it's just a GitHub action, which is updating the Jason strings.
+
+00:29:35,525 --> 00:29:35,745 [Claire]
+Yup.
+
+00:29:35,745 --> 00:29:37,225 [Luke]
+So, um...
+
+00:29:37,225 --> 00:29:38,165 [Claire]
+Great.
+
+00:29:38,165 --> 00:29:39,325 [Luke]
+Yeah.
+
+00:29:39,325 --> 00:29:46,485 [Claire]
+Well, this is super useful and a good self customer story. You saved yourself $40,000, so-
+
+00:29:46,485 --> 00:29:46,605 [Luke]
+Yes
+
+00:29:46,605 --> 00:30:06,345 [Claire]
+... you know, give your- give yourself a case study. Okay, and then we saved, I'm not saying the best one for last, but I love this last example. Uh, one, because you get to explain to the audience what an MCP is, for those that are still confused by the concept. And two, I think you built a really fun one, so you wanna talk about your WhatsApp MCP?
+
+00:30:06,345 --> 00:32:30,089 [Luke]
+What an MCP is, it's a model context protocol. And so it's a protocol, uh, written by Antropic, which enables anyone to expose tools to AI agents. And so the example, and why I built the WhatsApp one, was we all get tons of messages, we're all in tons of different WhatsApp groups, and it's really hard to stay on top. But currently, if you ask a tool like Claude, it has no idea about any of your WhatsApp messages. It can't help you out. And so what, again, actually that same weekend that I was ill, I did one, I did the Saturday was, uh, Ripsout, the, uh...... ripped out of our translation software. And then the Sunday was, okay, can I actually connect WhatsApp to my AI system using an MCP? And it's par- part of my broader thesis of basically like, I think a personal AI assistant really only needs your WhatsApp, your calendar, and your email, and then it knows everything about you. And it can even organize tasks, send emails, you know, organize dinners, dinners with your, with your friends. So, uh, that's why I built it. And there's also some like cool, um, use cases for work as well, uh, which we can jump into. So let me show you. Cool. So this is the WhatsApp MCP repo, and how it works is it has two main parts. So it has, um, a bridge, which it pretends... You know WhatsApp Web? When you sign in, you scan that barcode. That's es- out- exactly how it works. So it actually pretends to be WhatsApp Web, um, and it uses a fantastic library called WhatsMeow to do this. Uh, so you... When you run it in your terminal, you scan your barcode, an- and the first thing it does is it downloads all your messages onto a local computer, saves it in a SQLite database. Um, and what that means is you can then keep querying it as much as you want with an AI, uh, and you have no risk of, or very low risk of being banned because it's only downloaded it once. So yeah, to be fair, this is unofficial, uh, unofficial stuff. Um, and then the other bit is the WhatsApp MCP server, which basically gives the ability for your AI to query this, uh, SQLite database, as well as like sending messages, sending voice notes. So if we jump over to Claude...
+
+00:32:30,089 --> 00:32:32,489 [Claire]
+Mm-hmm. And this is the desktop Claude-
+
+00:32:32,489 --> 00:32:32,649 [Luke]
+Yes
+
+00:32:32,649 --> 00:32:33,809 [Claire]
+... instance?
+
+00:32:33,809 --> 00:32:59,689 [Luke]
+Yeah. Desktop Claude. They've also now shipped the ability for you to run it from Claude.ai, uh, if you host it too. Um, and what I've got is I've got this MCP called WhatsApp here, and I can just type into the chat, uh, "So what, uh, are some recent messages on WhatsApp I've received?"
+
+00:32:59,689 --> 00:33:07,089 [Luke]
+And, and what that will then do is it will ch- use the tools that the WhatsApp MCP exposes,
+
+00:33:07,089 --> 00:34:03,349 [Luke]
+and then summarize and use back that information. And here you can see it's talking about Elevenlabs' new features, and so, uh, Elevenlabs is launching a conversational AI agent, or a new speech-to-text offering, um, as well as a few tests like, "How are you?" and "Hello World." And, and a few examples of like why you may actually want to use this is, I'm in a whole bunch of different WhatsApp groups, and what you can do is you can use it to summarize, oh, what over the last week were people actually talking about? And, and often now, some of the best, uh, way to keep up with trends or the best thoughts on new tools, they're all in these WhatsApp groups with hundreds of messages per day. And so, uh, if you're looking for a way to get an edge on Twitter or LinkedIn, you can say, uh, "Summarize the thoughts on Elevenlabs
+
+00:34:03,349 --> 00:34:19,129 [Luke]
+in the messages." Um, that will then search the messages that you've received on WhatsApp which is talking about it. Uh, and then you could take something like this, chuck it into your GPT, which is already trained on your tone of voice, uh, and generate a tweet thread for you.
+
+00:34:19,129 --> 00:34:21,169 [Claire]
+Everything's a launch.
+
+00:34:21,169 --> 00:34:32,209 [Luke]
+Everything's a launch. Uh, and also to plug it, if you're interested in how we run launches, they have a blog post which goes through, like, all the different sets that we use as well.
+
+00:34:32,209 --> 00:34:38,089 [Claire]
+Yeah. Well, we'll link to that in the, in the show notes. So okay, just recapping this for folks that are still ha-
+
+00:34:38,089 --> 00:34:38,149 [Luke]
+Yeah
+
+00:34:38,149 --> 00:34:44,629 [Claire]
+... have their mind blown. So you built this MCP, which you've open sourced, which again is unofficial but-
+
+00:34:44,629 --> 00:34:44,729 [Luke]
+Yes
+
+00:34:44,729 --> 00:34:55,089 [Claire]
+... friendly, um, implemented in an nice way. Uh, you download this code, run it locally in your CLI. It does a one-time pull of your data.
+
+00:34:55,089 --> 00:34:55,129 [Luke]
+Yeah.
+
+00:34:55,129 --> 00:34:59,349 [Claire]
+So if you want it updated, do you just run and refresh that again, or does it pull? How does it work?
+
+00:34:59,349 --> 00:35:01,509 [Luke]
+So when you start it, it will pull-
+
+00:35:01,509 --> 00:35:01,529 [Claire]
+Mm-hmm
+
+00:35:01,529 --> 00:35:03,569 [Luke]
+... all the recent messages between the last-
+
+00:35:03,569 --> 00:35:03,589 [Claire]
+Yeah
+
+00:35:03,589 --> 00:35:05,209 [Luke]
+... time it ran and now.
+
+00:35:05,209 --> 00:35:05,229 [Claire]
+Yeah.
+
+00:35:05,229 --> 00:35:08,489 [Luke]
+And then whilst it's running, it will also receive any new messages.
+
+00:35:08,489 --> 00:35:09,129 [Claire]
+Got it. Okay.
+
+00:35:09,129 --> 00:35:19,109 [Luke]
+So actually, I can al- and I can use it to, so send a message to... I'm gonna do a phone number.
+
+00:35:19,109 --> 00:35:33,649 [Luke]
+And then potentially my phone's not on silent. Yeah, so that's just came through saying hello. And, and then you can also use it connected... The cool thing about MCPs as well is you can connect to lots of MCPs at once.
+
+00:35:33,649 --> 00:35:33,849 [Claire]
+Yup.
+
+00:35:33,849 --> 00:35:44,709 [Luke]
+And so I have an Elevenlabs MCP installed, so I can use it to... You could like generate a voice roundup. So you generate text to speech
+
+00:35:44,709 --> 00:35:47,629 [Luke]
+of this.
+
+00:35:47,629 --> 00:35:50,009 [Luke]
+Yes, so you can stitch these all together.
+
+00:35:50,009 --> 00:35:55,829 [Claire]
+Okay. So, so you have this MCP, it pulls down your stuff, it gets regular updates. It's all local, so none of this stuff-
+
+00:35:55,829 --> 00:35:55,909 [Luke]
+Yeah
+
+00:35:55,909 --> 00:36:11,249 [Claire]
+... is going to the cloud. Um, and then you've connected to that ser- or that server through your, your local desktop Claude, or, or if you, you hosted it, you could do it on the, the web version. And then now, just in this chat box-
+
+00:36:11,249 --> 00:36:11,389 [Luke]
+Yes
+
+00:36:11,389 --> 00:36:37,949 [Claire]
+... you have access to all these different tools. And, you know, one of my hypotheses with AI is like tabs start to go away. If you're like me, you have 500 tabs open, everything along the bottom of your desktop dock, and you're switching context. And this sort of centralized chat interface that can access all these tools just makes you much more efficient, and it also allows you to get really creative about how you stitch these tools together.
+
+00:36:37,949 --> 00:36:47,949 [Luke]
+Yeah. And so, and so for this one, for example, we just generated this text, and then you can say, "Send this to the phone number."
+
+00:36:47,949 --> 00:37:20,641 [Claire]
+And behind the scenes, I mean, for folks that aren't seeing this, it really is...... basically using natural language to select from a list of tools, which hits a list of publicly available APIs that have been appropriate- appropriately authenticated. And so for anybody who, you know, kind of knows what an API is, but maybe isn't an engineer, but wants to be able to say to a system, "Do this thing for me," and use sort of the exposed endpoints, this might be a more accessible, more accessible framework.
+
+00:37:20,641 --> 00:38:34,602 [Luke]
+Yeah. My... The overall thesis with tools and agents is with... We spoke about that Granola flow earlier, which was, um, when something happens, so when a deal is closed, then send out, you know, use Zapier to send out to Calendly, the person books in, then you generate, you do the call, you take the transcript, you put it into your GPT and then... And that's all very static and very rigid. But let's say, hypothetically, I actually want to do a round-up of five leading startups, which are all doing this. Well, suddenly my workflow's completely broken. If you had perfectly scripted that all out in a tool like, you know, Zapier or N8n, like, that's actually now not usable and you'd spend a ton of time resetting it up. And so the really cool thing about these chat-based MCP tools is it can be much more, you know, it's trying lots of different ways to, like, "Okay, how do I actually send this all via message?" You know, on the spot we were like, "Okay, generate this, now send this." And, the AIs, as the models get smarter and smarter, are able to get, deal with these, like, high-lever abstraction tasks. And so a genuine one you could do
+
+00:38:34,602 --> 00:38:48,521 [Luke]
+is, uh, why not have your AI actually phone up Claire and have the conversation for you about that ? So, uh, if you want, we could actually try that now. I'm not sure if it will work.
+
+00:38:48,521 --> 00:38:50,161 [Claire]
+Why not? Let's try.
+
+00:38:50,161 --> 00:38:59,962 [Luke]
+So we can do that. So create a conversational AI that can, uh, do case study interviews.
+
+00:38:59,962 --> 00:39:10,842 [Luke]
+And so this will then use ElevenLabs to actually create an AI agent that you can speak to about case studies. So, first of all, it's gonna... Yeah, list the agents.
+
+00:39:10,842 --> 00:39:15,741 [Claire]
+I love this, because you're using AI to create more AI.
+
+00:39:15,741 --> 00:39:15,782 [Luke]
+Yes.
+
+00:39:15,782 --> 00:39:25,122 [Claire]
+You're really just replicating agents on agents on agents. And then what this would do is create a specialized agent on the spot-
+
+00:39:25,122 --> 00:39:25,381 [Luke]
+Yes
+
+00:39:25,381 --> 00:39:32,481 [Claire]
+... for a specific use case, um, that then you could use to give me a little call.
+
+00:39:32,481 --> 00:39:32,782 [Luke]
+Yes.
+
+00:39:32,782 --> 00:39:35,301 [Claire]
+And get, get a case study done.
+
+00:39:35,301 --> 00:39:41,561 [Luke]
+Great. Yes, exactly. And so you can actually see that here. It went through and created a prompt.
+
+00:39:41,561 --> 00:39:41,582 [Claire]
+Yeah.
+
+00:39:41,582 --> 00:40:20,381 [Luke]
+So it's got the first message, "Hi, I'm your case study interview coach." But if you go to our Twitter, you can see Louis doing this workflow, where he then, um, phones up and orders a pizza using an AI. And you just say, "I would like to create a pizza-ordering AI agent." But yeah, hopefully this gives the listeners a glimpse into, like, you can, on the spot, come up with these agents, which I think will be more and more abstract, which can then do these tasks for you, using the tools as they go. So that's the promise of MCP. And transparently, it's still very early, and I think most of these are tools, uh, are toys, but I do think it's, it's going that way.
+
+00:40:20,381 --> 00:41:40,821 [Claire]
+As a parent of kids who really like pepperoni pizza, I'm very worried about the ability to spin up a pizza-ordering, ordering agent in my house, because we will end up with, with a lot of pizza. Okay, Luke, this has been incredible. Uh, you made a case study with me using Granola AI and your magical GPT. We eliminated $40,000 of spend, um, by coding in Cursor as a, as a marketer, and then you built a way to use Claude or an AI to query your source of both personal information and industry news, which is WhatsApp, and do a bunch of really interesting stuff there. So, uh, this has been very eye-opening to me. I've learned so many things from what you've shown me, um, including that everything is launched, I'm just gonna keep that in my mind. But let's wrap with a couple lightning-round questions. The first one is, you know, we've, we've talked a lot about coding and text-based flows. Even in what you showed, a lot of it is coding and, and text-based flows. But I think what's so interesting about your point of view is you're starting to bring the idea of voice as input and output into, um, into the, the industry and into how people build products. You know, very quickly, what do you think kind of, like, voice modalities unlock, maybe for product managers to think about in terms of what they're building?
+
+00:41:40,821 --> 00:41:42,601 [Luke]
+I think there's
+
+00:41:42,601 --> 00:43:07,001 [Luke]
+two broad types of things they unlock. So one of which is new experiences for customers, which just wouldn't have otherwise been possible. And so one great example is, like, if you're in education, suddenly you can make something which is way more engaging. So chess.com shipped a app with, uh, Professor Wolf, which enables you to get, like, turn-by-turn guidance on your different chess. And so you can imagine a world where every... whether you're learning a language, you're playing chess, you're, you're, uh, learning maths, that everyone can have this, like, interactive tutor. And that's kind of... yeah, these new experiences. The other type, which I think is really exciting if you're a product manager, is you probably have a lot of back-office functions. Um, but, so particularly if you're an internal PM, if you look at all the places that you currently have, um, you know, people doing manning phones... So often this would maybe be like, say, you're doing research collection, you know, you're a scaled marketplace and you have large numbers of people collecting data, or you're doing customer support. Well, maybe actually currently you're not able to expand internationally because your team only speaks English. Whereas now, you could spin up an entire team of customer support agents who are fluent in French and in Spanish and in German. So I think that's-
+
+00:43:07,001 --> 00:43:07,001 [Claire]
+Yeah
+
+00:43:07,001 --> 00:43:08,601 [Luke]
+... really exciting too.
+
+00:43:08,601 --> 00:43:21,001 [Claire]
+Yeah, I love the, I love the international, uh, uh, angle to this. It's something that I haven't heard very many people speak to. Okay, Luke, this has been so great. Where can we find you and what can we do for you?
+
+00:43:21,001 --> 00:43:35,821 [Luke]
+Thanks so much for having me on the podcast. It's been a lot of fun. Uh, you can find me... My website is harrys.co and, and a couple of blog posts people may enjoy... So I've got the, uh, "How To Launch Your Products," where I literally talk through the checklist that we use-
+
+00:43:35,821 --> 00:43:35,921 [Claire]
+Mm-hmm
+
+00:43:35,921 --> 00:43:50,481 [Luke]
+... uh, through our launches to go from idea to value prop to core assets to distribution. I also talk about how to hire your first growth marketer. Um, and you can follow me on Twitter, that's Luke Harris and then underscore.
+
+00:43:50,481 --> 00:43:53,501 [Claire]
+Great. Well, this has been so fun. Thank you so much.
+
+00:43:53,501 --> 00:43:56,501 [Luke]
+Cool. Thanks so much, Claire.
+
+00:43:56,501 --> 00:44:22,041 [Claire]
+Thanks so much for watching. If you enjoyed the show, please like and subscribe here on YouTube or, even better, leave us a comment with your thoughts. You can also find this podcast on Apple Podcasts, Spotify, or your favorite podcast app. Please consider leaving us a rating and review, which will help others find the show. You can see all our episodes and learn more about the show at howiaipod.com. See you next time.
