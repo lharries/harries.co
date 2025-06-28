@@ -96,9 +96,8 @@ export default function Home() {
               marketing, product, engineering and developer experience.
             </p>
             <p>
-              Alongside, I angel invest $5-$15k in startups. I&apos;m proud to
-              have backed some exceptional companies including Lovable and
-              Runna.
+              Alongside, I angel invest in startups. I&apos;m proud to have
+              backed some exceptional companies including Lovable and Runna.
             </p>
             <p>
               Previously, I was interim head of product at{" "}
@@ -170,12 +169,7 @@ export default function Home() {
         <Container className="mx-auto flex flex-col md:flex-row w-full gap-6">
           {podcasts.map((podcast, index) => (
             <Card key={index} className="w-full group" noPadding>
-              <a
-                href={podcast.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full"
-              >
+              <a href={`${podcast.url}`} className="w-full">
                 <div className="relative w-full pt-[56.25%] overflow-hidden rounded-t-md group">
                   {podcast.useBlurredBackground ? (
                     <>
