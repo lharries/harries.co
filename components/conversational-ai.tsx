@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/app/components";
-import { useConversation } from "@11labs/react";
+import { useConversation } from "@elevenlabs/react";
 import { useCallback, useState } from "react";
 
 export function ConversationalAI() {
@@ -27,6 +27,7 @@ export function ConversationalAI() {
       // Start the conversation with your agent
       await conversation.startSession({
         agentId: "lWbqR0FqZpT595AfcSve", // Replace with your agent ID
+        connectionType: "webrtc",
       });
     } catch (error) {
       console.error("Failed to start conversation:", error);
