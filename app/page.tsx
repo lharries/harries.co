@@ -9,6 +9,7 @@ import {
   BlogArticle,
   Project,
   NavBar,
+  SubstackSubscribe,
 } from "./components";
 import { getBlogPosts } from "../lib/blog";
 import { getPodcasts } from "../lib/podcasts";
@@ -228,6 +229,10 @@ export default function Home() {
               ))}
             </div>
           </Card>
+        </Container>
+
+        <Container>
+          <SubstackSubscribe />
         </Container>
 
         <Container>
