@@ -307,7 +307,7 @@ export const SubstackSubscribe = () => {
     <div className="bg-white rounded-md border-t-4 border-orange-400 py-10 px-8 flex flex-col items-center text-center gap-3">
       <h2 className="text-xl font-bold font-serif">Subscribe to my newsletter</h2>
       <p className="text-sm text-neutral-500 max-w-md">
-        Occasional posts on growth, startups, and things I&apos;m learning. No spam.
+        Occasional posts on growth, startups, and things I&apos;m learning.
       </p>
       <iframe
         src="https://lukeharries.substack.com/embed"
