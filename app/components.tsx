@@ -302,6 +302,24 @@ export const Project = ({
   );
 };
 
+export const SubstackSubscribe = () => {
+  return (
+    <div className="bg-white rounded-md border-t-4 border-orange-400 py-10 px-8 flex flex-col items-center text-center gap-3">
+      <h2 className="text-xl font-bold font-serif">Subscribe to my newsletter</h2>
+      <p className="text-sm text-neutral-500 max-w-md">
+        Occasional posts on growth, startups, and things I&apos;m learning.
+      </p>
+      <iframe
+        src="https://lukeharries.substack.com/embed"
+        width="100%"
+        height="80"
+        className="max-w-md mt-2"
+        style={{ border: "none", background: "transparent" }}
+      />
+    </div>
+  );
+};
+
 export const NavBar = () => {
   return (
     <Container>

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
-import { Container, Card, NavBar, Markdown } from "../components";
+import { Container, Card, NavBar, Markdown, SubstackSubscribe } from "../components";
 import { formatDate } from "@/lib/utils";
 import ElevenLabsAudioNative from "@/app/audio-native";
 import { TableOfContents } from "../components/TableOfContents";
@@ -134,6 +134,10 @@ export default async function Post({
 
               <div className="mt-2">
                 <Markdown body={content} />
+              </div>
+
+              <div className="mt-8">
+                <SubstackSubscribe />
               </div>
             </Card>
           </div>
